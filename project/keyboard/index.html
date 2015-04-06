@@ -1,23 +1,185 @@
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript" data-main="/js/lib/requireconfig" src="/js/lib/require.js"><!--prevent self-closing--></script><link href="/index.css" rel="stylesheet" type="text/css"/></head><body><!--
-        <div class="menu">
-            <h1>Projects</h1>
+<?DOCTYPE html?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <title>Conductive Keyboard, (ShrimpKey)</title><meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <script type="text/javascript" src="/style/require/require.js"><!-- Prevent self-closing --></script><script>
+            require.config({
+            baseUrl: '/style/require',
+            });
+        </script>
+        <script type="text/javascript" src="/style/index.js"><!-- Prevent self-closing --></script><link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700|Lusitana:400,700|Open+Sans:400,800" rel="stylesheet" type="text/css"/>
+        <link href="http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css"/>
+        <link href="http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="/style/normalize.css"/>
+        <link rel="stylesheet" type="text/css" href="/style/index.css"/>
+    </head>
+    <body class="project keyboard index">
+        <header class="navigation" role="banner">
+            <div class="navigation-wrapper">
+                <a href="/" class="logo">
+                    <img src="/style/brand/logomenu.png" alt="Logo Image"/>
+                </a>
+                <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+                <nav role="navigation">
+                    <ul id="js-navigation-menu" class="navigation-menu show">
+                        <li class="nav-link more">
+                            <a href="javascript:void(0)">Projects</a>
+                            <ul class="submenu wide">
+                                <li>
+                                    <a href="project/blink/">...blink an LED</a>
+                                </li>
+                                <li>
+                                    <a href="project/pov/">...paint with light</a>
+                                </li>
+                                <li>
+                                    <a href="project/keyboard/">...make a Banana Piano</a>
+                                </li>
+                                <li>
+                                    <a href="project/memory/">...test your melody memory</a>
+                                </li>
+                                <li>
+                                    <a href="project/alarmclock/">...invent an Alarm Clock</a>
+                                </li>
+                                <li>
+                                    <a href="project/ledclock/">...build a Word Clock</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-link more">
+                            <a href="kits/">Kits</a>
+                            <ul class="submenu">
+                                <li>
+                                    <a class="scroll-on-page-link" href="#kit">How to Choose</a>
+                                </li>
+                                <li class="more">
+                                    <a href="javascript:void(0)">Product List</a>
+                                    <ul class="submenu wide">
+                                        <li>
+                                            <a href="project/blink/">Shrimp Bundle</a>
+                                        </li>
+                                        <li>
+                                            <a href="project/pov/">Persistence of Vision</a>
+                                        </li>
+                                        <li>
+                                            <a href="project/keyboard/">Conductive Keyboard</a>
+                                        </li>
+                                        <li>
+                                            <a href="project/memory/">'Simon' Memory Game</a>
+                                        </li>
+                                        <li>
+                                            <a href="project/alarmclock/">Alarm Clock</a>
+                                        </li>
+                                        <li>
+                                            <a href="project/ledclock/">Word Clock</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-link more">
+                            <a href="javascript:void(0)">Teaching</a>
+                            <ul class="submenu">
+                                <li class="nav-link">
+                                    <a href="workshops.html">Workshops</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="about.html">Resources</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="#testimonials" class="scroll-on-page-link">Testimonials</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="offer.html">Special Offers</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-link more">
+                            <a href="javascript:void(0)">More</a>
+                            <ul class="submenu">
+                                <li class="nav-link">
+                                    <a href="#about" class="scroll-on-page-link">About Us</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="contribute.html">Contributing</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="license.html">Licensing</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="navigation-tools">
+                    <div class="search-bar">
+                        <form role="search" action="http://duckduckgo.com/">
+                            <input type="hidden" value="start.shrimping.it" id="sites"/><input type="hidden" value="1" name="kh"/>
+                            <input type="hidden" value="1" name="kn"/>
+                            <input type="hidden" value="1" name="kac"/>
+                            <input type="search" placeholder="Enter Search" name="q"/>
+                            <button type="submit">
+                                <img src="/style/brand/search-icon.png" alt="Search Icon"/>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="content">
+            <h1 id="conductive-keyboard-shrimpkey">Conductive Keyboard, (ShrimpKey)</h1>
+            <p>
+                This project demonstrates how to build a substitute for the <a href="http://makeymakey.com/" target="_blank">MakeyMakey</a> USB conductive keyboard.
+            </p>
+            <p>
+                Because it is constructed directly from component parts, it is cheaper and arguably more educational than a MakeyMakey. You can build the project by combining a <a href="../shrimp/index.html">Shrimp</a> with a handful of resistors and diodes, a hacked USB cable and some jumper wires or crocodile clips.
+            </p>
+            <h2 id="learning-outcomes">Learning Outcomes</h2>
+            <p>
+                This project introduces the concept of a <a href="../topics/voltagedivider.html">voltage divider</a>. It demonstrates how a <a href="../topics/pullup.html">pull up resistor</a> ensures an unambiguous signal from a voltage divider circuit.
+            </p>
+            <p>
+                From this starting point, advanced learners will be able to create their own button keypads, use <a href="../topics/potentiometer.html">potentiometers</a> to control circuit behaviour, sense light levels using <a href="../topics/ldr.html">Light Dependent Resistors</a>, Temperature and Acceleration Sensors using these key principles of analog electronics.
+            </p>
+            <p>
+                It also demonstrates the fundamentals of the <a href="../topics/usb.html">Universal Serial Bus</a> (USB). The circuit appears to laptops or tablets as a USB keyboard. The circuit proves that with just 2 wires connected and controlled in a suitable way, (plus power and ground wires) it's possible to emulate a device conforming to the USB Human Interface Device (HID) keyboard standard. Advanced learners will experiment with emulating different USB devices.
+            </p>
+            <h2 id="build-process">Build Process</h2>
+            <p>
+                As with all <a href="http://shrimping.it">@ShrimpingIt</a> projects, the build should begin by following the instructions to <a href="http://shrimping.it/shrimp/project/blink">build and program Blink</a>.
+            </p>
+            <p>Once your Shrimp is blinking, you can then proceed through the following builds...</p>
+            <p>1) Minimal Conductive Sensor</p>
+            <p>2) Minimal USB Keyboard</p>
             <ul>
-                <li><a href="{$serverroot}project/blink/build.html">Blink</a></li>
-                <li><a href="{$serverroot}project/pov/build.html">Persistence of Vision</a></li>
-                <li><a href="{$serverroot}project/alarmclock/build.html">Alarm Clock</a></li>
-                <li><a href="{$serverroot}project/ledclock/build.html">LED Clock</a></li>
-                <li><a href="{$serverroot}project/keyboard/build.html">Conductive Keyboard</a></li>
+                <li>
+                    add the minimum components for the circuit to be able to emulate a <a href="../topics/usb.html">USB keyboard</a>.
+                </li>
+                <li>
+                    upload code so that the circuit 'types' the phrase <code>Hello World!</code> every 10 seconds.
+                </li>
+                <li>plug the hacked USB cable into a computer, launch a suitable application, and see the typing appear on the screen</li>
             </ul>
-        </div>
-        --><h1 id="conductive-keyboard-shrimpkey">Conductive Keyboard, (ShrimpKey)</h1><table class="section"><tr><td class="text"><p>This project demonstrates how to build a substitute for the <a href="http://makeymakey.com/" target="_blank">MakeyMakey</a> USB conductive keyboard.</p><p>Because it is constructed directly from component parts, it is cheaper and arguably more educational than a MakeyMakey. You can build the project by combining a <a href="../shrimp/index.html">Shrimp</a> with a handful of resistors and diodes, a hacked USB cable and some jumper wires or crocodile clips.</p></td></tr></table><h2 id="learning-outcomes">Learning Outcomes</h2><table class="section"><tr><td class="text"><p>This project introduces the concept of a <a href="../topics/voltagedivider.html">voltage divider</a>. It demonstrates how a <a href="../topics/pullup.html">pull up resistor</a> ensures an unambiguous signal from a voltage divider circuit.</p><p>From this starting point, advanced learners will be able to create their own button keypads, use <a href="../topics/potentiometer.html">potentiometers</a> to control circuit behaviour, sense light levels using <a href="../topics/ldr.html">Light Dependent Resistors</a>, Temperature and Acceleration Sensors using these key principles of analog electronics.</p><p>It also demonstrates the fundamentals of the <a href="../topics/usb.html">Universal Serial Bus</a> (USB). The circuit appears to laptops or tablets as a USB keyboard. The circuit proves that with just 2 wires connected and controlled in a suitable way, (plus power and ground wires) it's possible to emulate a device conforming to the USB Human Interface Device (HID) keyboard standard. Advanced learners will experiment with emulating different USB devices.</p></td></tr></table><h2 id="build-process">Build Process</h2><table class="section"><tr><td class="text"><p>As with all <a href="http://shrimping.it">@ShrimpingIt</a> projects, the build should begin by following the instructions to <a href="http://shrimping.it/shrimp/project/blink">build and program Blink</a>.</p><p>Once your Shrimp is blinking, you can then proceed through the following builds...</p><p>1) Minimal Conductive Sensor</p><p>2) Minimal USB Keyboard</p><ul>
-<li>add the minimum components for the circuit to be able to emulate a <a href="../topics/usb.html">USB keyboard</a>.</li>
-<li>upload code so that the circuit 'types' the phrase <code>Hello World!</code> every 10 seconds.</li>
-<li>plug the hacked USB cable into a computer, launch a suitable application, and see the typing appear on the screen</li>
-</ul><p>3) Minimal Conductive USB Keyboard</p><ul>
-<li>add a single <a href="../topics/pullup.html">pull up resistor</a> a ground wire and a contact wire</li>
-<li>Upload code which senses a human body making a circuit between the ground wire and the contact wire causes the USB Keyboard to 'type' the number <code>1</code></li>
-<li>plug the USB cable into a computer, launch a suitable application, and see the typing appear on the screen</li>
-</ul><p>4) ShrimpKey: Full Conductive Keyboard</p><ul>
-<li>add the remaining 15 <a href="../topics/pullup.html">pull up resistors</a> to create a total of 16 conductive sensors, making it possible to create compelling interactive demonstrations like the MakeyMakey demos below.</li>
-</ul><iframe width="560" height="315" src="https://www.youtube.com/embed/rfQqh7iCcOU" frameborder="0" allowfullscreen="true">
-</iframe></td></tr></table></body></html>
+            <p>3) Minimal Conductive USB Keyboard</p>
+            <ul>
+                <li>
+                    add a single <a href="../topics/pullup.html">pull up resistor</a> a ground wire and a contact wire
+                </li>
+                <li>
+                    Upload code which senses a human body making a circuit between the ground wire and the contact wire causes the USB Keyboard to 'type' the number <code>1</code>
+                </li>
+                <li>plug the USB cable into a computer, launch a suitable application, and see the typing appear on the screen</li>
+            </ul>
+            <p>4) ShrimpKey: Full Conductive Keyboard</p>
+            <ul>
+                <li>
+                    add the remaining 15 <a href="../topics/pullup.html">pull up resistors</a> to create a total of 16 conductive sensors, making it possible to create compelling interactive demonstrations like the MakeyMakey demos below.
+                </li>
+            </ul>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rfQqh7iCcOU" frameborder="0" allowfullscreen="true">
+            </iframe>
+        </section>
+    </body>
+</html>

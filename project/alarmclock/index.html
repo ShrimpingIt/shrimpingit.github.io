@@ -1,24 +1,184 @@
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript" data-main="/js/lib/requireconfig" src="/js/lib/require.js"><!--prevent self-closing--></script><link href="/index.css" rel="stylesheet" type="text/css"/></head><body><!--
-        <div class="menu">
-            <h1>Projects</h1>
+<?DOCTYPE html?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <title>Alarm Clock Addon</title><meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <script type="text/javascript" src="/style/require/require.js"><!-- Prevent self-closing --></script><script>
+            require.config({
+            baseUrl: '/style/require',
+            });
+        </script>
+        <script type="text/javascript" src="/style/index.js"><!-- Prevent self-closing --></script><link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700|Lusitana:400,700|Open+Sans:400,800" rel="stylesheet" type="text/css"/>
+        <link href="http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css"/>
+        <link href="http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="/style/normalize.css"/>
+        <link rel="stylesheet" type="text/css" href="/style/index.css"/>
+    </head>
+    <body class="project alarmclock index">
+        <header class="navigation" role="banner">
+            <div class="navigation-wrapper">
+                <a href="/" class="logo">
+                    <img src="/style/brand/logomenu.png" alt="Logo Image"/>
+                </a>
+                <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+                <nav role="navigation">
+                    <ul id="js-navigation-menu" class="navigation-menu show">
+                        <li class="nav-link more">
+                            <a href="javascript:void(0)">Projects</a>
+                            <ul class="submenu wide">
+                                <li>
+                                    <a href="project/blink/">...blink an LED</a>
+                                </li>
+                                <li>
+                                    <a href="project/pov/">...paint with light</a>
+                                </li>
+                                <li>
+                                    <a href="project/keyboard/">...make a Banana Piano</a>
+                                </li>
+                                <li>
+                                    <a href="project/memory/">...test your melody memory</a>
+                                </li>
+                                <li>
+                                    <a href="project/alarmclock/">...invent an Alarm Clock</a>
+                                </li>
+                                <li>
+                                    <a href="project/ledclock/">...build a Word Clock</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-link more">
+                            <a href="kits/">Kits</a>
+                            <ul class="submenu">
+                                <li>
+                                    <a class="scroll-on-page-link" href="#kit">How to Choose</a>
+                                </li>
+                                <li class="more">
+                                    <a href="javascript:void(0)">Product List</a>
+                                    <ul class="submenu wide">
+                                        <li>
+                                            <a href="project/blink/">Shrimp Bundle</a>
+                                        </li>
+                                        <li>
+                                            <a href="project/pov/">Persistence of Vision</a>
+                                        </li>
+                                        <li>
+                                            <a href="project/keyboard/">Conductive Keyboard</a>
+                                        </li>
+                                        <li>
+                                            <a href="project/memory/">'Simon' Memory Game</a>
+                                        </li>
+                                        <li>
+                                            <a href="project/alarmclock/">Alarm Clock</a>
+                                        </li>
+                                        <li>
+                                            <a href="project/ledclock/">Word Clock</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-link more">
+                            <a href="javascript:void(0)">Teaching</a>
+                            <ul class="submenu">
+                                <li class="nav-link">
+                                    <a href="workshops.html">Workshops</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="about.html">Resources</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="#testimonials" class="scroll-on-page-link">Testimonials</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="offer.html">Special Offers</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-link more">
+                            <a href="javascript:void(0)">More</a>
+                            <ul class="submenu">
+                                <li class="nav-link">
+                                    <a href="#about" class="scroll-on-page-link">About Us</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="contribute.html">Contributing</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="license.html">Licensing</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="navigation-tools">
+                    <div class="search-bar">
+                        <form role="search" action="http://duckduckgo.com/">
+                            <input type="hidden" value="start.shrimping.it" id="sites"/><input type="hidden" value="1" name="kh"/>
+                            <input type="hidden" value="1" name="kn"/>
+                            <input type="hidden" value="1" name="kac"/>
+                            <input type="search" placeholder="Enter Search" name="q"/>
+                            <button type="submit">
+                                <img src="/style/brand/search-icon.png" alt="Search Icon"/>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="content">
+            <h1 id="alarm-clock-addon">Alarm Clock Addon</h1>
+            <h2 id="overview">Overview</h2>
+            <p>
+                <img src="theme/8180682507_8b5d19ae14_o_credit_antonio_thomas.jpg" style="margin:1%;width:30%"/><img src="theme/bells_credit_malcolmguite.jpg" style="margin:1%;width:30%"/>
+                <img src="theme/1_CobaltClock_credit_dougsclocks.jpg" style="margin:1%;width:30%"/>
+            </p>
+            <p>
+                This <a href="../topics/addon.html">addon</a> extends a <a href="../shrimp/index.html">Shrimp Parts</a> kit to create a functioning digital clock. The build offers a starting point for all kinds of time-driven inventions.
+            </p>
+            <p>
+                The <a href="build.html">project build</a> shows how to wire, program and configure the circuit as a clock which chimes hourly, or which sounds according to a daily or yearly schedule.
+            </p>
+            <p>
+                For a visual display of the time, the Alarm Clock kit can be augmented with an <a href="../ledclock/index.html">LED Clock Addon</a> which incorporates 24 superbright LEDs and high-power LED driver chips for a <a href="https://github.com/schmiegelt/xbmc.screensaver.unaryclock" target="_blank">Unary clock</a> or <a href="http://www.instructables.com/id/Wordclock/" target="_blank">Word Clock</a>.
+            </p>
+            <p>
+                A set of <a href="guide.html">activities</a> are provided for educators who wish to use these builds to support lessons in high school or university.
+            </p>
+            <h2 id="design">Design</h2>
+            <p>The build employs a Real Time Clock (RTC) chip which has a precise quartz-controlled time signal, as well as a battery-backup system, so that the time doesn't need to be reset every time the clock is unplugged.</p>
+            <p>
+                Since the RTC chip keeps time independently, the <a href="../shrimp/index.html">Shrimp</a> can be placed in a very <a href="../topics/lowpower.html">low-power mode</a> suitable for long-lived projects with time-driven behaviours running from battery.
+            </p>
+            <h2 id="learning-outcomes">Learning Outcomes</h2>
+            <p>This project shows how to use peripheral Integrated Circuits (ICs) as part of a @ShrimpingIt layout, demonstrates how to use a number of distinct digital communication protocols, and some special IC configurations.</p>
             <ul>
-                <li><a href="{$serverroot}project/blink/build.html">Blink</a></li>
-                <li><a href="{$serverroot}project/pov/build.html">Persistence of Vision</a></li>
-                <li><a href="{$serverroot}project/alarmclock/build.html">Alarm Clock</a></li>
-                <li><a href="{$serverroot}project/ledclock/build.html">LED Clock</a></li>
-                <li><a href="{$serverroot}project/keyboard/build.html">Conductive Keyboard</a></li>
+                <li>Protocols
+                    <ul>
+                        <li>Serial without clock - used to set and read the time (CP2102 UART IC)</li>
+                        <li>I2C - used to set the clock, configure it, and read the time when needed (DS1307 Real Time Clock IC)</li>
+                        <li>Serial with clock - controls the LEDs (WS2803 LED Driver IC)</li>
+                    </ul>
+                </li>
+                <li>Configurations
+                    <ul>
+                        <li>The Shrimp configures itself to go into a low-powered sleep mode</li>
+                        <li>The RTC is configured over I2C to flash an LED once per second</li>
+                    </ul>
+                </li>
             </ul>
-        </div>
-        --><h1 id="alarm-clock-addon">Alarm Clock Addon</h1><table class="section"><tr><td class="text"/></tr></table><h2 id="overview">Overview</h2><table class="section"><tr><td class="text"><p>This <a href="../topics/addon.html">addon</a> extends a <a href="../shrimp/index.html">Shrimp Parts</a> kit to create a functioning digital clock. The build offers a starting point for all kinds of time-driven inventions.</p><p>The <a href="build.html">project build</a> shows how to wire, program and configure the circuit as a clock which chimes hourly, or which sounds according to a daily or yearly schedule.</p><p>For a visual display of the time, the Alarm Clock kit can be augmented with an <a href="../ledclock/index.html">LED Clock Addon</a> which incorporates 24 superbright LEDs and high-power LED driver chips for a <a href="https://github.com/schmiegelt/xbmc.screensaver.unaryclock" target="_blank">Unary clock</a> or <a href="http://www.instructables.com/id/Wordclock/" target="_blank">Word Clock</a>.</p><p>A set of <a href="guide.html">activities</a> are provided for educators who wish to use these builds to support lessons in high school or university.</p></td><td class="image"><a href="theme/8180682507_8b5d19ae14_o_credit_antonio_thomas.jpg" target="_animation"><img src="theme/8180682507_8b5d19ae14_o_credit_antonio_thomas.jpg"/></a></td></tr></table><h2 id="design">Design</h2><table class="section"><tr><td class="text"><p>The build employs a Real Time Clock (RTC) chip which has a precise quartz-controlled time signal, as well as a battery-backup system, so that the time doesn't need to be reset every time the clock is unplugged.</p><p>Since the RTC chip keeps time independently, the <a href="../shrimp/index.html">Shrimp</a> can be placed in a very <a href="../topics/lowpower.html">low-power mode</a> suitable for long-lived projects with time-driven behaviours running from battery.</p></td></tr></table><h2 id="learning-outcomes">Learning Outcomes</h2><table class="section"><tr><td class="text"><p>This project shows how to use peripheral Integrated Circuits (ICs) as part of a @ShrimpingIt layout, demonstrates how to use a number of distinct digital communication protocols, and some special IC configurations.</p><ul>
-<li>Protocols
-<ul>
-<li>Serial without clock - used to set and read the time (CP2102 UART IC)</li>
-<li>I2C - used to set the clock, configure it, and read the time when needed (DS1307 Real Time Clock IC)</li>
-<li>Serial with clock - controls the LEDs (WS2803 LED Driver IC)</li>
-</ul></li>
-<li>Configurations
-<ul>
-<li>The Shrimp configures itself to go into a low-powered sleep mode</li>
-<li>The RTC is configured over I2C to flash an LED once per second</li>
-</ul></li>
-</ul><p>Many D&amp;T and Computing tasks are possible as spinoffs, specialising the housing, the time-controlled outputs or the software behaviour to suit many different purposes limited only by the imagination.</p></td></tr></table><h2 id="discussion">Discussion</h2><table class="section"><tr><td class="text"><p>Learners may remember from the original <a href="http://shrimping.it/shrimp/project/blink">Blink build</a>, that the ATMEGA328 requires a 16MHz crystal component, as part of its internal 'clock' circuit. Hz is short for Hertz, a scientific unit meaning 'per second', so a 16MHz crystal provides a 'tick' 16 million times a second.</p><p>The ATMEGA's clock circuit is used to trigger computing instructions. Each instruction relies on the results of the one before, and the 16MHz tick gives enough time for the movements of electrons which make up a single computing instruction to be completed before the next is triggered.</p><p>Although it is accurate enough to space out computing instructions, the 16 MHz signal is not very precise in absolute terms. If we were to rely on it to control our digital clock, adding up the inaccuracies over a whole day, we'd end up losing or gaining time making the clock unreliable. Even if we were to sample and assess the drift of our 16MHz crystal, and attempt to compensate for it, a later change in room temperature would influence the speed of the tick!</p><p>The Real Time Clock (RTC) Chip is designed to provide a much more precise timing circuit, stable to ambient temperature changes, for use in digital clocks.</p><p>In this build, we use the RTC as a peripheral chip, which is initially set by a user sending the correct time over the Serial UART to Arduino code running on the ATMEGA328. Arduino code running on the Shrimp then sets the RTC by sending a signal over the I2C bus. Once set, the RTC is then consulted periodically using an I2C request to establish an accurate time signal which can be used in our application.</p><p>Even when the rest of the circuit is shut down, the coin battery can keep the Real Time Clock chip active. When power comes back to the rest of the circuit, the time reported by the RTC will still be accurate.</p></td></tr></table></body></html>
+            <p>Many D&amp;T and Computing tasks are possible as spinoffs, specialising the housing, the time-controlled outputs or the software behaviour to suit many different purposes limited only by the imagination.</p>
+            <h2 id="discussion">Discussion</h2>
+            <p>
+                Learners may remember from the original <a href="http://shrimping.it/shrimp/project/blink">Blink build</a>, that the ATMEGA328 requires a 16MHz crystal component, as part of its internal 'clock' circuit. Hz is short for Hertz, a scientific unit meaning 'per second', so a 16MHz crystal provides a 'tick' 16 million times a second.
+            </p>
+            <p>The ATMEGA's clock circuit is used to trigger computing instructions. Each instruction relies on the results of the one before, and the 16MHz tick gives enough time for the movements of electrons which make up a single computing instruction to be completed before the next is triggered.</p>
+            <p>Although it is accurate enough to space out computing instructions, the 16 MHz signal is not very precise in absolute terms. If we were to rely on it to control our digital clock, adding up the inaccuracies over a whole day, we'd end up losing or gaining time making the clock unreliable. Even if we were to sample and assess the drift of our 16MHz crystal, and attempt to compensate for it, a later change in room temperature would influence the speed of the tick!</p>
+            <p>The Real Time Clock (RTC) Chip is designed to provide a much more precise timing circuit, stable to ambient temperature changes, for use in digital clocks.</p>
+            <p>In this build, we use the RTC as a peripheral chip, which is initially set by a user sending the correct time over the Serial UART to Arduino code running on the ATMEGA328. Arduino code running on the Shrimp then sets the RTC by sending a signal over the I2C bus. Once set, the RTC is then consulted periodically using an I2C request to establish an accurate time signal which can be used in our application.</p>
+            <p>Even when the rest of the circuit is shut down, the coin battery can keep the Real Time Clock chip active. When power comes back to the rest of the circuit, the time reported by the RTC will still be accurate.</p>
+        </section>
+    </body>
+</html>

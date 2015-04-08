@@ -24,30 +24,28 @@
                 <nav role="navigation">
                     <ul id="js-navigation-menu" class="navigation-menu show">
                         <li class="nav-link more">
-                            <a href="javascript:void(0)">Projects</a>
+                            <a href="project/">Projects</a>
                             <ul class="submenu wide">
                                 <li>
-                                    <a href="project/blink/">...blink an LED</a>
+                                    <a href="/#project-blink">...blink an LED</a>
                                 </li>
                                 <li>
-                                    <a href="project/pov/">...paint with light</a>
+                                    <a href="/#project-pov">...paint with light</a>
                                 </li>
                                 <li>
-                                    <a href="project/keyboard/">...make a Banana Piano</a>
+                                    <a href="/#project-blink">...make a Banana Piano</a>
                                 </li>
                                 <li>
-                                    <a href="project/memory/">...test your melody memory</a>
+                                    <a href="/#project-memory">...test your melody memory</a>
                                 </li>
                                 <li>
-                                    <a href="project/alarmclock/">...invent an Alarm Clock</a>
+                                    <a href="/#project-alarmclock">...invent a new Clock</a>
                                 </li>
-                                <li>
-                                    <a href="project/ledclock/">...build a Word Clock</a>
-                                </li>
+                                <!-- <li><a href="/#project-ledclock">...build a Word Clock</a></li> -->
                             </ul>
                         </li>
                         <li class="nav-link more">
-                            <a href="kits/">Kits</a>
+                            <a href="/kit/">Kits</a>
                             <ul class="submenu">
                                 <li>
                                     <a class="scroll-on-page-link" href="#kit">How to Choose</a>
@@ -56,23 +54,21 @@
                                     <a href="javascript:void(0)">Product List</a>
                                     <ul class="submenu wide">
                                         <li>
-                                            <a href="project/blink/">Shrimp Bundle</a>
+                                            <a href="/kit/shrimp.html">Shrimp Bundle</a>
                                         </li>
                                         <li>
-                                            <a href="project/pov/">Persistence of Vision</a>
+                                            <a href="/kit/pov.html">Persistence of Vision</a>
                                         </li>
                                         <li>
-                                            <a href="project/keyboard/">Conductive Keyboard</a>
+                                            <a href="/kit/keyboard.html">Conductive Keyboard</a>
                                         </li>
                                         <li>
-                                            <a href="project/memory/">'Simon' Memory Game</a>
+                                            <a href="/kit/memory.html">'Simon' Memory Game</a>
                                         </li>
                                         <li>
-                                            <a href="project/alarmclock/">Alarm Clock</a>
+                                            <a href="/kit/alarmclock.html">Alarm Clock</a>
                                         </li>
-                                        <li>
-                                            <a href="project/ledclock/">Word Clock</a>
-                                        </li>
+                                        <!-- <li><a href="/project/ledclock/">Word Clock</a></li> -->
                                     </ul>
                                 </li>
                             </ul>
@@ -81,16 +77,16 @@
                             <a href="javascript:void(0)">Teaching</a>
                             <ul class="submenu">
                                 <li class="nav-link">
-                                    <a href="workshops.html">Workshops</a>
+                                    <a href="/workshop/">Workshops</a>
                                 </li>
                                 <li class="nav-link">
-                                    <a href="about.html">Resources</a>
+                                    <a href="/about.html">Resources</a>
                                 </li>
                                 <li class="nav-link">
-                                    <a href="#testimonials" class="scroll-on-page-link">Testimonials</a>
+                                    <a href="/#testimonials" class="scroll-on-page-link">Testimonials</a>
                                 </li>
                                 <li class="nav-link">
-                                    <a href="offer.html">Special Offers</a>
+                                    <a href="/offer.html">Special Offers</a>
                                 </li>
                             </ul>
                         </li>
@@ -98,16 +94,16 @@
                             <a href="javascript:void(0)">More</a>
                             <ul class="submenu">
                                 <li class="nav-link">
-                                    <a href="#about" class="scroll-on-page-link">About Us</a>
+                                    <a href="/#about" class="scroll-on-page-link">About Us</a>
                                 </li>
                                 <li class="nav-link">
-                                    <a href="contribute.html">Contributing</a>
+                                    <a href="/contribute.html">Contributing</a>
                                 </li>
                                 <li class="nav-link">
-                                    <a href="license.html">Licensing</a>
+                                    <a href="/license.html">Licensing</a>
                                 </li>
                                 <li class="nav-link">
-                                    <a href="contact.html">Contact</a>
+                                    <a href="/contact.html">Contact</a>
                                 </li>
                             </ul>
                         </li>
@@ -455,7 +451,7 @@
                             <aside>
                                 <p>After double-checking your layout matches the final diagram above, you can insert the coin battery. Once you have set the time, this will help your clock keep time even when the USB or main battery pack is removed.</p>
                                 <p>
-                                    Note, if you attach nothing to the DS1307 Battery pin, then the clock will not work at all. If you don't have a reliable coin battery, and want to test your clock by powering it from the 5V supply, you need to attach DS1307 Pin 3 (the positive side of the coin battery) to 0V (ground). This tells the DS1307 to use the main power supply instead of the coin battery. 
+                                    Note, if you attach nothing to the DS1307 Battery pin, then the clock will not work at all. If you don't have a reliable coin battery, and want to test your clock programming by powering the DS1307 from the 5V supply, you need to attach DS1307 Pin 3 (the positive side of the coin battery) to 0V (ground). This tells the DS1307 to use the main power supply instead of the coin battery. 
                                     <strong>
                                         <em>Note, if a coin battery is attached at the time, this will short the battery!</em>
                                     </strong>
@@ -480,7 +476,7 @@
                             <aside>
                                 <p>Now the clock subcircuit is complete, we should be able to set and read back the time from the clock. Verifying this simple behaviour is a useful test, before we add lots of extra logic for controlling different chimes. [This software is yet to be uploaded]</p><p>Software which enables the clock to operate as an Alarm Clock can be found in our 'projects' Github repository. Note, code for this project depends upon the RTCLib, rtttl and Narcoleptic libraries also available in the same repository.</p>
                                 <p>
-                                    For novices, following the <a href="https://github.com/ShrimpingIt/projects">README</a> instructions in our repository should lead you through preparing your computer for uploading software.
+                                    For novices, scrolling down to the <a href="https://github.com/ShrimpingIt/projects">README</a> instructions on our main repository page should offer enough guidance to prepare your computer for uploading software.
                                 </p>
                                 <p>
                                     For more expert experimenters, here is a direct link to the code <a href="https://github.com/ShrimpingIt/projects/tree/master/sketchbook/shrimpingit/alarmclock/UnaryAlarmClock">in github</a> and <a href="https://raw.githubusercontent.com/ShrimpingIt/projects/master/sketchbook/shrimpingit/alarmclock/UnaryAlarmClock/UnaryAlarmClock.ino">in raw form</a>
@@ -491,5 +487,59 @@
                 </div>
             </section>
         </section>
+        <footer class="footer" role="contentinfo">
+            <div class="footer-logo">
+                <img src="style/brand/logomenu.png" alt="Logo image"/>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li>
+                        <h3>Community</h3>
+                    </li>
+                    <li>
+                        <a href="/project/">Projects</a>
+                    </li>
+                    <li>
+                        <a href="/support.html">Support</a>
+                    </li>
+                    <li>
+                        <a href="/license.html">Licensing</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <h3>Commercial</h3>
+                    </li>
+                    <li>
+                        <a href="/kit/">Kits</a>
+                    </li>
+                    <li>
+                        <a href="/workshop/">Workshops</a>
+                    </li>
+                    <li>
+                        <a href="/workshop/cpd.html">Training</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <h3>More</h3>
+                    </li>
+                    <li>
+                        <a href="/contact.html">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="/social.html">Follow Us</a>
+                    </li>
+                    <li>
+                        <a href="/">About Us</a>
+                    </li>
+                </ul>
+            </div>
+            <hr/>
+            <p>
+                Thanks to the <a href="http://arduino.cc">Arduino</a> community for the amazing foundations on which the Shrimp and @ShrimpingIt projects are based.
+                Thanks to <a href="http://fritzing.org">Fritzing</a> for vector graphics elements. Flickr user <a href="https://www.flickr.com/photos/randomskk/">Adam Greig</a> for cover image.
+            </p>
+        </footer>
     </body>
 </html>

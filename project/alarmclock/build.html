@@ -205,17 +205,20 @@
                             <aside>
                                 <p>This guide provides details for learners to wire, program and configure their first @ShrimpingIt digital clock project.</p>
                                 <p>
-                                    For general orientation, see the <a href="../clock/index.html">Alarm Clock</a> project page. The image to the right shows the completed build.
+                                    For general orientation, see the <a href="../clock/index.html">Alarm Clock</a> project page. The image shows the completed build.
                                 </p>
-                                <h3 id="requirements">Requirements</h3><p>The build assumes you have the following kits...</p><ul>
+                                <h3 id="requirements">Requirements</h3><p>The build assumes you have the following kits, or have sourced equivalent parts...</p><ul>
                                     <li>
-                                        An <a href="../clock/kit.html">Alarm Clock Addon</a> kit
+                                        An <a href="../../kit/alarmclock.html">Alarm Clock Addon</a> kit
                                     </li>
                                     <li>
-                                        A <a href="../shrimp/kit.html">Shrimp Parts</a> kit
+                                        A <a href="../../kit/shrimp.html">Shrimp Parts</a> kit
                                     </li>
                                     <li>
-                                        A <a href="../cp2102/kit.html">Programmer</a> kit
+                                        A <a href="../../kit/cp2102.html">Programmer</a> kit
+                                    </li>
+                                    <li>
+                                        A <a href="../../kit/breadboard400.html">400point Breadboard</a> kit
                                     </li>
                                 </ul>
                                 <p>For convenience, pre-bagged kits are available to order from @ShrimpingIt online. If you do not wish to buy from us, information is provided for you to source commodity parts direct from electronics wholesalers.</p>
@@ -250,7 +253,7 @@
                                 <img src="./sequence/02_capacitor.png"/>
                             </a>
                             <aside>
-                                <p>We are planning to deploy this circuit in the real world for a long time. We would like it to be stable to momentary changes to its power supply, (e.g. when a motor or a large number of LEDs suddenly draw a lot of energy).</p>
+                                <p>We are planning to deploy this circuit in the real world for a long time. We would like it to be stable to momentary changes to its power supply, (e.g. when a motor or a large number of LEDs suddenly draw a lot of energy from the same source).</p>
                                 <p>
                                     If the voltage drops too low, the Shrimp's ATMEGA328P-PU microcontroller will reset itself. Adding a decoupling capacitor provides a very short-term reservoir, <em>decoupling</em> the microcontroller from temporary dips in supply voltage.
                                 </p>
@@ -475,7 +478,13 @@
                                 <img src=""/>
                             </a>
                             <aside>
-                                <p>Now the clock subcircuit is complete, we should be able to set and read back the time from the clock. Verifying this simple behaviour is a useful test, before we add lots of extra logic for controlling different chimes.</p>
+                                <p>Now the clock subcircuit is complete, we should be able to set and read back the time from the clock. Verifying this simple behaviour is a useful test, before we add lots of extra logic for controlling different chimes. [This software is yet to be uploaded]</p><p>Software which enables the clock to operate as an Alarm Clock can be found in our 'projects' Github repository. Note, code for this project depends upon the RTCLib, rtttl and Narcoleptic libraries also available in the same repository.</p>
+                                <p>
+                                    For novices, following the <a href="https://github.com/ShrimpingIt/projects">README</a> instructions in our repository should lead you through preparing your computer for uploading software.
+                                </p>
+                                <p>
+                                    For more expert experimenters, here is a direct link to the code <a href="https://github.com/ShrimpingIt/projects/tree/master/sketchbook/shrimpingit/alarmclock/UnaryAlarmClock">in github</a> and <a href="https://raw.githubusercontent.com/ShrimpingIt/projects/master/sketchbook/shrimpingit/alarmclock/UnaryAlarmClock/UnaryAlarmClock.ino">in raw form</a>
+                                </p>
                             </aside>
                         </div>
                     </div>

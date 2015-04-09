@@ -1,7 +1,7 @@
 <?DOCTYPE html?>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
     <head>
-        <title>Alarm Clock Addon</title><meta charset="utf-8"/>
+        <title><!-- Prevent self-closing -->Alarm Clock Project</title><meta charset="utf-8"/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <script type="text/javascript" src="http://start.shrimping.it/style/require/require.js"><!-- Prevent self-closing --></script><script>
             require.config({
@@ -125,54 +125,14 @@
             </div>
         </header>
         <section class="content">
-            <h1 id="alarm-clock-addon">Alarm Clock Addon</h1>
-            <h2 id="overview">Overview</h2>
+            <h1 id="alarm-clock-project">Alarm Clock Project</h1>
             <p>
                 <img src="theme/8180682507_8b5d19ae14_o_credit_antonio_thomas.jpg" style="margin:1%;width:30%"/><img src="theme/bells_credit_malcolmguite.jpg" style="margin:1%;width:30%"/>
                 <img src="theme/1_CobaltClock_credit_dougsclocks.jpg" style="margin:1%;width:30%"/>
             </p>
-            <p>
-                This <a href="../topics/addon.html">addon</a> extends a <a href="../shrimp/index.html">Shrimp Parts</a> kit to create a functioning digital clock. The build offers a starting point for all kinds of time-driven inventions.
-            </p>
-            <p>
-                The <a href="build.html">project build</a> shows how to wire, program and configure the circuit as a clock which chimes hourly, or which sounds according to a daily or yearly schedule.
-            </p>
-            <p>
-                For a visual display of the time, the Alarm Clock kit can be augmented with an <a href="../ledclock/index.html">LED Clock Addon</a> which incorporates 24 superbright LEDs and high-power LED driver chips for a <a href="https://github.com/schmiegelt/xbmc.screensaver.unaryclock" target="_blank">Unary clock</a> or <a href="http://www.instructables.com/id/Wordclock/" target="_blank">Word Clock</a>.
-            </p>
-            <!-- A set of [activities](guide.html) are provided for educators who wish to use these builds to support lessons in high school or university. -->
-            <h2 id="design">Design</h2>
-            <p>The build employs a Real Time Clock (RTC) chip which has a precise quartz-controlled time signal, as well as a battery-backup system, so that the time doesn't need to be reset every time the clock is unplugged.</p>
-            <p>
-                Since the RTC chip keeps time independently, the <a href="../shrimp/index.html">Shrimp</a> can be placed in a very <a href="../topics/lowpower.html">low-power mode</a> suitable for long-lived projects with time-driven behaviours running from battery.
-            </p>
-            <h2 id="learning-outcomes">Learning Outcomes</h2>
-            <p>This project shows how to use peripheral Integrated Circuits (ICs) as part of a @ShrimpingIt layout, demonstrates how to use a number of distinct digital communication protocols, and some special IC configurations.</p>
-            <ul>
-                <li>Protocols
-                    <ul>
-                        <li>Serial without clock - used to set and read the time (CP2102 UART IC)</li>
-                        <li>I2C - used to set the clock, configure it, and read the time when needed (DS1307 Real Time Clock IC)</li>
-                        <li>Serial with clock - controls the LEDs (WS2803 LED Driver IC)</li>
-                    </ul>
-                </li>
-                <li>Configurations
-                    <ul>
-                        <li>The Shrimp configures itself to go into a low-powered sleep mode</li>
-                        <li>The RTC is configured over I2C to flash an LED once per second</li>
-                    </ul>
-                </li>
-            </ul>
-            <p>Many D&amp;T and Computing tasks are possible as spinoffs, specialising the housing, the time-controlled outputs or the software behaviour to suit many different purposes limited only by the imagination.</p>
-            <h2 id="discussion">Discussion</h2>
-            <p>
-                Learners may remember from the original <a href="http://shrimping.it/shrimp/project/blink">Blink build</a>, that the ATMEGA328 requires a 16MHz crystal component, as part of its internal 'clock' circuit. Hz is short for Hertz, a scientific unit meaning 'per second', so a 16MHz crystal provides a 'tick' 16 million times a second.
-            </p>
-            <p>The ATMEGA's clock circuit is used to trigger computing instructions. Each instruction relies on the results of the one before, and the 16MHz tick gives enough time for the movements of electrons which make up a single computing instruction to be completed before the next is triggered.</p>
-            <p>Although it is accurate enough to space out computing instructions, the 16 MHz signal is not very precise in absolute terms. If we were to rely on it to control our digital clock, adding up the inaccuracies over a whole day, we'd end up losing or gaining time making the clock unreliable. Even if we were to sample and assess the drift of our 16MHz crystal, and attempt to compensate for it, a later change in room temperature would influence the speed of the tick!</p>
-            <p>The Real Time Clock (RTC) Chip is designed to provide a much more precise timing circuit, stable to ambient temperature changes, for use in digital clocks.</p>
-            <p>In this build, we use the RTC as a peripheral chip, which is initially set by a user sending the correct time over the Serial UART to Arduino code running on the ATMEGA328. Arduino code running on the Shrimp then sets the RTC by sending a signal over the I2C bus. Once set, the RTC is then consulted periodically using an I2C request to establish an accurate time signal which can be used in our application.</p>
-            <p>Even when the rest of the circuit is shut down, the coin battery can keep the Real Time Clock chip active. When power comes back to the rest of the circuit, the time reported by the RTC will still be accurate.</p>
+            <p>This project is a fantastic starting point for any invention which relies on an accurate date and hour, for example controlling a clock display, or triggering events such as alarms by time of day, day of the week or day of the month.</p>
+            <p>Microcomputers usually need an extra chip to provide an accurate clock, and this build demonstrates how to wire up a DS1307 Real Time Clock chip with a coin battery to keep the time.</p>
+            <p>Example Shrimp behaviours are documented which set and read the accurate time, and which periodically check the time whilst using the lowest possible power, allowing a time-driven invention to be deployed on battery for a long time.</p>
         </section>
         <footer class="footer" role="contentinfo">
             <div class="footer-logo">

@@ -193,12 +193,6 @@
                                 <li>
                                     <a href="#step11">11</a>
                                 </li>
-                                <li>
-                                    <a href="#step12">12</a>
-                                </li>
-                                <li>
-                                    <a href="#step13">13</a>
-                                </li>
                             </ul>
                         </li>
                         <li class="page-next">
@@ -208,7 +202,7 @@
                 </div>
                 <div class="vertical-tabs-container">
                     <div class="vertical-tabs">
-                        <a href="javascript:void(0);" class="js-vertical-tab vertical-tab is-active" rel="tab1">Building the LED Clock</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab2">Requirements</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab3">Getting started</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab4">An extra breadboard</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab5">Power rails for extra breadboard</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab6">First WS2803D LED Driver</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab7">Power for the WS2803D</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab8">A 'Reference' Resistor</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab9">Decoupling capacitor</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab10">WS2803 I2C Control Wires</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab11">Second WS2803D chip</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab12">24 LEDs</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab13">Finished, Upload the code!</a>
+                        <a href="javascript:void(0);" class="js-vertical-tab vertical-tab is-active" rel="tab1">Building the LED Clock</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab2">An extra breadboard</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab3">Power rails for extra breadboard</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab4">First WS2803D LED Driver</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab5">Power for the WS2803D</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab6">A 'Reference' Resistor</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab7">Decoupling capacitor</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab8">WS2803 I2C Control Wires</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab9">Second WS2803D chip</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab10">24 LEDs</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab11">Finished, Upload the code!</a>
                     </div>
                     <div class="vertical-tab-content-container">
                         <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab1">Building the LED Clock</a>
@@ -221,15 +215,7 @@
                                 <p>
                                     For general orientation, see the <a href="../clock/index.html">Alarm Clock</a> project page.
                                 </p>
-                            </aside>
-                        </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab2">Requirements</a>
-                        <div id="tab2" class="js-vertical-tab-content vertical-tab-content">
-                            <a href="" target="_animation">
-                                <img src=""/>
-                            </a>
-                            <aside>
-                                <p>The build assumes you have the following kits...</p><ul>
+                                <h3 id="requirements">Requirements</h3><p>The build assumes you have the following kits...</p><ul>
                                     <li>
                                         An <a href="../clock/index.html">LED Clock Addon</a> kit
                                     </li>
@@ -252,22 +238,15 @@
                                 <p>
                                     Mac and Windows computers need a <a href="../cp2102/driver.html">CP2102 driver</a> to be installed for the USB Programmer to be recognised.
                                 </p>
-                            </aside>
-                        </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab3">Getting started</a>
-                        <div id="tab3" class="js-vertical-tab-content vertical-tab-content">
-                            <a href="" target="_animation">
-                                <img src=""/>
-                            </a>
-                            <aside>
+                                <h3 id="getting-started">Getting started</h3>
                                 <p>
                                     Before embarking on the LED Clock, you should have successfully completed the <a href="../clock/build.html">Alarm Clock build</a>. This guide uses the Alarm Clock circuit configuration as its starting point.
                                 </p>
                                 <p>As before we'll be using 'battleship' numbering to indicate where components should be inserted, with numbers and letters indicating the rows and columns of the breadboard.</p>
                             </aside>
                         </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab4">An extra breadboard</a>
-                        <div id="tab4" class="js-vertical-tab-content vertical-tab-content">
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab2">An extra breadboard</a>
+                        <div id="tab2" class="js-vertical-tab-content vertical-tab-content">
                             <a href="" target="_animation">
                                 <img src=""/>
                             </a>
@@ -280,8 +259,8 @@
                                 </ul>
                             </aside>
                         </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab5">Power rails for extra breadboard</a>
-                        <div id="tab5" class="js-vertical-tab-content vertical-tab-content">
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab3">Power rails for extra breadboard</a>
+                        <div id="tab3" class="js-vertical-tab-content vertical-tab-content">
                             <a href="sequence/02_powerrails.png" target="_animation">
                                 <img src="sequence/02_powerrails.png"/>
                             </a>
@@ -318,8 +297,8 @@
                                 </ul>
                             </aside>
                         </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab6">First WS2803D LED Driver</a>
-                        <div id="tab6" class="js-vertical-tab-content vertical-tab-content">
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab4">First WS2803D LED Driver</a>
+                        <div id="tab4" class="js-vertical-tab-content vertical-tab-content">
                             <a href="sequence/03_first_ws2803d.png" target="_animation">
                                 <img src="sequence/03_first_ws2803d.png"/>
                             </a>
@@ -333,8 +312,8 @@
                                 </ul>
                             </aside>
                         </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab7">Power for the WS2803D</a>
-                        <div id="tab7" class="js-vertical-tab-content vertical-tab-content">
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab5">Power for the WS2803D</a>
+                        <div id="tab5" class="js-vertical-tab-content vertical-tab-content">
                             <a href="sequence/04_first_ws2803d_power.png" target="_animation">
                                 <img src="sequence/04_first_ws2803d_power.png"/>
                             </a>
@@ -357,8 +336,8 @@
                                 </ul>
                             </aside>
                         </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab8">A 'Reference' Resistor</a>
-                        <div id="tab8" class="js-vertical-tab-content vertical-tab-content">
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab6">A 'Reference' Resistor</a>
+                        <div id="tab6" class="js-vertical-tab-content vertical-tab-content">
                             <a href="sequence/05_first_ws2803d_resistor.png" target="_animation">
                                 <img src="sequence/05_first_ws2803d_resistor.png"/>
                             </a>
@@ -377,8 +356,8 @@
                                 </ul>
                             </aside>
                         </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab9">Decoupling capacitor</a>
-                        <div id="tab9" class="js-vertical-tab-content vertical-tab-content">
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab7">Decoupling capacitor</a>
+                        <div id="tab7" class="js-vertical-tab-content vertical-tab-content">
                             <a href="sequence/06_first_ws2803d_capacitor.png" target="_animation">
                                 <img src="sequence/06_first_ws2803d_capacitor.png"/>
                             </a>
@@ -394,8 +373,8 @@
                                 </ul>
                             </aside>
                         </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab10">WS2803 I2C Control Wires</a>
-                        <div id="tab10" class="js-vertical-tab-content vertical-tab-content">
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab8">WS2803 I2C Control Wires</a>
+                        <div id="tab8" class="js-vertical-tab-content vertical-tab-content">
                             <a href="sequence/07_first_ws2803d_clock+data.png" target="_animation">
                                 <img src="sequence/07_first_ws2803d_clock+data.png"/>
                             </a>
@@ -421,8 +400,8 @@
                                 </ul>
                             </aside>
                         </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab11">Second WS2803D chip</a>
-                        <div id="tab11" class="js-vertical-tab-content vertical-tab-content">
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab9">Second WS2803D chip</a>
+                        <div id="tab9" class="js-vertical-tab-content vertical-tab-content">
                             <a href="sequence/08_second_ws2803d.png" target="_animation">
                                 <img src="sequence/08_second_ws2803d.png"/>
                             </a>
@@ -477,8 +456,8 @@
                                 </ul>
                             </aside>
                         </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab12">24 LEDs</a>
-                        <div id="tab12" class="js-vertical-tab-content vertical-tab-content">
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab10">24 LEDs</a>
+                        <div id="tab10" class="js-vertical-tab-content vertical-tab-content">
                             <a href="sequence/09_leds.png" target="_animation">
                                 <img src="sequence/09_leds.png"/>
                             </a>
@@ -486,8 +465,8 @@
                                 <p>There are a total of 24 LEDs to insert. Each one has one slightly longer leg - the positive leg, into which electrical charge flows to light it up. LED stands for "Light Emitting Diode". A diode is equivalent to a valve - it only allows charge to flow one way. If you attach your LEDs the wrong way round, they will not light up.</p><p>The long legs need to be attached to the +ive power rails down the sides of the LED display breadboard, and the short legs should be inserted either side of the WS2803D chips in breadboard rows 6,7,9,11,13,14 and 17,18,20,22,24,25. The WS2803D will allow current to flow into the pins in these rows, or block current flow, depending on the instructions it receives from the Shrimp's microcontroller.</p><p>Follow the pattern of LED wire locations in the diagram. These locations have been selected to allow enough space for the 5mm LEDs to lie next to each other.</p>
                             </aside>
                         </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab13">Finished, Upload the code!</a>
-                        <div id="tab13" class="js-vertical-tab-content vertical-tab-content">
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab11">Finished, Upload the code!</a>
+                        <div id="tab11" class="js-vertical-tab-content vertical-tab-content">
                             <a href="sequence/10_final.png" target="_animation">
                                 <img src="sequence/10_final.png"/>
                             </a>

@@ -190,9 +190,6 @@
                                 <li>
                                     <a href="#step10">10</a>
                                 </li>
-                                <li>
-                                    <a href="#step11">11</a>
-                                </li>
                             </ul>
                         </li>
                         <li class="page-next">
@@ -202,7 +199,7 @@
                 </div>
                 <div class="vertical-tabs-container">
                     <div class="vertical-tabs">
-                        <a href="javascript:void(0);" class="js-vertical-tab vertical-tab is-active" rel="tab1">Building the LED Clock</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab2">An extra breadboard</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab3">Power rails for extra breadboard</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab4">First WS2803D LED Driver</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab5">Power for the WS2803D</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab6">A 'Reference' Resistor</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab7">Decoupling capacitor</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab8">WS2803 I2C Control Wires</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab9">Second WS2803D chip</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab10">24 LEDs</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab11">Finished, Upload the code!</a>
+                        <a href="javascript:void(0);" class="js-vertical-tab vertical-tab is-active" rel="tab1">Building the LED Clock</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab2">An extra breadboard</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab3">Power rails for extra breadboard</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab4">First WS2803D LED Driver</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab5">Power for the DM134</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab6">A 'Reference' Resistor</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab7">DM134 I2C Control Wires</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab8">Second DM134 chip</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab9">24 LEDs</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab10">Finished, Upload the code!</a>
                     </div>
                     <div class="vertical-tab-content-container">
                         <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab1">Building the LED Clock</a>
@@ -211,38 +208,21 @@
                                 <img src="kit.png"/>
                             </a>
                             <aside>
-                                <p>This guide provides details for learners to wire, program and configure a @ShrimpingIt digital clock project with ultrabright LEDs which can programmed as a Word Clock or a Unary Clock.</p>
+                                <p>This guide provides details for learners to wire, program and configure a @ShrimpingIt digital clock project. It incorporates two LED driver chips which control ultrabright LEDs in a layout which can be programmed as a Word Clock or a Unary Clock.</p>
                                 <p>
-                                    For general orientation, see the <a href="../clock/index.html">Alarm Clock</a> project page.
-                                </p>
-                                <h3 id="requirements">Requirements</h3><p>The build assumes you have the following kits...</p><ul>
-                                    <li>
-                                        An <a href="../clock/index.html">LED Clock Addon</a> kit
-                                    </li>
-                                    <li>
-                                        An <a href="../clock/index.html">Alarm Clock Addon</a> kit
-                                    </li>
-                                    <li>
-                                        A <a href="../shrimp/index.html">Shrimp Parts</a> kit
-                                    </li>
-                                    <li>
-                                        A <a href="../cp2102/index.html">USB UART</a> kit
-                                    </li>
-                                </ul>
-                                <p>
-                                    For convenience, pre-bagged kits are available to order from <a href="http://shrimping.it">@ShrimpingIt</a> online. If you do not wish to buy from us, information is provided for you to source commodity parts direct from electronics wholesalers.
+                                    This guide provides details for learners to wire, program and configure their first @ShrimpingIt digital clock project. For general orientation, see the <a href="./index.html">LED Clock</a> project page. The completed build should replicate the image shown.
                                 </p>
                                 <p>
-                                    In addition you will need a Linux, Mac or Windows computer running the latest <a href="../topics/ide.html">Arduino IDE</a>.
-                                </p>
-                                <p>
-                                    Mac and Windows computers need a <a href="../cp2102/driver.html">CP2102 driver</a> to be installed for the USB Programmer to be recognised.
+                                    For convenience, <a href="../../kit/ledclock.html">pre-bagged kits</a> are available to order from @ShrimpingIt online. If you do not wish to buy from us, <a href="./procure.html">information is provided</a> for you to source commodity parts direct from electronics wholesalers.
                                 </p>
                                 <h3 id="getting-started">Getting started</h3>
                                 <p>
-                                    Before embarking on the LED Clock, you should have successfully completed the <a href="../clock/build.html">Alarm Clock build</a>. This guide uses the Alarm Clock circuit configuration as its starting point.
+                                    Before embarking on the Alarm Clock, you should have 
+                                    <strong>
+                                        successfully completed the <a href="../alarmclock/index.html">Alarm Clock build</a>
+                                    </strong>
+                                    .This build uses the Alarm Clock circuit as its starting point.
                                 </p>
-                                <p>As before we'll be using 'battleship' numbering to indicate where components should be inserted, with numbers and letters indicating the rows and columns of the breadboard.</p>
                             </aside>
                         </div>
                         <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab2">An extra breadboard</a>
@@ -296,23 +276,23 @@
                         </div>
                         <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab4">First WS2803D LED Driver</a>
                         <div id="tab4" class="js-vertical-tab-content vertical-tab-content">
-                            <a href="sequence/03_first_ws2803d.png" target="_animation">
-                                <img src="sequence/03_first_ws2803d.png"/>
+                            <a href="sequence/03_first_dm134.png" target="_animation">
+                                <img src="sequence/03_first_dm134.png"/>
                             </a>
                             <aside>
-                                <p>The WS2803D LED driver chip will be used to switch on and off the LEDs we're about to attach. Each chip is actually capable of controlling up to 18 LEDs, but we're only using 12 on each, for a total of 24 lights.</p><p>The WS2803D chip will need a power connection, and wires to receive LED lighting commands from the Shrimp's microcontroller.</p><p>Just like the ATMEGA328P-PU and the DS1307, the WS2803D chip has a half-moon stamped at one end. Pins are numbered anticlockwise, starting from the half-moon.</p><p>The first driver chip should be placed in the same orientation as all the other chips, straddling the right-hand LED Display breadboard and positioned as far up as it can go, leaving just enough room for the power rail connections which should be running across the centre of the board.</p><ul>
+                                <p>The DM134 LED driver chip will be used to switch on and off the LEDs we're about to attach. Each chip is actually capable of controlling up to 16 LEDs, but we're only using 12 on each, for a total of 24 lights.</p><p>The DM134 chip will need a power connection, wires to receive LED lighting commands from the Shrimp's microcontroller, and a resistor to control how much power to give the LEDs.</p><p>Just like the ATMEGA328P-PU and the DS1307, the DM134 chip has a half-moon stamped at one end. Pins are numbered anticlockwise, starting from the half-moon.</p><p>The first driver chip should be placed in the same orientation as all the other chips, straddling the right-hand LED Display breadboard and positioned as far up as it can go.</p><ul>
                                     <li>
                                         <strong>
-                                            <em>Insert the first WS2803D chip with the half-moon shape at the top of the breadboard. Pin 1 (the top-left pin, anticlockwise from the half-moon) should be in row 1, and pin 14 (the bottom-left pin) should be in row 14.</em>
+                                            <em>Insert the first DM134 chip with the half-moon shape at the top of the breadboard. Pin 1 (the top-left pin, anticlockwise from the half-moon) should be in row 1, and pin 12 (the bottom-left pin) should be in row 12.</em>
                                         </strong>
                                     </li>
                                 </ul>
                             </aside>
                         </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab5">Power for the WS2803D</a>
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab5">Power for the DM134</a>
                         <div id="tab5" class="js-vertical-tab-content vertical-tab-content">
-                            <a href="sequence/04_first_ws2803d_power.png" target="_animation">
-                                <img src="sequence/04_first_ws2803d_power.png"/>
+                            <a href="sequence/04_first_dm134_power.png" target="_animation">
+                                <img src="sequence/04_first_dm134_power.png"/>
                             </a>
                             <aside>
                                 <p>Pin 1 needs a connection to ground and Pin 28 (all the way anticlockwise from the half-moon) needs a connection to the 5V supply.</p><ul>
@@ -335,135 +315,128 @@
                         </div>
                         <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab6">A 'Reference' Resistor</a>
                         <div id="tab6" class="js-vertical-tab-content vertical-tab-content">
-                            <a href="sequence/05_first_ws2803d_resistor.png" target="_animation">
-                                <img src="sequence/05_first_ws2803d_resistor.png"/>
+                            <a href="sequence/05_first_dm134_resistor.png" target="_animation">
+                                <img src="sequence/05_first_dm134_resistor.png"/>
                             </a>
                             <aside>
                                 <p>
                                     You may recall from the <a href="../shrimp/build.html">Blink build</a> that attaching LEDs directly to 5V can make them burn out, so a current-limiting resistor was added between the LED and ground when attaching the Blink LED, to limit the flow of electricity.
                                 </p>
-                                <p>A WS2803D is known as a 'constant current' LED driver, and you can explicitly limit the current which flows through the LED pins. We simply have to attach a single current-limiting resistor to pin 2, to tell the WS2803D what the maximum current should be. This saves us attaching current-limiting resistors to every one of the 24 LEDs.</p><p>The correct resistor value can be calculated according to the following formula; The resistance (in Ohms) is 27.5 divided by the desired current (in Amps). Our LEDs can handle a maximum of 20milliAmps which is the same as 0.020 Amps. The resistor should therefore be 27.5 / 0.020, which is 1375 Ohms or 1.375 kOhms.</p><p>Unfortunately resistors are only available in a limited number of values, so we'll err on the side of caution and use a 1.5 kOhm resistor, limiting the current to 18.3 milliAmps instead.</p><ul>
-                                    <li>
-                                        <strong>
-                                            <em>
-                                                Attach a 1.5kOhm resistor between <span style="color:gray;">a2</span> and the (<span style="color:blue;">Blue</span>) left-hand -ive power rail
-                                            </em>
-                                        </strong>
-                                    </li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab7">Decoupling capacitor</a>
-                        <div id="tab7" class="js-vertical-tab-content vertical-tab-content">
-                            <a href="sequence/06_first_ws2803d_capacitor.png" target="_animation">
-                                <img src="sequence/06_first_ws2803d_capacitor.png"/>
-                            </a>
-                            <aside>
-                                <p>We'll add a small capacitor between the power lines of the WS2803D to smooth the supply in case the circuit experiences sudden power demands which cause the voltage to drop (e.g. turning on all the ultrabright LEDs at once!).</p><p>We'll be using a capacitor marked 104, which indicates its capacitance in picoFarads. Because the last figure indicates the number of zeroes to add on the end, this means it's a 10(0000) picoFarad capacitor. Because there are 1000 picoFarads in a nanoFarad, it's also called a 100 nanoFarad capacitor.</p><ul>
-                                    <li>
-                                        <strong>
-                                            <em>
-                                                Attach a capacitor marked 104 between <span style="color:gray;">d1</span> and <span style="color:gray;">g1</span>
-                                            </em>
-                                        </strong>
-                                    </li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab8">WS2803 I2C Control Wires</a>
-                        <div id="tab8" class="js-vertical-tab-content vertical-tab-content">
-                            <a href="sequence/07_first_ws2803d_clock+data.png" target="_animation">
-                                <img src="sequence/07_first_ws2803d_clock+data.png"/>
-                            </a>
-                            <aside>
+                                <p>A DM134 is known as a 'constant current' LED driver, and you can explicitly limit the current which flows through the LED pins. We simply have to attach a single current-limiting resistor between the DM134's pin 23 and Ground, to tell the DM134 what the maximum current should be. This saves us having to attach current-limiting resistors to every single one of the 24 LEDs.</p>
                                 <p>
-                                    The WS2803D can accept instructions to turn on and off specific LEDs over two wires. If the data wire is at 5V then a <strong>one</strong> is being sent. If the data wire is at 0V then a <strong>zero</strong> is being sent. The clock wire is pulsed to 5V when a new value on the data wire is ready to be read. Using this <strong>clocked serial</strong> data stream, a series of <strong>ones</strong> and <strong>zeroes</strong> is read into the WS2803, which determins whether individual LEDs are <strong>on</strong> or <strong>off</strong>.
-                                </p>
-                                <p>Once you have attached the clock and data lines the first WS2803D chip is fully wired up.</p><ul>
-                                    <li>
-                                        <strong>
-                                            <em>
-                                                Attach a <span style="color:blue;">Blue</span> wire between <span style="color:gray;">j5</span> on the left breadboard and <span style="color:gray;">a4</span> on the right breadboard, connecting the serial Clock line
-                                            </em>
-                                        </strong>
-                                    </li>
-                                    <li>
-                                        <strong>
-                                            <em>
-                                                Attach an <span style="color:orange;">Orange</span> wire between <span style="color:gray;">j6</span> on the left breadboard and <span style="color:gray;">a5</span> on the right breadboard, connecting the serial Data line
-                                            </em>
-                                        </strong>
-                                    </li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab9">Second WS2803D chip</a>
-                        <div id="tab9" class="js-vertical-tab-content vertical-tab-content">
-                            <a href="sequence/08_second_ws2803d.png" target="_animation">
-                                <img src="sequence/08_second_ws2803d.png"/>
-                            </a>
-                            <aside>
-                                <p>The second chip needs exactly the same connections, but it's upside down relative to the rest of the chips on the breadboard. So the half-moon shape is at the very bottom of the board, so Pin 1 (which is anticlockwise from the half-moon shape) should be inserted at the bottom row 30.</p>
-                                <p>
-                                    The second chip accepts data not from the ATMEGA chip directly, but from the other WS2803D. When the ATMEGA sends more than 18 <strong>ones</strong> and <strong>zeroes</strong>, the extra information is passed on from the first WS2803D to the next one. Special pins on each WS2803D are available to pass on this overflowing data. WS2803D chips can therefore be chained, and they provide special serial and clock pins for the next chip in the chain.
+                                    The correct resistor value can be calculated by looking at the<a href="http://www.siti.com.tw/product/spec/LED/SP_DM134,DM135-013.pdf">Data sheet for the DM134</a>, which shows a helpful graph showing the relationship between the resistor value and the LED current for a 5V circuit. This shows that a 680 Ohm resistor would be appropriate for our LEDs which should only be driven by a current of around 20 milliAmps, that's 20 thousandths of an Amp.
                                 </p>
                                 <ul>
                                     <li>
                                         <strong>
                                             <em>
-                                                Attach a <span style="color:green;">Green</span> wire from <span style="color:gray;">j30</span> to the (<span style="color:blue;">Blue</span>) right-hand -ive power rail, (connects WS2803D Pin 1 to 0V ground).
-                                            </em>
-                                        </strong>
-                                    </li>
-                                    <li>
-                                        <strong>
-                                            <em>
-                                                Attach a <span style="color:red;">Red</span> wire between <span style="color:gray;">a30</span> and the (<span style="color:red;">Red</span>) left-hand -ive power rail, (connecting the WS2803D Pin 28 to +5V power ).
-                                            </em>
-                                        </strong>
-                                    </li>
-                                    <li>
-                                        <strong>
-                                            <em>
-                                                Attach a capacitor marked 104 between <span style="color:gray;">d30</span> and <span style="color:gray;">g30</span>
-                                            </em>
-                                        </strong>
-                                    </li>
-                                    <li>
-                                        <strong>
-                                            <em>
-                                                Attach a 1.5kOhm resistor between <span style="color:gray;">j29</span> and the (<span style="color:blue;">Blue</span>) right-hand -ive power rail, (providing Pin 2 with a constant current reference)
-                                            </em>
-                                        </strong>
-                                    </li>
-                                    <li>
-                                        <strong>
-                                            <em>
-                                                Attach a <span style="color:blue;">Blue</span> wire between <span style="color:gray;">g2</span> and <span style="color:gray;">g27</span>, (the serial Clock line)
-                                            </em>
-                                        </strong>
-                                    </li>
-                                    <li>
-                                        <strong>
-                                            <em>
-                                                Attach an <span style="color:orange;">Orange</span> wire between <span style="color:gray;">g3</span> and <span style="color:gray;">g26</span>, (the serial Data line) 
+                                                Attach a 680Ohm resistor between <span style="color:gray;">g2</span> and <span style="color:gray;">d1</span>
                                             </em>
                                         </strong>
                                     </li>
                                 </ul>
                             </aside>
                         </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab10">24 LEDs</a>
-                        <div id="tab10" class="js-vertical-tab-content vertical-tab-content">
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab7">DM134 I2C Control Wires</a>
+                        <div id="tab7" class="js-vertical-tab-content vertical-tab-content">
+                            <a href="sequence/07_first_dm134_clock+data.png" target="_animation">
+                                <img src="sequence/07_first_dm134_clock+data.png"/>
+                            </a>
+                            <aside>
+                                <p>
+                                    The DM134 can accept instructions to turn on and off specific LEDs over three wires. If the data wire (yellow) is at 5V then a <strong>one</strong> is being sent. If the data wire is at 0V then a <strong>zero</strong> is being sent. The clock wire (purple) is pulsed to 5V when a new value on the data wire is ready to be read. Using this <strong>clocked serial</strong> data stream, a series of <strong>ones</strong> and <strong>zeroes</strong> is read into a memory store on the DM134. Finally when the values of all the LEDs have been sent, a <strong>Latch</strong> wire is pulsed, to tell the DM134 to display the new series which determines whether individual LEDs are <strong>on</strong> or <strong>off</strong>.
+                                </p>
+                                <p>Once you have attached the clock and data lines the first DM134 chip is fully wired up.</p><ul>
+                                    <li>
+                                        <strong>
+                                            <em>
+                                                Attach a <span style="color:yellow;">Yellow</span> wire between <span style="color:gray;">j5</span> on the left breadboard and <span style="color:gray;">c2</span> on the right breadboard, connecting the serial 'Data' line
+                                            </em>
+                                        </strong>
+                                    </li>
+                                    <li>
+                                        <strong>
+                                            <em>
+                                                Attach an <span style="color:purple;">Purple</span> wire between <span style="color:gray;">j6</span> on the left breadboard and <span style="color:gray;">b3</span> on the right breadboard, connecting the serial Data line
+                                            </em>
+                                        </strong>
+                                    </li>
+                                    <li>
+                                        <strong>
+                                            <em>
+                                                Attach an <span style="color:blue;">Blue</span> wire between <span style="color:gray;">j7</span> on the left breadboard and <span style="color:gray;">a4</span> on the right breadboard, connecting the serial Data line
+                                            </em>
+                                        </strong>
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab8">Second DM134 chip</a>
+                        <div id="tab8" class="js-vertical-tab-content vertical-tab-content">
+                            <a href="sequence/08_second_dm134.png" target="_animation">
+                                <img src="sequence/08_second_dm134.png"/>
+                            </a>
+                            <aside>
+                                <p>
+                                    The second chip needs exactly the same connections as shown in the diagram. However, the second chip accepts data not from the ATMEGA chip directly, but from lighting information 'overflowing' from the previous DM134. When the ATMEGA sends more than 16 <strong>ones</strong> and <strong>zeroes</strong>, the extra information is passed on from the first DM134 to the next one.
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>
+                                            <em>
+                                                Attach a <span style="color:green;">Green</span> wire from <span style="color:gray;">a15</span> to the (<span style="color:blue;">Blue</span>) left-hand -ive power rail, (connects DM134 Pin 1 to 0V ground).
+                                            </em>
+                                        </strong>
+                                    </li>
+                                    <li>
+                                        <strong>
+                                            <em>
+                                                Attach a <span style="color:red;">Red</span> wire between <span style="color:gray;">j15</span> and the (<span style="color:red;">Red</span>) left-hand -ive power rail, (connecting the DM134 Pin 24 to +5V power ).
+                                            </em>
+                                        </strong>
+                                    </li>
+                                    <li>
+                                        <strong>
+                                            <em>
+                                                Attach a 680 Ohm resistor between <span style="color:gray;">d15</span> and the top-left row (<span style="color:blue;">Blue</span>) (providing Pin 23 with a constant current reference)
+                                            </em>
+                                        </strong>
+                                    </li>
+                                    <li>
+                                        <strong>
+                                            <em>
+                                                Attach a <span style="color:yellow;">Yellow</span> wire between <span style="color:gray;">g3</span> on the right breadboard and <span style="color:gray;">d16</span> on the right breadboard, connecting the serial 'Data' line
+                                            </em>
+                                        </strong>
+                                    </li>
+                                    <li>
+                                        <strong>
+                                            <em>
+                                                Attach an <span style="color:purple;">Purple</span> wire between <span style="color:gray;">c3</span> on the right breadboard and <span style="color:gray;">c17</span> on the right breadboard, connecting the serial Data line
+                                            </em>
+                                        </strong>
+                                    </li>
+                                    <li>
+                                        <strong>
+                                            <em>
+                                                Attach an <span style="color:blue;">Blue</span> wire between <span style="color:gray;">b4</span> on the right breadboard and <span style="color:gray;">b18</span> on the right breadboard, connecting the serial Data line
+                                            </em>
+                                        </strong>
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab9">24 LEDs</a>
+                        <div id="tab9" class="js-vertical-tab-content vertical-tab-content">
                             <a href="sequence/09_leds.png" target="_animation">
                                 <img src="sequence/09_leds.png"/>
                             </a>
                             <aside>
-                                <p>There are a total of 24 LEDs to insert. Each one has one slightly longer leg - the positive leg, into which electrical charge flows to light it up. LED stands for "Light Emitting Diode". A diode is equivalent to a valve - it only allows charge to flow one way. If you attach your LEDs the wrong way round, they will not light up.</p><p>The long legs need to be attached to the +ive power rails down the sides of the LED display breadboard, and the short legs should be inserted either side of the WS2803D chips in breadboard rows 6,7,9,11,13,14 and 17,18,20,22,24,25. The WS2803D will allow current to flow into the pins in these rows, or block current flow, depending on the instructions it receives from the Shrimp's microcontroller.</p><p>Follow the pattern of LED wire locations in the diagram. These locations have been selected to allow enough space for the 5mm LEDs to lie next to each other.</p>
+                                <p>There are a total of 24 LEDs to insert. Each one has one slightly longer leg - the positive leg, into which electrical charge flows to light it up. LED stands for "Light Emitting Diode". A diode is equivalent to a valve - it only allows charge to flow one way. If you attach your LEDs the wrong way round, they will not light up.</p><p>The long legs need to be attached to the +ive power rails down the sides of the LED display breadboard, and the short legs should be inserted either side of the DM134 chips in breadboard rows 5,6,8,9,11,12 and 19,20,22,23,25,26. The DM134 will allow current to flow into the pins in these rows, or block current flow, depending on the instructions it receives from the Shrimp's microcontroller.</p><p>Follow the pattern of LED wire locations in the diagram. These locations have been selected to allow enough space for the 5mm LEDs to lie next to each other.</p>
                             </aside>
                         </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab11">Finished, Upload the code!</a>
-                        <div id="tab11" class="js-vertical-tab-content vertical-tab-content">
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab10">Finished, Upload the code!</a>
+                        <div id="tab10" class="js-vertical-tab-content vertical-tab-content">
                             <a href="sequence/10_final.png" target="_animation">
                                 <img src="sequence/10_final.png"/>
                             </a>

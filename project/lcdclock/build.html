@@ -51,21 +51,21 @@
                             <a href="http://start.shrimping.it/project/">Other Projects</a>
                             <ul class="submenu wide">
                                 <li>
-                                    <a href="http://start.shrimping.it/#project-blink">...blink an LED</a>
+                                    <a href="http://start.shrimping.it/index.html#project-blink">...blink an LED</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/#project-pov">...paint with light</a>
+                                    <a href="http://start.shrimping.it/index.html#project-pov">...paint with light</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/#project-blink">...make a Banana Piano</a>
+                                    <a href="http://start.shrimping.it/index.html#project-blink">...make a Banana Piano</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/#project-memory">...test your melody memory</a>
+                                    <a href="http://start.shrimping.it/index.html#project-memory">...test your melody memory</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/#project-alarmclock">...invent a new Clock</a>
+                                    <a href="http://start.shrimping.it/index.html#project-alarmclock">...invent a new Clock</a>
                                 </li>
-                                <!-- <li><a href="{$serverroot}#project-ledclock">...build a Word Clock</a></li> -->
+                                <!-- <li><a href="{$serverroot}index.html#project-ledclock">...build a Word Clock</a></li> -->
                             </ul>
                         </li>
                         <li class="nav-link more">
@@ -107,7 +107,7 @@
                                     <a href="http://start.shrimping.it/about.html">Resources</a>
                                 </li>
                                 <li class="nav-link">
-                                    <a href="http://start.shrimping.it/#testimonials" class="scroll-on-page-link">Testimonials</a>
+                                    <a href="http://start.shrimping.it/index.html#testimonials" class="scroll-on-page-link">Testimonials</a>
                                 </li>
                                 <li class="nav-link">
                                     <a href="http://start.shrimping.it/offer.html">Special Offers</a>
@@ -118,7 +118,7 @@
                             <a href="javascript:void(0)">More</a>
                             <ul class="submenu">
                                 <li class="nav-link">
-                                    <a href="http://start.shrimping.it/#about" class="scroll-on-page-link">About Us</a>
+                                    <a href="http://start.shrimping.it/index.html#about" class="scroll-on-page-link">About Us</a>
                                 </li>
                                 <li class="nav-link">
                                     <a href="http://start.shrimping.it/contribute.html">Contributing</a>
@@ -172,6 +172,9 @@
                                 <li>
                                     <a href="#step4">4</a>
                                 </li>
+                                <li>
+                                    <a href="#step5">5</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="page-next">
@@ -181,17 +184,17 @@
                 </div>
                 <div class="vertical-tabs-container">
                     <div class="vertical-tabs">
-                        <a href="javascript:void(0);" class="js-vertical-tab vertical-tab is-active" rel="tab1">Building the Liquid Crystal Clock</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab2">Getting started</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab3">Attach Adaptor</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab4">Rainbow cable</a>
+                        <a href="javascript:void(0);" class="js-vertical-tab vertical-tab is-active" rel="tab1">Building the Liquid Crystal Clock</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab2">Getting started</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab3">Attach Adaptor</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab4">Rainbow cable</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab5">Rainbow cable</a>
                     </div>
                     <div class="vertical-tab-content-container">
                         <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab1">Building the Liquid Crystal Clock</a>
                         <div id="tab1" class="js-vertical-tab-content vertical-tab-content">
-                            <a href="" target="_animation">
-                                <img src=""/>
+                            <a href="sequence/03_screen.png" target="_animation">
+                                <img src="sequence/03_screen.png"/>
                             </a>
                             <aside>
                                 <p>
-                                    This guide provides details for learners to wire, program and configure a @ShrimpingIt digital clock project. It incorporates a 84x48 pixel liquid crystal display (the same as the Nokia 5110). It can therefore be programmed to display text, numbers or simple line-art as part of a time-driven behaviour. For general orientation, see the <a href="./index.html">Liquid Crystal Clock</a> project page.
+                                    This guide provides details for learners to wire, program and configure a @ShrimpingIt digital clock project. It incorporates a 84x48 pixel liquid crystal display (the same as the Nokia 5110). It can therefore be programmed to display text, numbers or simple line-art as part of a time-driven behaviour. For general orientation, see the <a href="./index.html">Liquid Crystal Clock</a> project page. See a demo <a href="https://plus.google.com/115551960274376151777/posts/1sH9LafaPZ3">here</a>
                                 </p>
                                 <p>
                                     For convenience, <a href="../../kit/lcdclock.html">pre-bagged kits</a> are available to order from @ShrimpingIt online. If you do not wish to buy from us, <a href="./procure.html">information is provided</a> for you to source commodity parts direct from electronics wholesalers.
@@ -219,21 +222,38 @@
                                 <img src="sequence/01_adaptor.png"/>
                             </a>
                             <aside>
-                                <p>We have manufactured a simple adaptor which avoids the complexity of an extra breadboard, since the wiring job for the Liquid Crystal screen is very basic. The modules simply have 5 'series' resistors for protecting the 3V pins from the 5V signal generated by the Arduino and two wires, red and green for power and ground.</p>
+                                <p>We have manufactured a simple adaptor which avoids the complexity of an extra breadboard, since the wiring job for the Liquid Crystal screen is very basic. The modules simply have 5 'series' resistors for protecting the 3.3V signal pins from the 5V signal generated by the Arduino and two wires, red and green for power and ground.</p>
+                                <p>
+                                    An alternative to this is to wire to an improvised adaptor with a <a href="../../kit/breadboard170.html">170 point breadboard</a> using 5x 10kOhm resistors and two ordinary wires between the ATmega pins and the LCD pins, such that the wiring is electronically equivalent to the adaptor.
+                                </p>
                                 <p>
                                     <strong>
-                                        <em>Push the 7-pin crimped adapter into the breadboard on the right, so that the red and green wire colors line up</em>
+                                        <em>Push the crimped adapter into the breadboard between row 9 and row 16 on the right hand side of the breadboard, checking the red and green wires line up</em>
                                     </strong>
                                 </p>
                             </aside>
                         </div>
                         <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab4">Rainbow cable</a>
                         <div id="tab4" class="js-vertical-tab-content vertical-tab-content">
-                            <a href="sequence/02_final.png" target="_animation">
-                                <img src="sequence/02_final.png"/>
+                            <a href="sequence/02_cable.png" target="_animation">
+                                <img src="sequence/02_cable.png"/>
                             </a>
                             <aside>
-                                <p>Once the adaptor is in place, you should be able to connect a rainbow cable to wire up the adapter to the liquid crystal screen. Colours of the wires don't matter (they are just conducting wires), but it's important that they connect the right pins. Check against the coloured wires on the diagram to check the Liquid Crystal display is properly wired before powering up the circuit.</p>
+                                <p>Once the adaptor is in place, you should be able to connect a rainbow cable to wire up the adapter to the liquid crystal screen. Colours of the wires don't matter (they are just conducting wires), but it's important that they connect the right pins.</p><p>There is deliberately a spare wire between the GND (0Volts, green) and the VCC (+5Volts, Red), here shown in yellow, which you might wish to use for controlling the backlight of the LCD screen, but this is not currently included in our programs.</p>
+                                <p>
+                                    <strong>
+                                        <em>Attach one end of the rainbow cable to the adaptor, and the other to the Nokia screen.</em>
+                                    </strong>
+                                </p>
+                            </aside>
+                        </div>
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab5">Rainbow cable</a>
+                        <div id="tab5" class="js-vertical-tab-content vertical-tab-content">
+                            <a href="sequence/03_screen.png" target="_animation">
+                                <img src="sequence/03_screen.png"/>
+                            </a>
+                            <aside>
+                                <p>Now attach your LCD screen. Verify your wiring by following the route of the coloured wires in the graphic on the diagram to check the Liquid Crystal display is properly wired before powering up the circuit. Ensure no wires cross over (they should be in the same sequence at both ends), and that the VCC and GND connectors on the LCD connect to the Red and Green wires crossing the ATmega.</p>
                                 <p>
                                     <strong>
                                         <em>Attach one end of the rainbow cable to the adaptor, and the other to the Nokia screen.</em>

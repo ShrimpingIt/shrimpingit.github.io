@@ -48,24 +48,24 @@
                             </ul>
                         </li>
                         <li class="nav-link more">
-                            <a href="http://start.shrimping.it/index.html#project">Other Projects</a>
+                            <a href="http://start.shrimping.it/project/">Other Projects</a>
                             <ul class="submenu wide">
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-blink">...blink an LED</a>
+                                    <a href="http://start.shrimping.it/#project-blink">...blink an LED</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-pov">...paint with light</a>
+                                    <a href="http://start.shrimping.it/#project-pov">...paint with light</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-blink">...make a Banana Piano</a>
+                                    <a href="http://start.shrimping.it/#project-blink">...make a Banana Piano</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-memory">...test your melody memory</a>
+                                    <a href="http://start.shrimping.it/#project-memory">...test your melody memory</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-alarmclock">...invent a new Clock</a>
+                                    <a href="http://start.shrimping.it/#project-alarmclock">...invent a new Clock</a>
                                 </li>
-                                <!-- <li><a href="{$serverroot}index.html#project-ledclock">...build a Word Clock</a></li> -->
+                                <!-- <li><a href="{$serverroot}#project-ledclock">...build a Word Clock</a></li> -->
                             </ul>
                         </li>
                         <li class="nav-link more">
@@ -107,7 +107,7 @@
                                     <a href="http://start.shrimping.it/about.html">Resources</a>
                                 </li>
                                 <li class="nav-link">
-                                    <a href="http://start.shrimping.it/index.html#testimonials" class="scroll-on-page-link">Testimonials</a>
+                                    <a href="http://start.shrimping.it/#testimonials" class="scroll-on-page-link">Testimonials</a>
                                 </li>
                                 <li class="nav-link">
                                     <a href="http://start.shrimping.it/offer.html">Special Offers</a>
@@ -118,7 +118,7 @@
                             <a href="javascript:void(0)">More</a>
                             <ul class="submenu">
                                 <li class="nav-link">
-                                    <a href="http://start.shrimping.it/index.html#about" class="scroll-on-page-link">About Us</a>
+                                    <a href="http://start.shrimping.it/#about" class="scroll-on-page-link">About Us</a>
                                 </li>
                                 <li class="nav-link">
                                     <a href="http://start.shrimping.it/contribute.html">Contributing</a>
@@ -138,8 +138,8 @@
                 </nav>
                 <div class="navigation-tools">
                     <div class="search-bar">
-                        <form role="search" action="http://duckduckgo.com/">
-                            <input type="hidden" value="start.shrimping.it" id="sites"/><input type="hidden" value="1" name="kh"/>
+                        <form role="search" action="http://duckduckgo.com/" method="get">
+                            <input type="hidden" value="start.shrimping.it" name="sites"/><input type="hidden" value="1" name="kh"/>
                             <input type="hidden" value="1" name="kn"/>
                             <input type="hidden" value="1" name="kac"/>
                             <input type="search" placeholder="Enter Search" name="q"/>
@@ -154,8 +154,8 @@
         <section class="content">
             <h1 id="alarm-clock-addon">Alarm Clock Addon</h1>
             <p>Orrery, Beer/Butter fridge, Physical scheduler, Countdown, Werewolf, Full Moon, Space station tracker</p>
-            <p>Sunset, sunrise<br/>
-                Tides,<br/>
+            <p>
+                Sunset, sunrise<br/>Tides,<br/>
                 Calendar<br/>
                 Story<br/>
                 Practical Joke, Birthday, April fools
@@ -166,7 +166,7 @@
             <p>whether a Clock, a sensor which</p>
             <p>Word clock</p>
             <p>
-                Blind opener <a href="http://www.instructables.com/id/Blind-Opening-Alarm-Clock/" class="uri">http://www.instructables.com/id/Blind-Opening-Alarm-Clock/</a>
+                Blind opener <a href="http://www.instructables.com/id/Blind-Opening-Alarm-Clock/">http://www.instructables.com/id/Blind-Opening-Alarm-Clock/</a>
             </p>
             <h2 id="overview">Overview</h2>
             <p>
@@ -179,6 +179,8 @@
                 For a visual display of the time, the Alarm Clock kit can be augmented with an <a href="../ledclock/index.html">LED Clock Addon</a> which incorporates 24 superbright LEDs and high-power LED driver chips for a <a href="https://github.com/schmiegelt/xbmc.screensaver.unaryclock" target="_blank">Unary clock</a> or <a href="http://www.instructables.com/id/Wordclock/" target="_blank">Word Clock</a>.
             </p>
             <!-- A set of [activities](guide.html) are provided for educators who wish to use these builds to support lessons in high school or university. -->
+            
+            
             <h2 id="design">Design</h2>
             <p>The build employs a Real Time Clock (RTC) chip which has a precise quartz-controlled time signal, as well as a battery-backup system, so that the time doesn't need to be reset every time the clock is unplugged.</p>
             <p>
@@ -187,16 +189,26 @@
             <h2 id="learning-outcomes">Learning Outcomes</h2>
             <p>This project shows how to use peripheral Integrated Circuits (ICs) as part of a @ShrimpingIt layout, demonstrates how to use a number of distinct digital communication protocols, and some special IC configurations.</p>
             <ul>
-                <li>Protocols
+                <li>
+                    <p>Protocols</p>
                     <ul>
-                        <li>Serial without clock - used to set and read the time (CP2102 UART IC)</li>
-                        <li>I2C - used to set the clock, configure it, and read the time when needed (DS1307 Real Time Clock IC)</li>
-                        <li>Serial with clock - controls the LEDs (WS2803 LED Driver IC)</li>
+                        <li>
+                            Serial without clock - used to set and read the time (CP2102 UART IC)<br/>
+                        </li>
+                        <li>
+                            I2C - used to set the clock, configure it, and read the time when needed (DS1307 Real Time Clock IC)<br/>
+                        </li>
+                        <li>
+                            Serial with clock - controls the LEDs (WS2803 LED Driver IC)<br/>
+                        </li>
                     </ul>
                 </li>
-                <li>Configurations
+                <li>
+                    <p>Configurations</p>
                     <ul>
-                        <li>The Shrimp configures itself to go into a low-powered sleep mode</li>
+                        <li>
+                            The Shrimp configures itself to go into a low-powered sleep mode<br/>
+                        </li>
                         <li>The RTC is configured over I2C to flash an LED once per second</li>
                     </ul>
                 </li>

@@ -928,27 +928,27 @@ header.navigation {
     max-width: 35em;
     text-align: center; }
 
-article.type-system-serif, section.content {
+article.type-system-serif {
   text-align: left; }
-  article.type-system-serif h1, section.content h1, article.type-system-serif h2, section.content h2, article.type-system-serif h3, section.content h3, article.type-system-serif p, section.content p {
+  article.type-system-serif h1, article.type-system-serif h2, article.type-system-serif h3, article.type-system-serif p {
     margin: 0; }
-  article.type-system-serif hr, section.content hr {
+  article.type-system-serif hr {
     border-bottom: 1px solid #ddd;
     border-left: none;
     border-right: none;
     border-top: none;
     margin: 1.5em 0; }
-  article.type-system-serif p, section.content p {
+  article.type-system-serif p {
     color: #333;
     line-height: 1.5; }
-  article.type-system-serif a, section.content a {
+  article.type-system-serif a {
     color: #477DCA;
     text-decoration: none; }
-  article.type-system-serif::after, section.content::after {
+  article.type-system-serif::after {
     clear: both;
     content: "";
     display: table; }
-  article.type-system-serif .type, section.content .type {
+  article.type-system-serif .type {
     border-bottom: 1px solid;
     display: inline-block;
     font-family: "Merriweather Sans", sans-serif;
@@ -958,15 +958,15 @@ article.type-system-serif, section.content {
     padding: 0.3em 0;
     text-align: left;
     text-transform: uppercase; }
-  article.type-system-serif h1, section.content h1 {
+  article.type-system-serif h1 {
     font-family: "Lusitana", serif;
     font-size: 2em;
     font-weight: 700;
     margin-bottom: 0.5em; }
     @media screen and (min-width: 40em) {
-      article.type-system-serif h1, section.content h1 {
+      article.type-system-serif h1 {
         font-size: 2.6em; } }
-  article.type-system-serif h2, section.content h2 {
+  article.type-system-serif h2 {
     font-family: "Merriweather", serif;
     font-size: 1em;
     font-style: italic;
@@ -974,9 +974,9 @@ article.type-system-serif, section.content {
     line-height: 1.6em;
     margin-bottom: 0.9em; }
     @media screen and (min-width: 40em) {
-      article.type-system-serif h2, section.content h2 {
+      article.type-system-serif h2 {
         font-size: 1.2em; } }
-  article.type-system-serif code, section.content code {
+  article.type-system-serif code {
     background: #F7F7F7;
     border-radius: 4.5px;
     border: 1px solid #E0E0E0;
@@ -985,27 +985,27 @@ article.type-system-serif, section.content {
     font-style: normal;
     padding: 0.1em 0.4em;
     white-space: nowrap; }
-  article.type-system-serif h3, section.content h3 {
+  article.type-system-serif h3 {
     font-family: "Lusitana", serif;
     font-size: 1.4em;
     font-weight: 400;
     line-height: 1.3em;
     margin-bottom: .4em; }
-  article.type-system-serif p.date, section.content p.date {
+  article.type-system-serif p.date {
     color: rgba(51, 51, 51, 0.4);
     font-family: "Merriweather", serif;
     font-size: 0.9em;
     font-style: italic;
     margin-bottom: 0.3em; }
-  article.type-system-serif p, section.content p {
+  article.type-system-serif p {
     font-family: "Merriweather", serif;
     font-size: 0.9em;
     line-height: 1.6em;
     margin-bottom: 1.5em; }
-    article.type-system-serif p span, section.content p span {
+    article.type-system-serif p span {
       font-family: "Merriweather Sans", sans-serif;
       font-weight: 700; }
-  article.type-system-serif a.read-more, section.content a.read-more {
+  article.type-system-serif a.read-more {
     display: inline-block;
     font-family: "Merriweather Sans", sans-serif;
     font-size: 0.8em;
@@ -1013,16 +1013,16 @@ article.type-system-serif, section.content {
     margin-left: 0.2em;
     position: relative;
     text-transform: uppercase; }
-    article.type-system-serif a.read-more span, section.content a.read-more span {
+    article.type-system-serif a.read-more span {
       font-family: "Lusitana", serif;
       font-size: 1.5em;
       font-style: normal;
       position: absolute;
       right: -12px;
       top: -1px; }
-  article.type-system-serif hr, section.content hr {
+  article.type-system-serif hr {
     width: 3em; }
-  article.type-system-serif p.author, section.content p.author {
+  article.type-system-serif p.author {
     font-family: "Merriweather", serif;
     font-style: italic; }
 

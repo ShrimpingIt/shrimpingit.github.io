@@ -319,16 +319,24 @@
                             </a>
                             <aside>
                                 <p>The DS1307 Real Time Clock chip will be used to keep accurate time in our circuit. It looks a bit like a dead bug.</p><p>The chip must straddle the central spine of the breadboard. Each leg has a different number, name and function and should be cleanly inserted into a separate breadboard row with a minimum of bending. We can then wire components to a leg by inserting them in the same row.</p><p>The chip must be placed the correct way up. You may notice a half-moon shape punched in one end of the chip. A small circle is sometimes punched in one corner (indicating which is Pin number 1). The half-moon should be at the top of the circuit and any circle should be positioned toward the top left (the DS1307 has the same orientation as the Shrimp's ATMEGA chip).</p><p>It is called a chip or an Integrated Circuit (IC) because it contains a doped silicon wafer or 'chip' from which tiny shapes are cut, constructing the electronic components which make the clock circuit. The circuit inside is connected to the two rows of four legs.</p><p>Pins are numbered sequentially from Pin 1 (top-left, where a circle is punched in the plastic housing) anticlockwise around the chip until pin 8. The wiring for each pin is described in the following list. If you want, you can ignore this list and simply follow the step-by-step instructions which follow.</p><ul>
-                                    <li>Pins 1&amp;2 - two sides of a crystal which oscillates at 32.768Hz</li>
-                                    <li>Pin 3 - the +ive side of 3V coin battery attached as a backup to keep time</li>
-                                    <li>Pin 4 - ground rail 0V (GND)</li>
                                     <li>
-                                        Pin 5 - to ATMEGA SCL pin (is set to +5V when SDA has a <em>one</em> or <em>zero</em> value ready)
+                                        Pins 1&amp;2 - two sides of a crystal which oscillates at 32.768Hz<br/>
                                     </li>
                                     <li>
-                                        Pin 6 - to ATMEGA SDA pin (is set to +5V to represent a <em>one</em>, or 0V to represent a <em>zero</em> when sending binary data - used with Pin 5)
+                                        Pin 3 - the +ive side of 3V coin battery attached as a backup to keep time<br/>
                                     </li>
-                                    <li>Pin 7 - Sends an accurate heartbeat, e.g. an attached LED flashes once a second</li>
+                                    <li>
+                                        Pin 4 - ground rail 0V (GND)<br/>
+                                    </li>
+                                    <li>
+                                        Pin 5 - to ATMEGA SCL pin (is set to +5V when SDA has a <em>one</em> or <em>zero</em> value ready)<br/>
+                                    </li>
+                                    <li>
+                                        Pin 6 - to ATMEGA SDA pin (is set to +5V to represent a <em>one</em>, or 0V to represent a <em>zero</em> when sending binary data - used with Pin 5)<br/>
+                                    </li>
+                                    <li>
+                                        Pin 7 - Sends an accurate heartbeat, e.g. an attached LED flashes once a second<br/>
+                                    </li>
                                     <li>Pin 8 - Connected to the supply rail 5V (VCC)</li>
                                 </ul>
                                 <p>
@@ -384,9 +392,10 @@
                                 <p>
                                     ** Attach a 10kiloOhm pull-up resistor between j3 and any hole in the right-hand Red column, connecting SCL to +5V
                                     <em>
-                                        <strong><br/>
+                                        <strong>
+                                            <br/>
                                         </strong>
-                                         Attach a 10kiloOhm pull-up resistor between j4 and any hole in the right-hand Red column, connecting SDA to +5V
+                                        Attach a 10kiloOhm pull-up resistor between j4 and any hole in the right-hand Red column, connecting SDA to +5V
                                     </em>
                                     **
                                 </p>

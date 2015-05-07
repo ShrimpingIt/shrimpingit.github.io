@@ -2,7 +2,7 @@
 <?DOCTYPE html?>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
     <head>
-        <title> </title><meta charset="utf-8"/>
+        <title>Programming the Memory Game </title><meta charset="utf-8"/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <script type="text/javascript" src="http://start.shrimping.it/style/require/require.js"> </script><script>
             require.config({
@@ -152,7 +152,26 @@
             </div>
         </header>
         <section class="content">
-            
+            <h1 id="programming-the-memory-game">Programming the Memory Game</h1>
+            <p>The Memory Game is provided with two example behaviours to get you started.</p>
+            <h2 id="basic-circuit-testing">Basic Circuit Testing</h2>
+            <p>
+                Once you have <a href="../shrimp/program.html">configured your computer</a> for uploading @ShrimpingIt sketches, you can get started with the <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/memory/Memory01BabyGame/Memory01BabyGame.ino">Memory01BabyGame</a> sketch you will find under <em>File=&gt;Sketchbook=&gt;shrimpingit=&gt;memory=&gt;Memory01BabyGame</em>.
+            </p>
+            <p>This is a simple behaviour which was designed for a toddler to play with, where a single light is illuminated at a time.</p>
+            <p>Pushing the glowing button triggers a noise, then switches on a different light.</p>
+            <h2 id="melody-game">Melody Game</h2>
+            <p>
+                Next, try loading the demonstration memory game behaviour at<br/><a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/memory/Memory02MelodyGame/Memory02MelodyGame.ino">Memory02MelodyGame</a> sketch you will find under <em>File=&gt;Sketchbook=&gt;shrimpingit=&gt;memory=&gt;Memory02MelodyGame</em>.
+            </p>
+            <p>This plays a sequence of lights (with the accompanying notes), challenging you to respond, playing back the same melody sequence on the backlit buttons. Every time you complete the sequence correctly, it plays a slightly longer melody until your brain can't stand it!</p>
+            <h2 id="further-development">Further Development</h2>
+            <p>
+                Why not try to change the code by Googling for other <a href="http://en.wikipedia.org/wiki/Ring_Tone_Transfer_Language">rtttl</a> tunes which are more personal to you and putting them into your game.
+            </p>
+            <p>You could change the game behaviour altogether, making it into a quiz buzzer which indicates which was the ‘fastest finger first’.</p>
+            <p>To pimp your game, get a set of Arcade buttons and embed them in a laser-cut housing.</p>
+            <p>For advanced hackers, add an indicator of how many notes you’ve remembered, record the best score into EEPROM and trigger a special behaviour when you’ve beaten your own high score!</p>
         </section>
         <footer class="footer" role="contentinfo">
             <div class="footer-logo">

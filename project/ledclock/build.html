@@ -193,6 +193,12 @@
                                 <li>
                                     <a href="#step11">11</a>
                                 </li>
+                                <li>
+                                    <a href="#step12">12</a>
+                                </li>
+                                <li>
+                                    <a href="#step13">13</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="page-next">
@@ -202,13 +208,13 @@
                 </div>
                 <div class="vertical-tabs-container">
                     <div class="vertical-tabs">
-                        <a href="javascript:void(0);" class="js-vertical-tab vertical-tab is-active" rel="tab1">Building the LED Clock</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab2">Getting started</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab3">An extra breadboard</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab4">Extra breadboard power rails</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab5">First DM134 LED Driver</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab6">Power for the DM134</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab7">A 'Reference' Resistor</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab8">DM134 I2C Control Wires</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab9">Second DM134 chip</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab10">24 LEDs</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab11">Finished, Upload the code!</a>
+                        <a href="javascript:void(0);" class="js-vertical-tab vertical-tab is-active" rel="tab1">Building the LED Clock</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab2">Getting started</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab3">An extra breadboard</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab4">Extra breadboard power rails</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab5">First DM134 LED Driver</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab6">Power for the DM134</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab7">A 'Reference' Resistor</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab8">DM134 I2C Control Wires</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab9">DM134 Enable Wire</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab10">Second DM134 chip</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab11">24 LEDs</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab12">Extra Protection</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab13">Finished, Upload the code!</a>
                     </div>
                     <div class="vertical-tab-content-container">
                         <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab1">Building the LED Clock</a>
                         <div id="tab1" class="js-vertical-tab-content vertical-tab-content">
-                            <a href="kit.png" target="_animation">
-                                <img src="kit.png"/>
+                            <a href="sequence/10_final.png" target="_animation">
+                                <img src="sequence/10_final.png"/>
                             </a>
                             <aside>
                                 <p>This guide provides details for learners to wire, program and configure a @ShrimpingIt digital clock project. It incorporates two LED driver chips which control ultrabright LEDs in a layout which can be programmed as a Word Clock or a Unary Clock.</p>
@@ -259,6 +265,7 @@
                                                 Attach a <span style="color:red">Red</span> wire from the right-hand Red +ive column of the Alarm Clock breadboard to the left-hand <span style="color:red">Red</span> +ive column of the LED Display breadboard, roughly below the row numbered 15
                                             </em>
                                         </strong>
+                                        <br/>
                                     </li>
                                     <li>
                                         <strong>
@@ -266,6 +273,7 @@
                                                 Attach a <span style="color:green">Green</span> wire from the right-hand <span style="color:blue">Blue</span> -ive column of the Alarm Clock breadboard to the left-hand Blue -ive column of the LED Display breadboard, roughly below the row numbered 16
                                             </em>
                                         </strong>
+                                        <br/>
                                     </li>
                                     <li>
                                         <strong>
@@ -273,6 +281,7 @@
                                                 Attach a <span style="color:red;">Red</span> wire from the left-hand <span style="color:red;">Red</span> +ive column of the LED Display breadboard to the right-hand <span style="color:red;">Red</span> +ive column of the LED Display breadboard, starting just above row 15, and finishing just below row 15.
                                             </em>
                                         </strong>
+                                        <br/>
                                     </li>
                                     <li>
                                         <strong>
@@ -312,6 +321,7 @@
                                                 Attach a <span style="color:green;">Green</span> wire from <span style="color:gray">a1</span> to the (<span style="color:blue;">Blue</span>) left-hand -ive power rail
                                             </em>
                                         </strong>
+                                        <br/>
                                     </li>
                                     <li>
                                         <strong>
@@ -349,20 +359,21 @@
                         </div>
                         <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab8">DM134 I2C Control Wires</a>
                         <div id="tab8" class="js-vertical-tab-content vertical-tab-content">
-                            <a href="sequence/07_first_dm134_clock+data.png" target="_animation">
-                                <img src="sequence/07_first_dm134_clock+data.png"/>
+                            <a href="sequence/06_first_dm134_clock+data.png" target="_animation">
+                                <img src="sequence/06_first_dm134_clock+data.png"/>
                             </a>
                             <aside>
                                 <p>
-                                    The DM134 can accept instructions to turn on and off specific LEDs over three wires. If the data wire (yellow) is at 5V then a <strong>one</strong> is being sent. If the data wire is at 0V then a <strong>zero</strong> is being sent. The clock wire (purple) is pulsed to 5V when a new value on the data wire is ready to be read. Using this <strong>clocked serial</strong> data stream, a series of <strong>ones</strong> and <strong>zeroes</strong> is read into a memory store on the DM134. Finally when the values of all the LEDs have been sent, a <strong>Latch</strong> wire is pulsed, to tell the DM134 to display the new series which determines whether individual LEDs are <strong>on</strong> or <strong>off</strong>.
+                                    The DM134 can accept instructions to turn on and off specific LEDs over three wires. If the data wire (yellow) is at 5V then a <strong>one</strong> is being sent. If the data wire is at 0V then a <strong>zero</strong> is being sent. The clock wire (purple) is pulsed to 5V when a new value on the data wire is ready to be read. Using this <strong>clocked serial</strong> data stream, a series of <strong>ones</strong> and <strong>zeroes</strong> is read into a memory store on the DM134. Finally when the values of all the LEDs have been sent, a <strong>Latch</strong> wire is pulsed, to tell the DM134 to display the new series, determining which individual LEDs are <strong>on</strong> or <strong>off</strong>.
                                 </p>
-                                <p>Once you have attached the clock and data lines the first DM134 chip is fully wired up.</p><ul>
+                                <ul>
                                     <li>
                                         <strong>
                                             <em>
                                                 Attach a <span style="color:yellow;">Yellow</span> wire between <span style="color:gray;">j5</span> on the left breadboard and <span style="color:gray;">c2</span> on the right breadboard, connecting the serial 'Data' line
                                             </em>
                                         </strong>
+                                        <br/>
                                     </li>
                                     <li>
                                         <strong>
@@ -370,6 +381,7 @@
                                                 Attach an <span style="color:purple;">Purple</span> wire between <span style="color:gray;">j6</span> on the left breadboard and <span style="color:gray;">b3</span> on the right breadboard, connecting the serial Data line
                                             </em>
                                         </strong>
+                                        <br/>
                                     </li>
                                     <li>
                                         <strong>
@@ -381,8 +393,24 @@
                                 </ul>
                             </aside>
                         </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab9">Second DM134 chip</a>
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab9">DM134 Enable Wire</a>
                         <div id="tab9" class="js-vertical-tab-content vertical-tab-content">
+                            <a href="sequence/07_first_dm134_enable.png" target="_animation">
+                                <img src="sequence/07_first_dm134_enable.png"/>
+                            </a>
+                            <aside>
+                                <p>
+                                    The DM134 has an <em>enable</em> pin. When the pin detects the right signal, it enables itself. Without receiving the right signal, it will do nothing at all.
+                                </p>
+                                <p>The required signal is described in the data sheet as an 'Active Low'. That means it's a pin which is normally pulled up to the supply voltage (5V), and needs to be connected to Ground to pull down the pin (to 0V) to activate it.</p>
+                                <p>
+                                    When <em>enable</em> it is not connected to Ground, then no LEDs will light.
+                                </p>
+                                <p>Once you have attached the enable wire the first DM134 chip is fully wired up.</p>
+                            </aside>
+                        </div>
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab10">Second DM134 chip</a>
+                        <div id="tab10" class="js-vertical-tab-content vertical-tab-content">
                             <a href="sequence/08_second_dm134.png" target="_animation">
                                 <img src="sequence/08_second_dm134.png"/>
                             </a>
@@ -397,6 +425,7 @@
                                                 Attach a <span style="color:green;">Green</span> wire from <span style="color:gray;">a15</span> to the (<span style="color:blue;">Blue</span>) left-hand -ive power rail, (connects DM134 Pin 1 to 0V ground).
                                             </em>
                                         </strong>
+                                        <br/>
                                     </li>
                                     <li>
                                         <strong>
@@ -404,6 +433,7 @@
                                                 Attach a <span style="color:red;">Red</span> wire between <span style="color:gray;">j15</span> and the (<span style="color:red;">Red</span>) left-hand -ive power rail, (connecting the DM134 Pin 24 to +5V power ).
                                             </em>
                                         </strong>
+                                        <br/>
                                     </li>
                                     <li>
                                         <strong>
@@ -411,6 +441,7 @@
                                                 Attach a 680 Ohm resistor between <span style="color:gray;">d15</span> and the top-left row (<span style="color:blue;">Blue</span>) (providing Pin 23 with a constant current reference)
                                             </em>
                                         </strong>
+                                        <br/>
                                     </li>
                                     <li>
                                         <strong>
@@ -418,6 +449,7 @@
                                                 Attach a <span style="color:yellow;">Yellow</span> wire between <span style="color:gray;">g3</span> on the right breadboard and <span style="color:gray;">d16</span> on the right breadboard, connecting the serial 'Data' line
                                             </em>
                                         </strong>
+                                        <br/>
                                     </li>
                                     <li>
                                         <strong>
@@ -425,6 +457,7 @@
                                                 Attach an <span style="color:purple;">Purple</span> wire between <span style="color:gray;">c3</span> on the right breadboard and <span style="color:gray;">c17</span> on the right breadboard, connecting the serial Data line
                                             </em>
                                         </strong>
+                                        <br/>
                                     </li>
                                     <li>
                                         <strong>
@@ -436,8 +469,8 @@
                                 </ul>
                             </aside>
                         </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab10">24 LEDs</a>
-                        <div id="tab10" class="js-vertical-tab-content vertical-tab-content">
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab11">24 LEDs</a>
+                        <div id="tab11" class="js-vertical-tab-content vertical-tab-content">
                             <a href="sequence/09_leds.png" target="_animation">
                                 <img src="sequence/09_leds.png"/>
                             </a>
@@ -445,8 +478,30 @@
                                 <p>There are a total of 24 LEDs to insert. Each one has one slightly longer leg - the positive leg, into which electrical charge flows to light it up. LED stands for "Light Emitting Diode". A diode is equivalent to a valve - it only allows charge to flow one way. If you attach your LEDs the wrong way round, they will not light up.</p><p>The long legs need to be attached to the +ive power rails down the sides of the LED display breadboard, and the short legs should be inserted either side of the DM134 chips in breadboard rows 5,6,8,9,11,12 and 19,20,22,23,25,26. The DM134 will allow current to flow into the pins in these rows, or block current flow, depending on the instructions it receives from the Shrimp's microcontroller.</p><p>Follow the pattern of LED wire locations in the diagram. These locations have been selected to allow enough space for the 5mm LEDs to lie next to each other.</p>
                             </aside>
                         </div>
-                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab11">Finished, Upload the code!</a>
-                        <div id="tab11" class="js-vertical-tab-content vertical-tab-content">
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab12">Extra Protection</a>
+                        <div id="tab12" class="js-vertical-tab-content vertical-tab-content">
+                            <a href="sequence/09a_extra_protection.png" target="_animation">
+                                <img src="sequence/09a_extra_protection.png"/>
+                            </a>
+                            <aside>
+                                <p>The LED driver chip draws so much current that if all its lights are turned on simultaneously then the sudden demand can trigger problems elsewhere in the circuit. This is a frustrating fault to diagnose because it is occasional, depending on multiple factors.</p><p>Unless your USB power supply is very reliable (e.g. a short cable to a high-quality voltage-regulated supply) it's a good idea to have a local reservoir of charge to smooth over these differences.</p>
+                                <p>
+                                    The 104 ceramic capacitors we use have a very rapid response time, but they cannot hold a great deal of charge. By contrast, the large 10uF electrolytic capacitor is slow to respond, but can store quite a lot of charge. Adding both capacitors together should enable rapid response <em>and</em> a substantial reservoir.
+                                </p>
+                                <p>The capacitors will be attached across the power supply from 5V to 0V. The ceramic capacitor has no orientation. The electrolytic capacitor has its positive leg longer than its negative leg, and a strip down its body on the negative side showing minus symbols.</p>
+                                <p>
+                                    <strong>
+                                        <em>Add a 100 nF ceramic capacitor (marked 104) between h9 and h11 on the left breadboard</em>
+                                    </strong>
+                                    <br/>
+                                    <strong>
+                                        <em>Add a 10 uF electrolytic capacitor between i9 and i11 on the left breadboard</em>
+                                    </strong>
+                                </p>
+                            </aside>
+                        </div>
+                        <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab13">Finished, Upload the code!</a>
+                        <div id="tab13" class="js-vertical-tab-content vertical-tab-content">
                             <a href="sequence/10_final.png" target="_animation">
                                 <img src="sequence/10_final.png"/>
                             </a>

@@ -928,27 +928,27 @@ header.navigation {
     max-width: 35em;
     text-align: center; }
 
-article.type-system-rounded, body.project.index, body.project.build {
+article.type-system-rounded, body.project.index, body.project.build, body.project.program {
   text-align: left; }
-  article.type-system-rounded h1, body.project.index h1, body.project.build h1, article.type-system-rounded h2, body.project.index h2, body.project.build h2, article.type-system-rounded h3, body.project.index h3, body.project.build h3, article.type-system-rounded p, body.project.index p, body.project.build p {
+  article.type-system-rounded h1, body.project.index h1, body.project.build h1, body.project.program h1, article.type-system-rounded h2, body.project.index h2, body.project.build h2, body.project.program h2, article.type-system-rounded h3, body.project.index h3, body.project.build h3, body.project.program h3, article.type-system-rounded p, body.project.index p, body.project.build p, body.project.program p {
     margin: 0; }
-  article.type-system-rounded hr, body.project.index hr, body.project.build hr {
+  article.type-system-rounded hr, body.project.index hr, body.project.build hr, body.project.program hr {
     border-bottom: 1px solid #ddd;
     border-left: none;
     border-right: none;
     border-top: none;
     margin: 1.5em 0; }
-  article.type-system-rounded p, body.project.index p, body.project.build p {
+  article.type-system-rounded p, body.project.index p, body.project.build p, body.project.program p {
     color: #333;
     line-height: 1.5; }
-  article.type-system-rounded a, body.project.index a, body.project.build a {
+  article.type-system-rounded a, body.project.index a, body.project.build a, body.project.program a {
     color: #477DCA;
     text-decoration: none; }
-  article.type-system-rounded::after, body.project.index::after, body.project.build::after {
+  article.type-system-rounded::after, body.project.index::after, body.project.build::after, body.project.program::after {
     clear: both;
     content: "";
     display: table; }
-  article.type-system-rounded .type, body.project.index .type, body.project.build .type {
+  article.type-system-rounded .type, body.project.index .type, body.project.build .type, body.project.program .type {
     border-bottom: 1px solid;
     display: inline-block;
     font-family: "Nunito", sans-serif;
@@ -958,23 +958,23 @@ article.type-system-rounded, body.project.index, body.project.build {
     padding: 0.3em 0;
     text-align: left;
     text-transform: uppercase; }
-  article.type-system-rounded h1, body.project.index h1, body.project.build h1 {
+  article.type-system-rounded h1, body.project.index h1, body.project.build h1, body.project.program h1 {
     font-family: "Varela Round", sans-serif;
     font-size: 1.8em;
     margin-bottom: 0.5em; }
     @media screen and (min-width: 40em) {
-      article.type-system-rounded h1, body.project.index h1, body.project.build h1 {
+      article.type-system-rounded h1, body.project.index h1, body.project.build h1, body.project.program h1 {
         font-size: 2.4em; } }
-  article.type-system-rounded h2, body.project.index h2, body.project.build h2 {
+  article.type-system-rounded h2, body.project.index h2, body.project.build h2, body.project.program h2 {
     font-family: "Varela Round", sans-serif;
     font-size: 1.2em;
     font-weight: 400;
     line-height: 1.4em;
     margin-bottom: 0.9em; }
     @media screen and (min-width: 40em) {
-      article.type-system-rounded h2, body.project.index h2, body.project.build h2 {
+      article.type-system-rounded h2, body.project.index h2, body.project.build h2, body.project.program h2 {
         font-size: 1.4em; } }
-  article.type-system-rounded code, body.project.index code, body.project.build code {
+  article.type-system-rounded code, body.project.index code, body.project.build code, body.project.program code {
     background: #F7F7F7;
     border-radius: 4.5px;
     border: 1px solid #E0E0E0;
@@ -983,28 +983,28 @@ article.type-system-rounded, body.project.index, body.project.build {
     font-style: normal;
     padding: 0.1em 0.4em;
     white-space: nowrap; }
-  article.type-system-rounded h3, body.project.index h3, body.project.build h3 {
+  article.type-system-rounded h3, body.project.index h3, body.project.build h3, body.project.program h3 {
     font-family: "Varela Round", sans-serif;
     font-size: 1.2em;
     font-weight: 400;
     line-height: 1.3em;
     margin-bottom: 0.4em; }
-  article.type-system-rounded p.date, body.project.index p.date, body.project.build p.date {
+  article.type-system-rounded p.date, body.project.index p.date, body.project.build p.date, body.project.program p.date {
     color: rgba(51, 51, 51, 0.4);
     font-family: "Nunito", sans-serif;
     font-size: 0.9em;
     margin-bottom: 0.3em; }
-  article.type-system-rounded p, body.project.index p, body.project.build p {
+  article.type-system-rounded p, body.project.index p, body.project.build p, body.project.program p {
     font-family: "Nunito", sans-serif;
     font-size: 1.05em;
     font-weight: 300;
     line-height: 1.4em;
     margin-bottom: 1.5em; }
-    article.type-system-rounded p span, body.project.index p span, body.project.build p span {
+    article.type-system-rounded p span, body.project.index p span, body.project.build p span, body.project.program p span {
       font-family: "Varela Round", sans-serif;
       font-size: 0.8em;
       text-transform: uppercase; }
-  article.type-system-rounded a.read-more, body.project.index a.read-more, body.project.build a.read-more {
+  article.type-system-rounded a.read-more, body.project.index a.read-more, body.project.build a.read-more, body.project.program a.read-more {
     display: inline-block;
     font-family: "Varela Round", sans-serif;
     font-size: 0.8em;
@@ -1012,14 +1012,14 @@ article.type-system-rounded, body.project.index, body.project.build {
     margin-left: 0.2em;
     position: relative;
     text-transform: uppercase; }
-    article.type-system-rounded a.read-more span, body.project.index a.read-more span, body.project.build a.read-more span {
+    article.type-system-rounded a.read-more span, body.project.index a.read-more span, body.project.build a.read-more span, body.project.program a.read-more span {
       font-size: 1.5em;
       position: absolute;
       right: -12px;
       top: -1px; }
-  article.type-system-rounded hr, body.project.index hr, body.project.build hr {
+  article.type-system-rounded hr, body.project.index hr, body.project.build hr, body.project.program hr {
     width: 3em; }
-  article.type-system-rounded p.author, body.project.index p.author, body.project.build p.author {
+  article.type-system-rounded p.author, body.project.index p.author, body.project.build p.author, body.project.program p.author {
     font-family: "Nunito", sans-serif; }
 
 .ribbon-box {
@@ -1545,20 +1545,6 @@ section.content {
     clear: both;
     content: "";
     display: table; }
-  section.content > p {
-    float: left;
-    display: block;
-    margin-right: 1.75788%;
-    width: 74.56053%; }
-    section.content > p:last-child {
-      margin-right: 0; }
-  section.content > img {
-    float: left;
-    display: block;
-    margin-right: 1.75788%;
-    width: 23.68159%; }
-    section.content > img:last-child {
-      margin-right: 0; }
   section.content ul p, section.content ol p {
     margin: 0;
     padding: 0; }
@@ -1628,7 +1614,7 @@ body.project {
       left:0;
       top:0;
     }*/ }
-  body.project.index .pagination, body.project.build .pagination {
+  body.project.index .pagination, body.project.build .pagination, body.project.program .pagination {
     text-align: right;
     font-size: 0.8em; }
 

@@ -51,33 +51,33 @@
                             <a href="http://start.shrimping.it/index.html#project">Other Projects</a>
                             <ul class="submenu wide">
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-blink">...blink an LED</a>
+                                    <a href="http://start.shrimping.it/project/blink/build.html">...blink an LED</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-pov">...paint with light</a>
+                                    <a href="http://start.shrimping.it/project/pov/build.html">...paint with light</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-blink">...make a Banana Piano</a>
+                                    <a href="http://start.shrimping.it/project/keyboard/build.html">...make a Banana Piano</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-memory">...test your melody memory</a>
+                                    <a href="http://start.shrimping.it/project/memory/build.html">...test your melody memory</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-ledclock">...build an LED Clock</a>
+                                    <a href="http://start.shrimping.it/project/alarmclock/build.html">...invent a Clock</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-alarmclock">...invent a new Clock</a>
+                                    <a href="http://start.shrimping.it/project/ledclock/build.html">...show the time with LEDs</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-link more">
-                            <a href="http://start.shrimping.it/kit/">Kits</a>
+                            <a href="http://start.shrimping.it/kit/">Buying</a>
                             <ul class="submenu">
                                 <li>
                                     <a class="scroll-on-page-link" href="http://start.shrimping.it/index.html#kit">How to Choose</a>
                                 </li>
                                 <li class="more">
-                                    <a href="javascript:void(0)">Product List</a>
+                                    <a href="javascript:void(0)">Kit List</a>
                                     <ul class="submenu wide">
                                         <li>
                                             <a href="http://start.shrimping.it/kit/shrimp.html">Shrimp Bundle</a>
@@ -105,16 +105,28 @@
                             <a href="javascript:void(0)">Teaching</a>
                             <ul class="submenu">
                                 <li class="nav-link">
-                                    <a href="http://start.shrimping.it/workshop/">Workshops</a>
+                                    <a href="http://start.shrimping.it//#workshop">Workshops</a>
                                 </li>
-                                <li class="nav-link">
-                                    <a href="http://start.shrimping.it/about.html">Resources</a>
-                                </li>
-                                <li class="nav-link">
-                                    <a href="http://start.shrimping.it/index.html#testimonials" class="scroll-on-page-link">Testimonials</a>
-                                </li>
+                                <!--
+                                <li class="nav-link"><a href="{$serverroot}about.html">Resources</a></li>
+                                <li class="nav-link"><a href="{$serverroot}index.html#testimonials" class="scroll-on-page-link" >Testimonials</a></li>
+                            -->
                                 <li class="nav-link">
                                     <a href="http://start.shrimping.it/offer.html">Special Offers</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-link more">
+                            <a href="javascript:void(0)">Contributing</a>
+                            <ul class="submenu">
+                                <li class="nav-link">
+                                    <a href="http://start.shrimping.it/contribute.html#feedback">Feedback</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="http://start.shrimping.it/contribute.html#donate">Donating</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="http://start.shrimping.it/bagging.html">Buying</a>
                                 </li>
                             </ul>
                         </li>
@@ -125,13 +137,7 @@
                                     <a href="http://start.shrimping.it/index.html#about" class="scroll-on-page-link">About Us</a>
                                 </li>
                                 <li class="nav-link">
-                                    <a href="http://start.shrimping.it/contribute.html">Contributing</a>
-                                </li>
-                                <li class="nav-link">
                                     <a href="http://start.shrimping.it/license.html">Licensing</a>
-                                </li>
-                                <li class="nav-link">
-                                    <a href="http://start.shrimping.it/feedback.html" target="_blank">Feedback</a>
                                 </li>
                                 <li class="nav-link">
                                     <a href="http://start.shrimping.it/contact.html">Contact</a>
@@ -160,30 +166,18 @@
             <p>The default time display relies on a set of 24 LEDs organised in two lines of 12, a display which is quite power-hungry, and therefore intended to be continually illuminated by a permanent power supply (not a battery).</p>
             <p>These LEDs are employed in two distinct regimes to present the time of day as...</p>
             <ul>
-                <li>
-                    a word clock display<br/>
-                </li>
-                <li>
-                    leds are placed behind printed words<br/>
-                </li>
-                <li>
-                    words are selectively illuminated to present the time in English<br/>
-                </li>
+                <li>a word clock display</li>
+                <li>leds are placed behind printed words</li>
+                <li>words are selectively illuminated to present the time in English</li>
                 <li>
                     <p>examples; "It's five minutes to ten", "It's a quarter past three"</p>
                 </li>
+                <li>a proportional display</li>
+                <li>a row with one lit LED for every hour</li>
                 <li>
-                    a proportional display<br/>
+                    examples <code>** * * * *</code> is 6 hours, <code>**   *   **</code> is 5 hours
                 </li>
-                <li>
-                    a row with one lit LED for every hour<br/>
-                </li>
-                <li>
-                    examples <code>** * * * *</code> is 6 hours, <code>**   *   **</code> is 5 hours<br/>
-                </li>
-                <li>
-                    another row with one lit LED for every 5 minutes.<br/>
-                </li>
+                <li>another row with one lit LED for every 5 minutes.</li>
                 <li>
                     <p>
                         examples <code>** * * * *</code> is 30 minutes, <code>**   *   **</code> is 25 minutes
@@ -195,60 +189,34 @@
             <p>The following chips are used.</p>
             <ul>
                 <li>
-                    <p>
-                        <em>ATMEGA328P-PU</em>
-                    </p>
+                    <em>ATMEGA328P-PU</em>
                     <ul>
+                        <li>Performs the role of the 'brain' controlling the device</li>
+                        <li>an Arduino-compatible microcontroller</li>
+                        <li>Used in all the @ShrimpingIt projects</li>
                         <li>
-                            Performs the role of the 'brain' controlling the device<br/>
-                        </li>
-                        <li>
-                            an Arduino-compatible microcontroller<br/>
-                        </li>
-                        <li>
-                            Used in all the @ShrimpingIt projects<br/>
-                        </li>
-                        <li>
-                            <strong>receives initial time setting from a laptop (via Serial UART communication)</strong><br/>
+                            <strong>receives initial time setting from a laptop (via Serial UART communication)</strong>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <p>
-                        <em>Real Time Clock Chip</em>
-                    </p>
+                    <em>Real Time Clock Chip</em>
                     <ul>
+                        <li>performs the role of pendulum - the tick in the clock</li>
+                        <li>precisely regulated Quartz clock maintains accurate time signal</li>
+                        <li>battery backup subcircuit allows time to be retained even when unplugged</li>
                         <li>
-                            performs the role of pendulum - the tick in the clock<br/>
-                        </li>
-                        <li>
-                            precisely regulated Quartz clock maintains accurate time signal<br/>
-                        </li>
-                        <li>
-                            battery backup subcircuit allows time to be retained even when unplugged<br/>
-                        </li>
-                        <li>
-                            <strong>sends timestamps and receives them from the ATMEGA328 (via I2C communication)</strong><br/>
+                            <strong>sends timestamps and receives them from the ATMEGA328 (via I2C communication)</strong>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <p>
-                        <em>LED driver chip</em>
-                    </p>
+                    <em>LED driver chip</em>
                     <ul>
-                        <li>
-                            can light a large number of LEDs (more than the ATMEGA)<br/>
-                        </li>
-                        <li>
-                            can handle high-powered LEDs (more than the ATMEGA)<br/>
-                        </li>
-                        <li>
-                            regulates the current to each LED (eliminating the need for resistors)<br/>
-                        </li>
-                        <li>
-                            described as a 'Shift Register'<br/>
-                        </li>
+                        <li>can light a large number of LEDs (more than the ATMEGA)</li>
+                        <li>can handle high-powered LEDs (more than the ATMEGA)</li>
+                        <li>regulates the current to each LED (eliminating the need for resistors)</li>
+                        <li>described as a 'Shift Register'</li>
                         <li>
                             <strong>receives LED on and off commands from the ATMEGA (a clocked signal)</strong>
                         </li>

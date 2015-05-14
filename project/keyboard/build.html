@@ -51,33 +51,33 @@
                             <a href="http://start.shrimping.it/index.html#project">Other Projects</a>
                             <ul class="submenu wide">
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-blink">...blink an LED</a>
+                                    <a href="http://start.shrimping.it/project/blink/build.html">...blink an LED</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-pov">...paint with light</a>
+                                    <a href="http://start.shrimping.it/project/pov/build.html">...paint with light</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-blink">...make a Banana Piano</a>
+                                    <a href="http://start.shrimping.it/project/keyboard/build.html">...make a Banana Piano</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-memory">...test your melody memory</a>
+                                    <a href="http://start.shrimping.it/project/memory/build.html">...test your melody memory</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-ledclock">...build an LED Clock</a>
+                                    <a href="http://start.shrimping.it/project/alarmclock/build.html">...invent a Clock</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-alarmclock">...invent a new Clock</a>
+                                    <a href="http://start.shrimping.it/project/ledclock/build.html">...show the time with LEDs</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-link more">
-                            <a href="http://start.shrimping.it/kit/">Kits</a>
+                            <a href="http://start.shrimping.it/kit/">Buying</a>
                             <ul class="submenu">
                                 <li>
                                     <a class="scroll-on-page-link" href="http://start.shrimping.it/index.html#kit">How to Choose</a>
                                 </li>
                                 <li class="more">
-                                    <a href="javascript:void(0)">Product List</a>
+                                    <a href="javascript:void(0)">Kit List</a>
                                     <ul class="submenu wide">
                                         <li>
                                             <a href="http://start.shrimping.it/kit/shrimp.html">Shrimp Bundle</a>
@@ -105,16 +105,28 @@
                             <a href="javascript:void(0)">Teaching</a>
                             <ul class="submenu">
                                 <li class="nav-link">
-                                    <a href="http://start.shrimping.it/workshop/">Workshops</a>
+                                    <a href="http://start.shrimping.it//#workshop">Workshops</a>
                                 </li>
-                                <li class="nav-link">
-                                    <a href="http://start.shrimping.it/about.html">Resources</a>
-                                </li>
-                                <li class="nav-link">
-                                    <a href="http://start.shrimping.it/index.html#testimonials" class="scroll-on-page-link">Testimonials</a>
-                                </li>
+                                <!--
+                                <li class="nav-link"><a href="{$serverroot}about.html">Resources</a></li>
+                                <li class="nav-link"><a href="{$serverroot}index.html#testimonials" class="scroll-on-page-link" >Testimonials</a></li>
+                            -->
                                 <li class="nav-link">
                                     <a href="http://start.shrimping.it/offer.html">Special Offers</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-link more">
+                            <a href="javascript:void(0)">Contributing</a>
+                            <ul class="submenu">
+                                <li class="nav-link">
+                                    <a href="http://start.shrimping.it/contribute.html#feedback">Feedback</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="http://start.shrimping.it/contribute.html#donate">Donating</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="http://start.shrimping.it/bagging.html">Buying</a>
                                 </li>
                             </ul>
                         </li>
@@ -125,13 +137,7 @@
                                     <a href="http://start.shrimping.it/index.html#about" class="scroll-on-page-link">About Us</a>
                                 </li>
                                 <li class="nav-link">
-                                    <a href="http://start.shrimping.it/contribute.html">Contributing</a>
-                                </li>
-                                <li class="nav-link">
                                     <a href="http://start.shrimping.it/license.html">Licensing</a>
-                                </li>
-                                <li class="nav-link">
-                                    <a href="http://start.shrimping.it/feedback.html" target="_blank">Feedback</a>
                                 </li>
                                 <li class="nav-link">
                                     <a href="http://start.shrimping.it/contact.html">Contact</a>
@@ -222,7 +228,7 @@
                                 For orientation, see the <a href="../keyboard/index.html">Conductive Keyboard</a> project page.
                             </p>
                             <p>
-                                For convenience, <a href="../../kit/keyboard.html">pre-bagged kits</a> are available to order from @ShrimpingIt online. If you do not wish to buy from us, <a href="./procure.html">information is provided</a> for you to source commodity parts direct from electronics wholesalers.
+                                For convenience, <a href="../../kit/keyboard.html">pre-bagged kits</a> are available to order from @ShrimpingIt online. If you do not wish to buy from us, <a href="../../kit/keyboard.html#bom">information is provided</a> for you to source commodity parts direct from electronics wholesalers.
                             </p>
                         </section>
                     </div>
@@ -302,7 +308,12 @@
                             <img src="./sequence/04_usbdiodes.png"/>
                         </a>
                         <section class="text">
-                            <p>The Data+ (Green USB) and Data- (White USB) wires are both expected to send at a maximum of 3.6V.</p><p>A diode is a device which normally operates like a water valve, which allows current to flow freely in one direction, but entirely blocks the flow of current in the other direction (like a a very high or infinite resistance to current flow).</p><p>However, a Zener is a special kind of diode. It is more like a leaky water valve which 'breaks down', (equivalent to very low resistance), when the reverse pressure (voltage) applied exceeds a certain threshold.</p><p>We can use this feature of Zeners to ensure that the Green and White wires have a maximum of 3.6V output, even though they are being driven by the ATMEGA328's 5V output pins. Essentially, any voltage above 3.6V is allowed to bleed away through the Zener.</p>
+                            <p>The Data+ (Green USB) and Data- (White USB) wires are both expected to send at a maximum of 3.6V.</p><p>A diode is a device which normally operates like a water valve, which allows current to flow freely in one direction, but entirely blocks the flow of current in the other direction (like a a very high or infinite resistance to current flow).</p><p>However, a Zener is a special kind of diode. It is more like a leaky water valve which 'breaks down', (equivalent to very low resistance), when the reverse pressure (voltage) applied exceeds a certain threshold.</p><p>We can use this feature of Zeners to ensure that the Green and White wires have a maximum of 3.6V output, even though they are being driven by the ATMEGA328's 5V output pins. Essentially, any voltage above 3.6V is allowed to bleed away through the Zener.</p><p>Zeners are a small red and black cylinder on a silver wire. Current can flow forwards from the red end to the black end freely. When the reverse voltage exceeds 3.6V it can flow backwards too.</p>
+                            <p>
+                                <strong>
+                                    <em>Attach the two small Zener diodes from h9-&gt;h1 and i9-&gt;i2 making sure the black end connect to the green and white USB wires</em>
+                                </strong>
+                            </p>
                         </section>
                     </div>
                     <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab7">USB 1.1 resistors</a>

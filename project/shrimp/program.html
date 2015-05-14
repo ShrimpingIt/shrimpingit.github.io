@@ -2,7 +2,7 @@
 <?DOCTYPE html?>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
     <head>
-        <title>Download Our Sketches </title><meta charset="utf-8"/>
+        <title>Programming Shrimps: Configuring your computer </title><meta charset="utf-8"/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <script type="text/javascript" src="http://start.shrimping.it/style/require/require.js"> </script><script>
             require.config({
@@ -51,33 +51,33 @@
                             <a href="http://start.shrimping.it/index.html#project">Other Projects</a>
                             <ul class="submenu wide">
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-blink">...blink an LED</a>
+                                    <a href="http://start.shrimping.it/project/blink/build.html">...blink an LED</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-pov">...paint with light</a>
+                                    <a href="http://start.shrimping.it/project/pov/build.html">...paint with light</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-blink">...make a Banana Piano</a>
+                                    <a href="http://start.shrimping.it/project/keyboard/build.html">...make a Banana Piano</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-memory">...test your melody memory</a>
+                                    <a href="http://start.shrimping.it/project/memory/build.html">...test your melody memory</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-ledclock">...build an LED Clock</a>
+                                    <a href="http://start.shrimping.it/project/alarmclock/build.html">...invent a Clock</a>
                                 </li>
                                 <li>
-                                    <a href="http://start.shrimping.it/index.html#project-alarmclock">...invent a new Clock</a>
+                                    <a href="http://start.shrimping.it/project/ledclock/build.html">...show the time with LEDs</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-link more">
-                            <a href="http://start.shrimping.it/kit/">Kits</a>
+                            <a href="http://start.shrimping.it/kit/">Buying</a>
                             <ul class="submenu">
                                 <li>
                                     <a class="scroll-on-page-link" href="http://start.shrimping.it/index.html#kit">How to Choose</a>
                                 </li>
                                 <li class="more">
-                                    <a href="javascript:void(0)">Product List</a>
+                                    <a href="javascript:void(0)">Kit List</a>
                                     <ul class="submenu wide">
                                         <li>
                                             <a href="http://start.shrimping.it/kit/shrimp.html">Shrimp Bundle</a>
@@ -105,16 +105,28 @@
                             <a href="javascript:void(0)">Teaching</a>
                             <ul class="submenu">
                                 <li class="nav-link">
-                                    <a href="http://start.shrimping.it/workshop/">Workshops</a>
+                                    <a href="http://start.shrimping.it//#workshop">Workshops</a>
                                 </li>
-                                <li class="nav-link">
-                                    <a href="http://start.shrimping.it/about.html">Resources</a>
-                                </li>
-                                <li class="nav-link">
-                                    <a href="http://start.shrimping.it/index.html#testimonials" class="scroll-on-page-link">Testimonials</a>
-                                </li>
+                                <!--
+                                <li class="nav-link"><a href="{$serverroot}about.html">Resources</a></li>
+                                <li class="nav-link"><a href="{$serverroot}index.html#testimonials" class="scroll-on-page-link" >Testimonials</a></li>
+                            -->
                                 <li class="nav-link">
                                     <a href="http://start.shrimping.it/offer.html">Special Offers</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-link more">
+                            <a href="javascript:void(0)">Contributing</a>
+                            <ul class="submenu">
+                                <li class="nav-link">
+                                    <a href="http://start.shrimping.it/contribute.html#feedback">Feedback</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="http://start.shrimping.it/contribute.html#donate">Donating</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="http://start.shrimping.it/bagging.html">Buying</a>
                                 </li>
                             </ul>
                         </li>
@@ -125,13 +137,7 @@
                                     <a href="http://start.shrimping.it/index.html#about" class="scroll-on-page-link">About Us</a>
                                 </li>
                                 <li class="nav-link">
-                                    <a href="http://start.shrimping.it/contribute.html">Contributing</a>
-                                </li>
-                                <li class="nav-link">
                                     <a href="http://start.shrimping.it/license.html">Licensing</a>
-                                </li>
-                                <li class="nav-link">
-                                    <a href="http://start.shrimping.it/feedback.html" target="_blank">Feedback</a>
                                 </li>
                                 <li class="nav-link">
                                     <a href="http://start.shrimping.it/contact.html">Contact</a>
@@ -156,46 +162,45 @@
             </div>
         </header>
         <section class="content">
+            <h1 id="programming-shrimps-configuring-your-computer">Programming Shrimps: Configuring your computer</h1>
             <section>
                 <img src="arduinoweb.png" style="margin:1%;height:200px"/>
                 <img src="arduinoide.png" style="margin:1%;height:200px"/>
                 <img src="projectsgithub.png" style="margin:1%;height:200px"/>
             </section>
-            
-            
             <p>The following configuration steps are needed before uploading your first example sketch (program) to a @ShrimpingIt circuit...</p>
             <ul>
-                <li>
-                    Download our Sketches (example Shrimp programs)<br/>
-                </li>
-                <li>
-                    Install the USB Module<br/>
-                </li>
-                <li>
-                    Install the Arduino IDE<br/>
-                </li>
+                <li>Download our Sketches (example Shrimp programs)</li>
+                <li>Install the USB Module</li>
+                <li>Install the Arduino IDE</li>
                 <li>Select our Sketches and USB Module in the Arduino IDE</li>
             </ul>
-            <p>Once you have completed these steps, you should be able to choose and upload any sketch from our collection, using the Arduino IDE.</p>
+            <p>
+                Detailed steps are shown below. Once you have completed these steps, you should be able to select and upload our example sketches found under 
+                <strong>
+                    <em>shrimpingit</em>
+                </strong>
+                in the Arduino IDE's Sketchbook menu.
+            </p>
             <h2 id="download-our-sketches">Download Our Sketches</h2>
             <p>
                 Visit the <a href="https://github.com/ShrimpingIt/projects">@ShrimpingIt projects repository</a> to find a folder containing the programs and libraries for all our @ShrimpingIt projects, intended for the <a href="http://www.arduino.cc/en/Main/Software">Arduino IDE</a> version 1.6.3 or above. You should be able to click on the Zip button to download a snapshot of the repository and unpack it to a location of your choice.
             </p>
             <h2 id="install-drivers-for-the-cp2102-uart">Install Drivers for the CP2102 UART</h2>
-            <p>Once new driver software is installed, it is a good idea to restart your machine to ensure everything works. Drivers are available for the CP2102 for...</p>
+            <p>After installing new drivers, it is a good idea to restart your machine to ensure everything works. Drivers are available for the CP2102 for...</p>
             <ul>
                 <li>
-                    <a href="http://shrimping.it/drivers/cp2102/macos/10.4-10.9_newer_untested/Mac_OSX_VCP_Driver.zip">Mac OS 10.4 and above</a><br/>
+                    <a href="http://shrimping.it/drivers/cp2102/macos/10.4-10.9_newer_untested/Mac_OSX_VCP_Driver.zip">Mac OS 10.4 and above</a>
                 </li>
                 <li>
                     <a href="http://shrimping.it/drivers/cp2102/windows/windows-8-silabs/CP210x_VCP_Windows.zip">Windows 8</a> <a href="http://shrimping.it/drivers/cp2102/windows/xp-vista-win7-silabs/CP210x_VCP_Win_XP_S2K3_Vista_7.exe">Windows XP, Vista, 7</a>
                 </li>
             </ul>
-            <p>Linux distributions include built-in CP2102 drivers, although Linux user accounts may need 'dialout' permissions to access the device. Those running Linux kernels without CP210x drivers are l33t hackers and can solve this problem themselves :)</p>
+            <p>Linux distributions include built-in CP2102 drivers, although Linux user accounts may need 'dialout' or 'serial' permissions to access the device.</p>
             <p>
                 If your machine is running an old or specialist operating system, then browse 
                 <a href="http://shrimping.it/drivers">
-                    <a href="http://shrimping.it/drivers">http://shrimping.it/drivers</a>
+                    <a href="http://shrimping.it/drivers" class="uri">http://shrimping.it/drivers</a>
                 </a>
                 or the <a href="https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx">Silabs driver page</a>.
             </p>
@@ -203,10 +208,10 @@
             <p>We use an unmodified Arduino IDE to upload programs to the Shrimp. Instructions for installing the Arduino IDE are available for...</p>
             <ul>
                 <li>
-                    <a href="http://playground.arduino.cc/Learning/Linux">Linux</a><br/>
+                    <a href="http://playground.arduino.cc/Learning/Linux">Linux</a>
                 </li>
                 <li>
-                    <a href="http://arduino.cc/en/Guide/MacOSX">Mac</a><br/>
+                    <a href="http://arduino.cc/en/Guide/MacOSX">Mac OS</a>
                 </li>
                 <li>
                     <a href="http://arduino.cc/en/Guide/Windows">Windows</a>
@@ -220,7 +225,7 @@
                 A new port should appear in the Arduino IDE under <em>Tools=&gt;Serial Ports</em> a short while after you plug in the CP2102, and it should disappear when you remove it. Click on that port to select it. A tick should appear next to the port to indicate that the Arduino IDE will use it for uploading and serial monitoring
             </p>
             <p>
-                Click on 'Arduino Uno' under <em>Tools=&gt;Boards</em> in the Arduino IDE. A Shrimp is binary- and pin-compatible with an Arduino Uno. A dot should appear next to 'Arduino Uno' to show it is selected.
+                A Shrimp is binary- and pin-compatible with an Arduino Uno. Click on 'Arduino Uno' under <em>Tools=&gt;Boards</em> in the Arduino IDE. A dot should appear next to 'Arduino Uno' to show the right configuration is selected.
             </p>
             <h2 id="choose-and-upload-a-sketch">Choose and Upload a Sketch</h2>
             <p>

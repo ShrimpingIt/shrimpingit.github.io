@@ -205,6 +205,9 @@
                             <li>
                                 <a href="#step12">12</a>
                             </li>
+                            <li>
+                                <a href="#step13">13</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="page-next">
@@ -214,7 +217,7 @@
             </div>
             <div class="vertical-tabs-container">
                 <div class="vertical-tabs">
-                    <a href="javascript:void(0);" class="js-vertical-tab vertical-tab is-active" rel="tab1">About this Guide</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab2">Getting started</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab3">Surplus parts</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab4">Right Power Rails</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab5">USB cable</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab6">Regulating Zener Diodes</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab7">USB 1.1 resistors</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab8">Test conductive sensing</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab9">More Right Hand Pullups</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab10">Left Power Rails</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab11">Left Hand Pullups</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab12">Bonus Pullup</a>
+                    <a href="javascript:void(0);" class="js-vertical-tab vertical-tab is-active" rel="tab1">About this Guide</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab2">Getting started</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab3">Surplus parts</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab4">Move 9-pin header</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab5">Right Power Rails</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab6">USB cable</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab7">Regulating Zener Diodes</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab8">USB 1.1 resistors</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab9">Run Hello World</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab10">First Pull-up</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab11">Test conductive sensing</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab12">More Right Hand Pullups</a><a href="javascript:void(0);" class="js-vertical-tab vertical-tab " rel="tab13">Left Pullups</a>
                 </div>
                 <div class="vertical-tab-content-container">
                     <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab1">About this Guide</a>
@@ -256,15 +259,30 @@
                             <p>You can remove the Blink LED and resistor as these are not used in the circuit, and it will be easier to wire the circuit with them out of the way.</p>
                         </section>
                     </div>
-                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab4">Right Power Rails</a>
+                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab4">Move 9-pin header</a>
                     <div id="tab4" class="js-vertical-tab-content vertical-tab-content">
-                        <a class="picture" href="./sequence/02_rightpower.png" target="_animation">
-                            <img src="./sequence/02_rightpower.png"/>
+                        <a class="picture" href="./sequence/02_move_header.png" target="_animation">
+                            <img src="./sequence/02_move_header.png"/>
+                        </a>
+                        <section class="text">
+                            <p>The 9-pin header uses an area where we would like to add some pull-up resistors later in the build.</p><p>Since the five holes in each row are equivalent (they are connected together inside the breadboard), we can move the header across to give us more room, without affecting the circuit.</p><p>Although the coloured UART ribbon cable is not shown, it will avoid errors and save you time later if you leave the wiring intact following your Blink testing.</p>
+                            <p>
+                                <strong>
+                                    <em>Move the 9-pin programming header across by two columns, placing its first pin in h2 and its last pin in h10</em>
+                                </strong>
+                            </p>
+                        </section>
+                    </div>
+                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab5">Right Power Rails</a>
+                    <div id="tab5" class="js-vertical-tab-content vertical-tab-content">
+                        <a class="picture" href="./sequence/03_right_power.png" target="_animation">
+                            <img src="./sequence/03_right_power.png"/>
                         </a>
                         <section class="text">
                             <p>
-                                The power rails on the right must be connected to the ATMEGA's power pins, and hence back to the CP2102 power from our laptop. These power rails will be used to provide the +5V signal for the Right-hand <a href="../topic/pullup.html">Pull-ups</a> which are so fundamental to the behaviour of a <a href="http://makeymakey.com/">MakeyMakey</a>. We'll also be connecting from the right hand power rails to the left hand power rails so that <a href="../topic/pullup.html">Pull-ups</a> can be attached on the left hand side. Finally, the right-hand power rails will be a convenient place to connect the +5V and 0V of the USB cable (so the project can be powered and act as a keyboard, even when the UART is removed).
+                                The power rails on the right must be connected to +5V and 0V, the same as the ATMEGA's power pins. These will be used to provide the +5V signal for the Right-hand <a href="../topic/pullup.html">Pull-ups</a> which are so fundamental to the behaviour of a <a href="http://makeymakey.com/">MakeyMakey</a>.
                             </p>
+                            <p>The right-hand power rails will also be a convenient place to connect the +5V and 0V wires when the project is running as a USB keyboard from the hacked USB cable we'll attach later.</p>
                             <p>
                                 <strong>
                                     <em>Attach a Green wire from J9 horizontally and slightly down to the -ive (Blue) power rail on the right</em>
@@ -276,13 +294,17 @@
                             </p>
                         </section>
                     </div>
-                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab5">USB cable</a>
-                    <div id="tab5" class="js-vertical-tab-content vertical-tab-content">
-                        <a class="picture" href="./sequence/03_usbcable.png" target="_animation">
-                            <img src="./sequence/03_usbcable.png"/>
+                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab6">USB cable</a>
+                    <div id="tab6" class="js-vertical-tab-content vertical-tab-content">
+                        <a class="picture" href="./sequence/04_usb_cable.png" target="_animation">
+                            <img src="./sequence/04_usb_cable.png"/>
                         </a>
                         <section class="text">
-                            <p>When complete, our system will emulate a USB 1.1 keyboard.</p><p>A USB 1.1 cable is made up of four wires with a standard color code.</p><p>@ShrimpingIt kits contain a Male type A plug chopped from the end of a generic USB cable, with male header pins crimped to the exposed colored wires (guaranteeing good breadboard connectivity).</p><p>However, any USB cable you chop in half will do. You can solder pins on the end, or slide the stranded wire carefully into breadboard holes before jamming in a set of male header pins to hold them in place and in contact.</p><p>Two of the wires provide power +5V (Red) and 0V (Black), which must be connected to the power rails.</p><p>The other two wires are known as Data+ or D+ (Green) and Data- or D- (White), and are used for signalling at 3.6V data back and forth between the host (laptop) and the peripheral device (keyboard). We will be attaching these to some free rows above the ATMEGA chip, where we can make the other special connections required.</p>
+                            <p>When complete, our system will emulate a USB 1.1 keyboard.</p><p>A USB 1.1 cable is made up of four wires with a standard color code.</p><p>Two of the wires provide power +5V (Red) and 0V (Black), which must be connected to the power rails.</p><p>The other two wires are known as Data+ or D+ (Green) and Data- or D- (White), and are used for signalling at 3.6V data back and forth between the host (laptop) and the peripheral device (keyboard). We will be attaching these to some free rows above the ATMEGA chip, where we can make the other special connections required.</p>
+                            <p>
+                                @ShrimpingIt <a href="../../kit/keyboard.html">bagged kits</a> contain a Male type A plug chopped from the end of a generic USB cable, with male header pins crimped to the exposed colored wires guaranteeing good breadboard connectivity.
+                            </p>
+                            <p>However, any USB cable you chop in half will do. You can solder pins on the end, or slide the stranded wire carefully into breadboard holes before jamming in a set of male header pins to hold them in place and in contact.</p>
                             <p>
                                 <strong>
                                     <em>Attach Data+ Green wire to J1</em>
@@ -293,38 +315,42 @@
                                 </strong>
                                 <br/>
                                 <strong>
-                                    <em>Attach +5V to the right hand +ive power rail</em>
+                                    <em>Attach +5V to the second hole in the right hand +ive power rail</em>
                                 </strong>
                                 <br/>
                                 <strong>
-                                    <em>Attach 0V to the right hand -ive power rail</em>
+                                    <em>Attach 0V to the second hole in the right hand -ive power rail</em>
                                 </strong>
                             </p>
                         </section>
                     </div>
-                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab6">Regulating Zener Diodes</a>
-                    <div id="tab6" class="js-vertical-tab-content vertical-tab-content">
-                        <a class="picture" href="./sequence/04_usbdiodes.png" target="_animation">
-                            <img src="./sequence/04_usbdiodes.png"/>
+                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab7">Regulating Zener Diodes</a>
+                    <div id="tab7" class="js-vertical-tab-content vertical-tab-content">
+                        <a class="picture" href="./sequence/05_usb_diodes.png" target="_animation">
+                            <img src="./sequence/05_usb_diodes.png"/>
                         </a>
                         <section class="text">
-                            <p>The Data+ (Green USB) and Data- (White USB) wires are both expected to send at a maximum of 3.6V.</p><p>A diode is a device which normally operates like a water valve, which allows current to flow freely in one direction, but entirely blocks the flow of current in the other direction (like a a very high or infinite resistance to current flow).</p><p>However, a Zener is a special kind of diode. It is more like a leaky water valve which 'breaks down', (equivalent to very low resistance), when the reverse pressure (voltage) applied exceeds a certain threshold.</p><p>We can use this feature of Zeners to ensure that the Green and White wires have a maximum of 3.6V output, even though they are being driven by the ATMEGA328's 5V output pins. Essentially, any voltage above 3.6V is allowed to bleed away through the Zener.</p><p>Zeners are a small red and black cylinder on a silver wire. Current can flow forwards from the red end to the black end freely. When the reverse voltage exceeds 3.6V it can flow backwards too.</p>
+                            <p>The Data+ (Green USB) and Data- (White USB) wires are both expected to send at a maximum of 3.6V.</p><p>A diode is a device which normally operates like a water valve, which allows current to flow freely in one direction, but entirely blocks the flow of current in the other direction (like a a very high or infinite resistance to current flow).</p>
+                            <p>
+                                However, a Zener is a special kind of diode. It is more like a leaky water valve which 'breaks down', (making a <a href="../../topic/shortcircuit.html">short circuit</a>), when the reverse pressure (voltage) applied exceeds a certain threshold.
+                            </p>
+                            <p>We can use this feature of Zeners to ensure that the Green and White wires have a maximum of 3.6V output, even though they are being driven by the ATMEGA328's 5V output pins. Essentially, any voltage above 3.6V is allowed to bleed away through the Zener.</p><p>Zeners are a small red and black cylinder on a silver wire. Like other diodes, current can flow forwards from the red end to the black end freely. However, when the reverse voltage exceeds 3.6V it can flow the other way too.</p>
                             <p>
                                 <strong>
-                                    <em>Attach the two small Zener diodes from h9-&gt;h1 and i9-&gt;i2 making sure the black end connect to the green and white USB wires</em>
+                                    <em>Attach the two small Zener diodes from h9-&gt;h2 and i9-&gt;i1 making sure the black ends connect to the green and white USB wires</em>
                                 </strong>
                             </p>
                         </section>
                     </div>
-                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab7">USB 1.1 resistors</a>
-                    <div id="tab7" class="js-vertical-tab-content vertical-tab-content">
-                        <a class="picture" href="./sequence/05_usbresistors.png" target="_animation">
-                            <img src="./sequence/05_usbresistors.png"/>
+                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab8">USB 1.1 resistors</a>
+                    <div id="tab8" class="js-vertical-tab-content vertical-tab-content">
+                        <a class="picture" href="./sequence/06_usb_resistors.png" target="_animation">
+                            <img src="./sequence/06_usb_resistors.png"/>
                         </a>
                         <section class="text">
-                            <p>We're using software control of the ATMEGA's pin 4 and pin 6 to generate a signal conforming to a USB 1.1 keyboard standard, but the signal is at 5V when it should be at 3.6V to be conformant.</p><p>Two 68Ohm resistors are used for the connections instead of wires. When pin 4 or 6 are at +5V, the 68Ohm resistors from pins 4 and 6 will consume around 1.4V of the 5V signal, before it reaches the USB cable. The signal departing over the USB Data+ (Green) or Data- (White) will then be around 3.6V, satisfying the USB 1.1 standard.</p>
+                            <p>We'll generate signals in software to make the ATmega's pin 4 and pin 6 behave like D+ and D- of a USB 1.1 keyboard, but the signal from the ATmega is at 5V when it should be at 3.6V to be conformant to the standard.</p><p>The Zener diodes effectively 'short-circuit' anything above 3.6V feeding it directly to ground (0V). Using 68Ohm resistors to connect to D+ and D- wires limits the flow of current allowed through this short-circuit from our signalling ATmega, and dissipates exactly 1.4V of our 5V signal as heat before it gets to the USB wires.</p>
                             <p>
-                                The 2.2kOhm resistor is a <a href="../topic/pullup.html">pullup</a> resistor. The presence of this resistor (and the strength of its pull) can be detected by the laptop when you connect the conductive keyboard, and it indicates that the laptop should try to connect at USB 1.1 'full speed' - 12.1 Mega bits-per-second.
+                                The 2.2kOhm resistor is a <a href="../topic/pullup.html">pullup</a> resistor. The presence of this resistor (and the strength of its pull) can be detected by the laptop when you connect the conductive keyboard, and it indicates that the laptop should try to connect at USB 1.1 'full speed' which is just 12.1 Mega bits-per-second. Note, on some USB hubs, this will limit ALL USB connections to be the speed of the slowest device.
                             </p>
                             <p>Each of the colored bands corresponds with a single figure number in the resistor code. Resistor codes begin at the end opposite the gold (quality) stripe. The 68Ohm resistors have Blue, Grey, Black for a code sequence 6, 8, 0. The first two figures of the resistance in Ohms are 6 and 8, and this should be followed by no extra zeroes, in other words 68() or 68Ohms. The 2.2 kOhm resistors have Red, Red, Red for a code sequence 2, 2, 2. The first two figures are 2 and 2, and this should be followed by two extra zeroes, in other words 22(00) or 2,200 Ohms. There are 1000 Ohms in a kiloOhm so that's the same as 2.2 kOhms.</p>
                             <p>
@@ -337,17 +363,40 @@
                                 </strong>
                                 <br/>
                                 <strong>
-                                    <em>Connect a 2.2KOhm resistor from i1 to the right hand +ive (Red) power rail, just below the red USB wire</em>
+                                    <em>Connect a 2.2KOhm resistor from g2 to the right hand +ive (Red) power rail, just below the red USB wire</em>
                                 </strong>
                             </p>
                         </section>
                     </div>
-                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab8">Test conductive sensing</a>
-                    <div id="tab8" class="js-vertical-tab-content vertical-tab-content">
-                        <a class="picture" href="./sequence/06_firstpullup.png" target="_animation">
-                            <img src="./sequence/06_firstpullup.png"/>
+                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab9">Run Hello World</a>
+                    <div id="tab9" class="js-vertical-tab-content vertical-tab-content">
+                        <a class="picture" href="./sequence/06a_hello_world.png" target="_animation">
+                            <img src="./sequence/06a_hello_world.png"/>
                         </a>
                         <section class="text">
+                            <p>Now the USB circuit is complete, it should be able to connect to a computer as a USB device. So we'll create a behaviour which pretends to be a USB keyboard, and which types some text automatically.</p>
+                            <p>
+                                To test this, navigate to File=&gt;Sketchbook=&gt;shrimpingit=&gt;Keyboard=&gt;<a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/keyboard/Keyboard00HelloWorld/Keyboard00HelloWorld.ino">Keyboard00HelloWorld</a> to load some new code (this assumes you've already configured your software when <a href="http://start.shrimping.it/project/blink/build.html#step12">testing Blink</a>).
+                            </p>
+                            <p>Choose File=&gt;Upload to upload the code. Now open a new text editor like Gedit, Libreoffice or Word and make sure there's a cursor inside the document. Once you plug in the hacked USB cable, it should appear as a keyboard and begin typing the text 'hello world'. You could already use this circuit for a practical joke (on a long timer) or to log into your computer automatically by typing your username and password. We're not going to stop here, though.</p>
+                            <p>
+                                <strong>
+                                    <em>
+                                        Load the <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/keyboard/Keyboard00HelloWorld/Keyboard00HelloWorld.ino">Keyboard00HelloWorld</a> program from File=&gt;Sketchbook=&gt;shrimpingit=&gt;Keyboard
+                                    </em>
+                                </strong>
+                            </p>
+                        </section>
+                    </div>
+                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab10">First Pull-up</a>
+                    <div id="tab10" class="js-vertical-tab-content vertical-tab-content">
+                        <a class="picture" href="./sequence/07_first_pullup.png" target="_animation">
+                            <img src="./sequence/07_first_pullup.png"/>
+                        </a>
+                        <section class="text">
+                            <p>
+                                Next we're going to attach a series of <a href="../../topic/pullup.html">pull-up</a> resistors which are so strong that a human body is relatively <em>much</em> more conductive.
+                            </p>
                             <p>
                                 When we're not touching a pad on the conductive keyboard, the only connection to the ATMEGA's top-right pin will be a 20 MegaOhm resistor pulling it to nearly +5V. This +5V signal is an indication to the ATMEGA that we're <em>not</em> touching the pad.
                             </p>
@@ -362,12 +411,80 @@
                             </p>
                         </section>
                     </div>
-                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab9">More Right Hand Pullups</a>
-                    <div id="tab9" class="js-vertical-tab-content vertical-tab-content">
-                        <a class="picture" href="./sequence/07_rightpullups.png" target="_animation">
-                            <img src="./sequence/07_rightpullups.png"/>
+                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab11">Test conductive sensing</a>
+                    <div id="tab11" class="js-vertical-tab-content vertical-tab-content">
+                        <a class="picture" href="./sequence/08_first_test.png" target="_animation">
+                            <img src="./sequence/08_first_test.png"/>
                         </a>
                         <section class="text">
+                            <p>Now we are ready to add some wires to make a conductive keyboard.</p>
+                            <p>
+                                <strong>
+                                    <em>
+                                        Upload the <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/keyboard/Keyboard01Single/Keyboard01Single.ino">Keyboard01Single</a> program from File=&gt;Sketchbook=&gt;shrimpingit=&gt;Keyboard
+                                    </em>
+                                </strong>
+                                <br/>
+                                <strong>
+                                    <em>Load a Text Editor</em>
+                                </strong>
+                                <br/>
+                                <strong>
+                                    <em>Attach the Hacked USB cable as a Keyboard</em>
+                                </strong>
+                                <br/>
+                                <strong>
+                                    <em>Attach a jumper wire or crocodile clip to g2</em>
+                                </strong>
+                                <br/>
+                                <strong>
+                                    <em>Attach a jumper wire or crocodile clip to a ground rail</em>
+                                </strong>
+                                <br/>
+                                <strong>
+                                    <em>Try touching both at once, making a human circuit. A '1' character should be typed</em>
+                                </strong>
+                                <br/>
+                                <strong>
+                                    <em>Prove other ways that current can be detected, for example through...</em>
+                                </strong>
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>
+                                        <em>fruit</em>
+                                    </strong>
+                                </li>
+                                <li>
+                                    <strong>
+                                        <em>aglass of water</em>
+                                    </strong>
+                                </li>
+                                <li>
+                                    <strong>
+                                        <em>conductive graphite drawn on paper with a pencil</em>
+                                    </strong>
+                                </li>
+                                <li>
+                                    <strong>
+                                        <em>tin foil</em>
+                                    </strong>
+                                </li>
+                                <li>
+                                    <strong>
+                                        <em>lots of your friends holding hands</em>
+                                    </strong>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab12">More Right Hand Pullups</a>
+                    <div id="tab12" class="js-vertical-tab-content vertical-tab-content">
+                        <a class="picture" href="./sequence/09_right_pullups.png" target="_animation">
+                            <img src="./sequence/09_right_pullups.png"/>
+                        </a>
+                        <section class="text">
+                            <p>We can have multiple different wires which can be monitored independently. In this way, you can create a Banana Piano with up to 16 keys!</p><p>Let's start by wiring the extra pull-ups on the right hand side.</p>
                             <p>
                                 <strong>
                                     <em>Connect 20MegaOhm resistors from j4,j5,j6,j7,j8,j12,j13,j14,j15,j16 to the next free holes on the right-hand +ive (Red) power rail</em>
@@ -375,13 +492,16 @@
                             </p>
                         </section>
                     </div>
-                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab10">Left Power Rails</a>
-                    <div id="tab10" class="js-vertical-tab-content vertical-tab-content">
-                        <a class="picture" href="./sequence/08_leftpower.png" target="_animation">
-                            <img src="./sequence/08_leftpower.png"/>
+                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab13">Left Pullups</a>
+                    <div id="tab13" class="js-vertical-tab-content vertical-tab-content">
+                        <a class="picture" href="./sequence/10_left_pullups.png" target="_animation">
+                            <img src="./sequence/10_left_pullups.png"/>
                         </a>
                         <section class="text">
-                            <p>If we want more than 11 keys on our keyboard, we need to start using sensing pins from the left-hand side of the ATMEGA chip. It is convenient to activate the left-hand +ive power rails by attaching a +5V connection for the left-hand pullup resistors we will need. As good practice, we're also activating the ground rail, otherwise we may rely on it being connected by mistake.</p>
+                            <p>There are just 11 inputs available on the right hand side of the ATmega, so we'll to use the left-hand side to give us another 5.</p><p>We activate the left-hand +ive power rails by attaching a +5V connection for the left-hand pullup resistors we will need. As good practice, we're also wiring the ground rail at the same time, even though we're not using it yet.</p>
+                            <p>
+                                Now the power rail is active, we can add the extra 5 20MegaOhm <a href="../../topic/pullup.html">pull-up</a> resistors. See <a href="#step7">Step 7</a> for details how to identify a 20MegaOhm resistor.
+                            </p>
                             <p>
                                 <strong>
                                     <em>Attach a Green wire from the Right Hand -ive (Blue) power rail to the Left Hand -ive (Blue) power rail </em>
@@ -390,33 +510,9 @@
                                 <strong>
                                     <em>Attach a Red wire from the Right Hand +ive (Blue) power rail to the Left Hand +ive (Blue) power rail </em>
                                 </strong>
-                            </p>
-                        </section>
-                    </div>
-                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab11">Left Hand Pullups</a>
-                    <div id="tab11" class="js-vertical-tab-content vertical-tab-content">
-                        <a class="picture" href="./sequence/09_leftpullups.png" target="_animation">
-                            <img src="./sequence/09_leftpullups.png"/>
-                        </a>
-                        <section class="text">
-                            <p>Aset of four digital pullups are really easy to connect on the left, giving us a total of 15 keys so far. See Step 6 for details how to identify a 20MegaOhm resistor.</p>
-                            <p>
+                                <br/>
                                 <strong>
                                     <em>Attach 20MegaOhm resistors from j16,j15,j14,j13 to the nearest holes on the Left-hand +ive (Red) power rail</em>
-                                </strong>
-                            </p>
-                        </section>
-                    </div>
-                    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab12">Bonus Pullup</a>
-                    <div id="tab12" class="js-vertical-tab-content vertical-tab-content">
-                        <a class="picture" href="./sequence/10_lastpullup.png" target="_animation">
-                            <img src="./sequence/10_lastpullup.png"/>
-                        </a>
-                        <section class="text">
-                            <p>If you really need the full set of 16 sensor pins to be active, you'll need to change the 9-pin header, removing one of the pins for convenience, so the pullup can be added.</p>
-                            <p>
-                                <strong>
-                                    <em>Replace the programming header, leaving 5 pins at the top, a one-pin gap, and 3 further pins below.</em>
                                 </strong>
                                 <br/>
                                 <strong>
@@ -482,5 +578,15 @@
                 Thanks to <a href="http://fritzing.org">Fritzing</a> for vector graphics elements. Flickr user <a href="https://www.flickr.com/photos/randomskk/">Adam Greig</a> for cover image.
             </p>
         </footer>
+        <script>
+            //<!--
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-36299759-2', 'auto');
+            ga('send', 'pageview');
+            //-->
+        </script>
     </body>
 </html>

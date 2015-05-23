@@ -300,11 +300,10 @@
                             <img src="./sequence/04_usb_cable.png"/>
                         </a>
                         <section class="text">
-                            <p>When complete, our system will emulate a USB 1.1 keyboard.</p><p>A USB 1.1 cable is made up of four wires with a standard color code.</p><p>Two of the wires provide power +5V (Red) and 0V (Black), which must be connected to the power rails.</p><p>The other two wires are known as Data+ or D+ (Green) and Data- or D- (White), and are used for signalling at 3.6V data back and forth between the host (laptop) and the peripheral device (keyboard). We will be attaching these to some free rows above the ATMEGA chip, where we can make the other special connections required.</p>
+                            <p>When complete, our system will emulate a USB 1.1 keyboard. A USB 1.1 cable is made up of four wires with a standard color code.</p><p>Two wires provide power +5V (Red) and 0V (Black), connected to the power rails. The other two are Data+ (or D+, Green) and Data- (or D-, White), for sending data back and forth between the host (laptop) and the peripheral device (keyboard). We'll attach these to free rows above the ATMEGA chip for later connections to be made.</p>
                             <p>
-                                @ShrimpingIt <a href="../../kit/keyboard.html">bagged kits</a> contain a Male type A plug chopped from the end of a generic USB cable, with male header pins crimped to the exposed colored wires guaranteeing good breadboard connectivity.
+                                @ShrimpingIt <a href="../../kit/keyboard.html">bagged kits</a> contain a Male type A plug cut from a generic USB cable, with crimped male header pins guaranteeing breadboard connectivity. However, you can use any USB cable chopped in half, soldering pins on the end, or sliding all the strands of each wire carefully into a breadboard hole before jamming in a male header pin to hold it in place and in contact.
                             </p>
-                            <p>However, any USB cable you chop in half will do. You can solder pins on the end, or slide the stranded wire carefully into breadboard holes before jamming in a set of male header pins to hold them in place and in contact.</p>
                             <p>
                                 <strong>
                                     <em>Attach Data+ Green wire to J1</em>
@@ -330,11 +329,10 @@
                             <img src="./sequence/05_usb_diodes.png"/>
                         </a>
                         <section class="text">
-                            <p>The Data+ (Green USB) and Data- (White USB) wires are both expected to send at a maximum of 3.6V.</p><p>A diode is a device which normally operates like a water valve, which allows current to flow freely in one direction, but entirely blocks the flow of current in the other direction (like a a very high or infinite resistance to current flow).</p>
                             <p>
-                                However, a Zener is a special kind of diode. It is more like a leaky water valve which 'breaks down', (making a <a href="../../topic/shortcircuit.html">short circuit</a>), when the reverse pressure (voltage) applied exceeds a certain threshold.
+                                Zener diodes are tiny red and black cylinders on a silver wire. A diode operates like a water valve, allowing current to flow freely in one direction, but resisting it in the other direction. However, a Zener is a special kind of diode, like a leaky water valve which 'breaks down'. Zeners (make a <a href="../../topic/shortcircuit.html">short circuit</a>), when the reverse pressure (voltage) applied exceeds a certain threshold.
                             </p>
-                            <p>We can use this feature of Zeners to ensure that the Green and White wires have a maximum of 3.6V output, even though they are being driven by the ATMEGA328's 5V output pins. Essentially, any voltage above 3.6V is allowed to bleed away through the Zener.</p><p>Zeners are a small red and black cylinder on a silver wire. Like other diodes, current can flow forwards from the red end to the black end freely. However, when the reverse voltage exceeds 3.6V it can flow the other way too.</p>
+                            <p>The Data+ (Green USB) and Data- (White USB) signals accept a maximum of 3.6V. We can use Zeners to guarantee this. Essentially, any voltage above 3.6V is allowed to bleed away through the Zener.</p>
                             <p>
                                 <strong>
                                     <em>Attach the two small Zener diodes from h9-&gt;h2 and i9-&gt;i1 making sure the black ends connect to the green and white USB wires</em>

@@ -1,349 +1,151 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <?DOCTYPE html?>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-    <head>
-        <title> </title><meta charset="utf-8"/>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <script type="text/javascript" src="http://start.shrimping.it/style/require/require.js"> </script><script>
-            require.config({
-            baseUrl: 'http://start.shrimping.it/style/require',
-            });
-        </script>
-        <script type="text/javascript" src="http://start.shrimping.it/style/index.js"> </script><link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700|Lusitana:400,700|Open+Sans:400,800" rel="stylesheet" type="text/css"/>
-        <link href="http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css"/>
-        <link href="http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" type="text/css" href="http://start.shrimping.it/style/normalize.css"/>
-        <link rel="stylesheet" type="text/css" href="http://start.shrimping.it/style/index.css"/>
-    </head>
-    <body class="project keyboard scratchpad">
-        <header class="navigation" role="banner">
-            <div class="navigation-wrapper">
-                <a href="/" class="logo">
-                    <img src="http://start.shrimping.it/style/brand/logomenu.png" alt="Logo Image"/>
-                </a>
-                <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
-                <nav role="navigation">
-                    <ul id="js-navigation-menu" class="navigation-menu show">
-                        <li class="nav-link more">
-                            <a href="./">Conductive Keyboard Project</a>
-                            <ul class="submenu">
-                                <li>
-                                    <a href="index.html">Introducing It</a>
-                                </li>
-                                <li>
-                                    <a href="build.html">Wiring It</a>
-                                </li>
-                                <li>
-                                    <a href="program.html">Programming It</a>
-                                </li>
-                                <li>
-                                    <a href="debug.html">Debugging It</a>
-                                </li>
-                                <li>
-                                    <a href="teach.html">Teaching It</a>
-                                </li>
-                                <li>
-                                    <a href="../../kit/keyboard.html">Buying It</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-link more">
-                            <a href="http://start.shrimping.it/index.html#project">Other Projects</a>
-                            <ul class="submenu wide">
-                                <li>
-                                    <a href="http://start.shrimping.it/project/blink/build.html">...blink an LED</a>
-                                </li>
-                                <li>
-                                    <a href="http://start.shrimping.it/project/pov/build.html">...paint with light</a>
-                                </li>
-                                <li>
-                                    <a href="http://start.shrimping.it/project/keyboard/build.html">...make a Banana Piano</a>
-                                </li>
-                                <li>
-                                    <a href="http://start.shrimping.it/project/memory/build.html">...test your melody memory</a>
-                                </li>
-                                <li>
-                                    <a href="http://start.shrimping.it/project/alarmclock/build.html">...invent a Clock</a>
-                                </li>
-                                <li>
-                                    <a href="http://start.shrimping.it/project/ledclock/build.html">...show the time with LEDs</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-link more">
-                            <a href="http://start.shrimping.it/kit/">Buying</a>
-                            <ul class="submenu">
-                                <li>
-                                    <a class="scroll-on-page-link" href="http://start.shrimping.it/index.html#kit">How to Choose</a>
-                                </li>
-                                <li class="more">
-                                    <a href="javascript:void(0)">Kit List</a>
-                                    <ul class="submenu wide">
-                                        <li>
-                                            <a href="http://start.shrimping.it/kit/shrimp.html">Shrimp Bundle</a>
-                                        </li>
-                                        <li>
-                                            <a href="http://start.shrimping.it/kit/pov.html">Persistence of Vision</a>
-                                        </li>
-                                        <li>
-                                            <a href="http://start.shrimping.it/kit/keyboard.html">Conductive Keyboard</a>
-                                        </li>
-                                        <li>
-                                            <a href="http://start.shrimping.it/kit/memory.html">'Simon' Memory Game</a>
-                                        </li>
-                                        <li>
-                                            <a href="http://start.shrimping.it/kit/alarmclock.html">Alarm Clock</a>
-                                        </li>
-                                        <li>
-                                            <a href="http://start.shrimping.it/kit/ledclock.html">LED Clock</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-link more">
-                            <a href="javascript:void(0)">Teaching</a>
-                            <ul class="submenu">
-                                <li class="nav-link">
-                                    <a href="http://start.shrimping.it//#workshop">Workshops</a>
-                                </li>
-                                <!--
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title> </title><meta charset="utf-8"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript" src="http://start.shrimping.it/style/require/require.js"> </script><script>
+                require.config({
+                    baseUrl: 'http://start.shrimping.it/style/require',
+                });
+            </script><script type="text/javascript" src="http://start.shrimping.it/style/index.js"> </script><link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700|Lusitana:400,700|Open+Sans:400,800" rel="stylesheet" type="text/css"/><link href="http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css"/><link href="http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic" rel="stylesheet" type="text/css"/><link rel="stylesheet" type="text/css" href="http://start.shrimping.it/style/normalize.css"/><link rel="stylesheet" type="text/css" href="http://start.shrimping.it/style/index.css"/></head><body class="project keyboard scratchpad"><header class="navigation" role="banner"><div class="navigation-wrapper"><a href="/" class="logo"><img src="http://start.shrimping.it/style/brand/logomenu.png" alt="Logo Image"/></a><a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a><nav role="navigation"><ul id="js-navigation-menu" class="navigation-menu show"><li class="nav-link more"><a href="./">Conductive Keyboard Project</a><ul class="submenu"><li><a href="index.html">Introducing It</a></li><li><a href="build.html">Wiring It</a></li><li><a href="program.html">Programming It</a></li><li><a href="debug.html">Debugging It</a></li><li><a href="teach.html">Teaching It</a></li><li><a href="../../kit/keyboard.html">Buying It</a></li></ul></li><li class="nav-link more"><a href="http://start.shrimping.it/index.html#project">Other Projects</a><ul class="submenu wide"><li><a href="http://start.shrimping.it/project/blink/build.html">...blink an LED</a></li><li><a href="http://start.shrimping.it/project/pov/build.html">...paint with light</a></li><li><a href="http://start.shrimping.it/project/keyboard/build.html">...make a Banana Piano</a></li><li><a href="http://start.shrimping.it/project/memory/build.html">...test your melody memory</a></li><li><a href="http://start.shrimping.it/project/alarmclock/build.html">...invent a Clock</a></li><li><a href="http://start.shrimping.it/project/ledclock/build.html">...show the time with LEDs</a></li></ul></li><li class="nav-link more"><a href="http://start.shrimping.it/kit/">Buying</a><ul class="submenu"><li><a class="scroll-on-page-link" href="http://start.shrimping.it/index.html#kit">How to Choose</a></li><li class="more"><a href="javascript:void(0)">Kit List</a><ul class="submenu wide"><li><a href="http://start.shrimping.it/kit/shrimp.html">Shrimp Parts</a></li><li><a href="http://start.shrimping.it/kit/pov.html">Persistence of Vision Addon</a></li><li><a href="http://start.shrimping.it/kit/keyboard.html">Conductive Keyboard Addon</a></li><li><a href="http://start.shrimping.it/kit/memory.html">Memory Game Addon [Simon]</a></li><li><a href="http://start.shrimping.it/kit/alarmclock.html">Alarm Clock Addon</a></li><li><a href="http://start.shrimping.it/kit/ledclock.html">LED Clock Addon</a></li><li><a href="http://start.shrimping.it/kit/breadboard400.html">400 point Breadboard</a></li><li><a href="http://start.shrimping.it/kit/cp2102.html">USB UART module</a></li></ul></li></ul></li><li class="nav-link more"><a href="javascript:void(0)">Teaching</a><ul class="submenu"><li class="nav-link"><a href="http://start.shrimping.it//#workshop">Workshops</a></li><!--
                                 <li class="nav-link"><a href="{$serverroot}about.html">Resources</a></li>
                                 <li class="nav-link"><a href="{$serverroot}index.html#testimonials" class="scroll-on-page-link" >Testimonials</a></li>
-                            -->
-                                <li class="nav-link">
-                                    <a href="http://start.shrimping.it/offer.html">Special Offers</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-link more">
-                            <a href="javascript:void(0)">Contributing</a>
-                            <ul class="submenu">
-                                <li class="nav-link">
-                                    <a href="http://start.shrimping.it/contribute.html#feedback">Feedback</a>
-                                </li>
-                                <li class="nav-link">
-                                    <a href="http://start.shrimping.it/contribute.html#donate">Donating</a>
-                                </li>
-                                <li class="nav-link">
-                                    <a href="http://start.shrimping.it/bagging.html">Buying</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-link more">
-                            <a href="javascript:void(0)">More</a>
-                            <ul class="submenu">
-                                <li class="nav-link">
-                                    <a href="http://start.shrimping.it/index.html#about" class="scroll-on-page-link">About Us</a>
-                                </li>
-                                <li class="nav-link">
-                                    <a href="http://start.shrimping.it/license.html">Licensing</a>
-                                </li>
-                                <li class="nav-link">
-                                    <a href="http://start.shrimping.it/contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="navigation-tools">
-                    <div class="search-bar">
-                        <form role="search" action="http://duckduckgo.com/" method="get">
-                            <input type="hidden" value="start.shrimping.it" name="sites"/><input type="hidden" value="1" name="kh"/>
-                            <input type="hidden" value="1" name="kn"/>
-                            <input type="hidden" value="1" name="kac"/>
-                            <input type="search" placeholder="Enter Search" name="q"/>
-                            <button type="submit">
-                                <img src="http://start.shrimping.it/style/brand/search-icon.png" alt="Search Icon"/>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <section class="content">
-            <h1 id="section"/>
-            <p>From MakeyMakey - the starting keys...</p>
-            <p>int keyCodes[NUM_INPUTS] = {<br/>
-                // top side of the makey makey board
-            </p>
-            <p>KEY_UP_ARROW, // up arrow pad<br/>
-                KEY_DOWN_ARROW, // down arrow pad<br/>
-                KEY_LEFT_ARROW, // left arrow pad<br/>
-                KEY_RIGHT_ARROW, // right arrow pad<br/>
-                ' ', // space button pad<br/>
-                MOUSE_LEFT, // click button pad
-            </p>
-            <p>// female header on the back left side</p>
-            <p>'w', // pin D5<br/>
-                'a', // pin D4<br/>
-                's', // pin D3<br/>
-                'd', // pin D2<br/>
-                'f', // pin D1<br/>
-                'g', // pin D0
-            </p>
-            <p>// female header on the back right side</p>
-            <p>MOUSE_MOVE_UP, // pin A5<br/>
-                MOUSE_MOVE_DOWN, // pin A4<br/>
-                MOUSE_MOVE_LEFT, // pin A3<br/>
-                MOUSE_MOVE_RIGHT, // pin A2<br/>
-                MOUSE_LEFT, // pin A1<br/>
-                MOUSE_RIGHT // pin A0<br/>
-                };
-            </p>
-            <h2 id="equipment-for-heysham-high">Equipment for Heysham High</h2>
-            <h1 id="tasks">Tasks</h1>
-            <ul>
-                <li>Laptops
-                    <ul>
-                        <li>Pack 1 through 22 or so</li>
-                        <li>Get them networked</li>
-                        <li>Put the shrimpingit Sketchbook in place</li>
-                        <li>Copy Arduino 1.6.4? Needed?</li>
-                    </ul>
-                </li>
-                <li>Components
-                    <ul>
-                        <li>Strip and crimp Male USB cables</li>
-                        <li>Replace 22kOhm resistors (cables too fat)</li>
-                        <li>Bag jumpers or solid-core wire</li>
-                    </ul>
-                </li>
-                <li>Vector Art
-                    <ul>
-                        <li>Voltage Divider layout(s)<br/>
-                        </li>
-                    </ul>
-                </li>
-                <li>Code
-                    <ul>
-                        <li>Augment sketchbook with
-                            <ul>
-                                <li>Potential divider demo
-                                    <ul>
-                                        <li>BBC Bitesize GCSE Electronics</li>
-                                    </ul>
-                                </li>
-                                <li>USB Hello World demo</li>
-                                <li>USB 1 Resistor demo</li>
-                                <li>USB 11 Resistor demo</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <h1 id="to-take">To take</h1>
-            <ul>
-                <li>20 lots of
-                    <ul>
-                        <li>Conductive Keyboard Addon</li>
-                        <li>Shrimp Parts</li>
-                        <li>400 point breadboard</li>
-                        <li>USB UART</li>
-                        <li>Potentiometer</li>
-                        <li>Light Dependent Resistor</li>
-                        <li>Tactile button</li>
-                    </ul>
-                </li>
-                <li>A USB keyboard for Scratch Piano demo</li>
-                <li>Fruit
-                    <ul>
-                        <li>Bananas, Onions</li>
-                    </ul>
-                </li>
-                <li>2B Pencils</li>
-                <li><ul>
-                        <li>Blank white paper</li>
-                    </ul>
-                </li>
-            </ul>
-            <h1 id="sequence">Sequence</h1>
-            <ul>
-                <li>Video
-                    <ul>
-                        <li>Arduino Compilation video?</li>
-                        <li>MakeyMakey video</li>
-                    </ul>
-                </li>
-                <li>Blink build</li>
-                <li>Voltage Divider intro</li>
-                <li>Voltage divider demos
-                    <ul>
-                        <li>Arduino Analog example</li>
-                        <li>Potentiometer</li>
-                        <li>Light Dependent Resistor</li>
-                        <li>Button</li>
-                    </ul>
-                </li>
-                <li>Partial Conductive Keyboard build
-                    <ul>
-                        <li>Metal-to-metal</li>
-                        <li>Human beans</li>
-                        <li>Tape</li>
-                        <li>Fruit</li>
-                    </ul>
-                </li>
-                <li>Scratch Banana Piano</li>
-                <li>USB Keyboard Hello World demo</li>
-                <li>USB Keyboard Add a Resistor</li>
-                <li>USB Keyboard Add all the resistors</li>
-            </ul>
-        </section>
-        <footer class="footer" role="contentinfo">
-            <div class="footer-logo">
-                <img src="http://start.shrimping.it/style/brand/logomenu.png" alt="Logo image"/>
-            </div>
-            <div class="footer-links">
-                <ul>
-                    <li>
-                        <h3>Community</h3>
-                    </li>
-                    <li>
-                        <a href="http://start.shrimping.it/project/">Projects</a>
-                    </li>
-                    <li>
-                        <a href="http://start.shrimping.it/support.html">Support</a>
-                    </li>
-                    <li>
-                        <a href="http://start.shrimping.it/license.html">Licensing</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <h3>Commercial</h3>
-                    </li>
-                    <li>
-                        <a href="http://start.shrimping.it/kit/">Kits</a>
-                    </li>
-                    <li>
-                        <a href="http://start.shrimping.it/workshop/">Workshops</a>
-                    </li>
-                    <li>
-                        <a href="http://start.shrimping.it/workshop/cpd.html">Training</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <h3>More</h3>
-                    </li>
-                    <li>
-                        <a href="http://start.shrimping.it/contact.html">Contact Us</a>
-                    </li>
-                    <li>
-                        <a href="http://start.shrimping.it/social.html">Follow Us</a>
-                    </li>
-                    <li>
-                        <a href="http://start.shrimping.it/">About Us</a>
-                    </li>
-                </ul>
-            </div>
-            <hr/>
-            <p>
+                            --><li class="nav-link"><a href="http://start.shrimping.it/offer.html">Special Offers</a></li></ul></li><li class="nav-link more"><a href="javascript:void(0)">Contributing</a><ul class="submenu"><li class="nav-link"><a href="http://start.shrimping.it/contribute.html#feedback">Feedback</a></li><li class="nav-link"><a href="http://start.shrimping.it/contribute.html#donate">Donating</a></li><li class="nav-link"><a href="http://start.shrimping.it/bagging.html">Buying</a></li></ul></li><li class="nav-link more"><a href="javascript:void(0)">More</a><ul class="submenu"><li class="nav-link"><a href="http://start.shrimping.it/index.html#about" class="scroll-on-page-link">About Us</a></li><li class="nav-link"><a href="http://start.shrimping.it/license.html">Licensing</a></li><li class="nav-link"><a href="http://start.shrimping.it/contact.html">Contact</a></li></ul></li></ul></nav><div class="navigation-tools"><div class="search-bar"><form role="search" action="http://duckduckgo.com/" method="get"><input type="hidden" value="start.shrimping.it" name="sites"/><input type="hidden" value="1" name="kh"/><input type="hidden" value="1" name="kn"/><input type="hidden" value="1" name="kac"/><input type="search" placeholder="Enter Search" name="q"/><button type="submit"><img src="http://start.shrimping.it/style/brand/search-icon.png" alt="Search Icon"/></button></form></div></div></div></header><section class="content">
+<h1 id="section"/>
+<p>From MakeyMakey - the starting keys...</p>
+<p>int keyCodes[NUM_INPUTS] = {<br/>
+ // top side of the makey makey board</p>
+<p>KEY_UP_ARROW, // up arrow pad<br/>
+ KEY_DOWN_ARROW, // down arrow pad<br/>
+ KEY_LEFT_ARROW, // left arrow pad<br/>
+ KEY_RIGHT_ARROW, // right arrow pad<br/>
+ ' ', // space button pad<br/>
+ MOUSE_LEFT, // click button pad</p>
+<p>// female header on the back left side</p>
+<p>'w', // pin D5<br/>
+ 'a', // pin D4<br/>
+ 's', // pin D3<br/>
+ 'd', // pin D2<br/>
+ 'f', // pin D1<br/>
+ 'g', // pin D0</p>
+<p>// female header on the back right side</p>
+<p>MOUSE_MOVE_UP, // pin A5<br/>
+ MOUSE_MOVE_DOWN, // pin A4<br/>
+ MOUSE_MOVE_LEFT, // pin A3<br/>
+ MOUSE_MOVE_RIGHT, // pin A2<br/>
+ MOUSE_LEFT, // pin A1<br/>
+ MOUSE_RIGHT // pin A0<br/>
+};</p>
+<h2 id="equipment-for-heysham-high">Equipment for Heysham High</h2>
+<h1 id="tasks">Tasks</h1>
+<ul>
+<li>Laptops
+<ul>
+<li>Pack 1 through 22 or so</li>
+<li>Get them networked</li>
+<li>Put the shrimpingit Sketchbook in place</li>
+<li>Copy Arduino 1.6.4? Needed?</li>
+</ul></li>
+<li>Components
+<ul>
+<li>Strip and crimp Male USB cables</li>
+<li>Replace 22kOhm resistors (cables too fat)</li>
+<li>Bag jumpers or solid-core wire</li>
+</ul></li>
+<li>Vector Art
+<ul>
+<li>Voltage Divider layout(s)<br/>
+</li>
+</ul></li>
+<li>Code
+<ul>
+<li>Augment sketchbook with
+<ul>
+<li>Potential divider demo
+<ul>
+<li>BBC Bitesize GCSE Electronics</li>
+</ul></li>
+<li>USB Hello World demo</li>
+<li>USB 1 Resistor demo</li>
+<li>USB 11 Resistor demo</li>
+</ul></li>
+</ul></li>
+</ul>
+<h1 id="to-take">To take</h1>
+<ul>
+<li>20 lots of
+<ul>
+<li>Conductive Keyboard Addon</li>
+<li>Shrimp Parts</li>
+<li>400 point breadboard</li>
+<li>USB UART</li>
+<li>Potentiometer</li>
+<li>Light Dependent Resistor</li>
+<li>Tactile button</li>
+</ul></li>
+<li>A USB keyboard for Scratch Piano demo</li>
+<li>Fruit
+<ul>
+<li>Bananas, Onions</li>
+</ul></li>
+<li>2B Pencils</li>
+<li><ul>
+<li>Blank white paper</li>
+</ul></li>
+</ul>
+<h1 id="sequence">Sequence</h1>
+<ul>
+<li>Video
+<ul>
+<li>Arduino Compilation video?</li>
+<li>MakeyMakey video</li>
+</ul></li>
+<li>Blink build</li>
+<li>Voltage Divider intro</li>
+<li>Voltage divider demos
+<ul>
+<li>Arduino Analog example</li>
+<li>Potentiometer</li>
+<li>Light Dependent Resistor</li>
+<li>Button</li>
+</ul></li>
+<li>Partial Conductive Keyboard build
+<ul>
+<li>Metal-to-metal</li>
+<li>Human beans</li>
+<li>Tape</li>
+<li>Fruit</li>
+</ul></li>
+<li>Scratch Banana Piano</li>
+<li>USB Keyboard Hello World demo</li>
+<li>USB Keyboard Add a Resistor</li>
+<li>USB Keyboard Add all the resistors</li>
+</ul>
+<h2 id="learning-outcomes">Learning Outcomes</h2>
+<p>This project introduces the concept of a voltage divider. It demonstrates how a pull up resistor ensures an unambiguous signal from a voltage divider circuit.</p>
+<p>From this starting point, advanced learners will be able to create their own button keypads, use potentiometers to control circuit behaviour, sense light levels using Light Dependent Resistors, Temperature and Acceleration Sensors using these key principles of analog electronics.</p>
+<p>It also demonstrates the fundamentals of the Universal Serial Bus (USB). The circuit appears to laptops or tablets as a USB keyboard. The circuit proves that with just 2 wires connected and controlled in a suitable way, (plus power and ground wires) it's possible to emulate a device conforming to the USB Human Interface Device (HID) keyboard standard. Advanced learners will experiment with emulating different USB devices.</p>
+<h2 id="build-process">Build Process</h2>
+<p>As with all <a href="http://shrimping.it">@ShrimpingIt</a> projects, the build should begin by following the instructions to <a href="http://shrimping.it/shrimp/project/blink">build and program Blink</a>.</p>
+<p>Once your Shrimp is blinking, you can then proceed through the following builds...</p>
+<p>1) Minimal Conductive Sensor</p>
+<p>2) Minimal USB Keyboard</p>
+<ul>
+<li>add the minimum components for the circuit to be able to emulate a USB keyboard.</li>
+<li>upload code so that the circuit 'types' the phrase <code>Hello World!</code> every 10 seconds.</li>
+<li>plug the hacked USB cable into a computer, launch a suitable application, and see the typing appear on the screen</li>
+</ul>
+<p>3) Minimal Conductive USB Keyboard</p>
+<ul>
+<li>add a single pull up resistor a ground wire and a contact wire</li>
+<li>Upload code which senses a human body making a circuit between the ground wire and the contact wire causes the USB Keyboard to 'type' the number <code>1</code></li>
+<li>plug the USB cable into a computer, launch a suitable application, and see the typing appear on the screen</li>
+</ul>
+<p>4) ShrimpKey: Full Conductive Keyboard</p>
+<ul>
+<li>add the remaining 15 pull up resistors to create a total of 16 conductive sensors, making it possible to create compelling interactive demonstrations like the MakeyMakey demos below.</li>
+</ul>
+</section><footer class="footer" role="contentinfo"><div class="footer-logo"><img src="http://start.shrimping.it/style/brand/logomenu.png" alt="Logo image"/></div><div class="footer-links"><ul><li><h3>Community</h3></li><li><a href="http://start.shrimping.it/project/">Projects</a></li><li><a href="http://start.shrimping.it/support.html">Support</a></li><li><a href="http://start.shrimping.it/license.html">Licensing</a></li></ul><ul><li><h3>Commercial</h3></li><li><a href="http://start.shrimping.it/kit/">Kits</a></li><li><a href="http://start.shrimping.it/workshop/">Workshops</a></li><li><a href="http://start.shrimping.it/workshop/cpd.html">Training</a></li></ul><ul><li><h3>More</h3></li><li><a href="http://start.shrimping.it/contact.html">Contact Us</a></li><li><a href="http://start.shrimping.it/social.html">Follow Us</a></li><li><a href="http://start.shrimping.it/">About Us</a></li></ul></div><hr/><p>
                 Thanks to the <a href="http://arduino.cc">Arduino</a> community for the amazing foundations on which the Shrimp and @ShrimpingIt projects are based.
                 Thanks to <a href="http://fritzing.org">Fritzing</a> for vector graphics elements. Flickr user <a href="https://www.flickr.com/photos/randomskk/">Adam Greig</a> for cover image.
-            </p>
-        </footer>
-        <script>
+            </p></footer><script>
             //<!--
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -351,7 +153,4 @@
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
             ga('create', 'UA-36299759-2', 'auto');
             ga('send', 'pageview');
-            //-->
-        </script>
-    </body>
-</html>
+            //--></script></body></html>

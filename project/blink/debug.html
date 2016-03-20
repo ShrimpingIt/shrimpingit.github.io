@@ -1,23 +1,77 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <?DOCTYPE html?>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title> </title><meta charset="utf-8"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript" src="http://start.shrimping.it/style/require/require.js"> </script><script>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>Debugging Blink </title><meta charset="utf-8"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript" src="http://start.shrimping.it/style/require/require.js"> </script><script>
                 require.config({
                     baseUrl: 'http://start.shrimping.it/style/require',
                 });
-            </script><script type="text/javascript" src="http://start.shrimping.it/style/index.js"> </script><link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700|Lusitana:400,700|Open+Sans:400,800" rel="stylesheet" type="text/css"/><link href="http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css"/><link href="http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic" rel="stylesheet" type="text/css"/><link rel="stylesheet" type="text/css" href="http://start.shrimping.it/style/normalize.css"/><link rel="stylesheet" type="text/css" href="http://start.shrimping.it/style/index.css"/></head><body class="project blink debug"><header class="navigation" role="banner"><div class="navigation-wrapper"><a href="/" class="logo"><img src="http://start.shrimping.it/style/brand/logomenu.png" alt="Logo Image"/></a><a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a><nav role="navigation"><ul id="js-navigation-menu" class="navigation-menu show"><li class="nav-link more"><a href="./">Blink Project</a><ul class="submenu"><li><a href="index.html">Introducing It</a></li><li><a href="build.html">Wiring It</a></li><li><a href="program.html">Programming It</a></li><li><a href="../../kit/shrimp.html">Buying It</a></li></ul></li><li class="nav-link more"><a href="http://start.shrimping.it/index.html#project">Other Projects</a><ul class="submenu wide"><li><a href="http://start.shrimping.it/project/blink/build.html">...blink an LED</a></li><li><a href="http://start.shrimping.it/project/pov/build.html">...paint with light</a></li><li><a href="http://start.shrimping.it/project/keyboard/build.html">...make a Banana Piano</a></li><li><a href="http://start.shrimping.it/project/memory/build.html">...test your melody memory</a></li><li><a href="http://start.shrimping.it/project/alarmclock/build.html">...invent a Clock</a></li><li><a href="http://start.shrimping.it/project/ledclock/build.html">...show the time with LEDs</a></li></ul></li><li class="nav-link more"><a href="http://start.shrimping.it/kit/">Kits</a><ul class="submenu wide"><li><a href="http://start.shrimping.it/kit/shrimp.html">Shrimp Parts</a></li><li><a href="http://start.shrimping.it/kit/pov.html">Persistence of Vision Addon</a></li><li><a href="http://start.shrimping.it/kit/keyboard.html">Conductive Keyboard Addon</a></li><li><a href="http://start.shrimping.it/kit/memory.html">Memory Game Addon [Simon]</a></li><li><a href="http://start.shrimping.it/kit/alarmclock.html">Alarm Clock Addon</a></li><li><a href="http://start.shrimping.it/kit/ledclock.html">LED Clock Addon</a></li><li><a href="http://start.shrimping.it/kit/stripboard.html">Stripboard Addon</a></li><li><a href="http://start.shrimping.it/kit/breadboard400.html">400 point Breadboard</a></li><li><a href="http://start.shrimping.it/kit/breadboard170.html">170 point Breadboard</a></li><li><a href="http://start.shrimping.it/kit/power3xAAA.html">3xAAA Battery Pack</a></li><li><a href="http://start.shrimping.it/kit/cp2102.html">USB UART module</a></li></ul></li><!--
+            </script><script type="text/javascript" src="http://start.shrimping.it/style/index.js"> </script><link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700|Lusitana:400,700|Open+Sans:400,800" rel="stylesheet" type="text/css"/><link href="http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css"/><link href="http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic" rel="stylesheet" type="text/css"/><link rel="stylesheet" type="text/css" href="http://start.shrimping.it/style/normalize.css"/><link rel="stylesheet" type="text/css" href="http://start.shrimping.it/style/index.css"/></head><body class="project blink debug"><header class="navigation" role="banner"><div class="navigation-wrapper"><a href="http://start.shrimping.it//index.html" class="logo"><img src="http://start.shrimping.it/style/brand/logomenu.png" alt="Logo Image"/></a><a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a><nav role="navigation"><ul id="js-navigation-menu" class="navigation-menu show"><li class="nav-link more"><a href="./">Blink Project</a><ul class="submenu"><li><a href="index.html">Introducing It</a></li><li><a href="build.html">Wiring It</a></li><li><a href="program.html">Programming It</a></li><li><a href="../../kit/shrimp.html">Buying It</a></li></ul></li><li class="nav-link more"><a href="http://start.shrimping.it/index.html#project">Other Projects</a><ul class="submenu wide"><li><a href="http://start.shrimping.it/project/blink/build.html">...blink an LED</a></li><li><a href="http://start.shrimping.it/project/pov/build.html">...paint with light</a></li><li><a href="http://start.shrimping.it/project/keyboard/build.html">...make a Banana Piano</a></li><li><a href="http://start.shrimping.it/project/memory/build.html">...test your melody memory</a></li><li><a href="http://start.shrimping.it/project/alarmclock/build.html">...invent a Clock</a></li><li><a href="http://start.shrimping.it/project/ledclock/build.html">...show the time with LEDs</a></li></ul></li><li class="nav-link more"><a href="http://start.shrimping.it/kit/">Kits</a><ul class="submenu wide"><li><a href="http://start.shrimping.it/kit/shrimp.html">Shrimp Parts</a></li><li><a href="http://start.shrimping.it/kit/pov.html">Persistence of Vision Addon</a></li><li><a href="http://start.shrimping.it/kit/keyboard.html">Conductive Keyboard Addon</a></li><li><a href="http://start.shrimping.it/kit/memory.html">Memory Game Addon [Simon]</a></li><li><a href="http://start.shrimping.it/kit/alarmclock.html">Alarm Clock Addon</a></li><li><a href="http://start.shrimping.it/kit/ledclock.html">LED Clock Addon</a></li><li><a href="http://start.shrimping.it/kit/stripboard.html">Stripboard Addon</a></li><li><a href="http://start.shrimping.it/kit/breadboard400.html">400 point Breadboard</a></li><li><a href="http://start.shrimping.it/kit/breadboard170.html">170 point Breadboard</a></li><li><a href="http://start.shrimping.it/kit/power3xAAA.html">3xAAA Battery Pack</a></li><li><a href="http://start.shrimping.it/kit/cp2102.html">USB UART module</a></li></ul></li><!--
                         <li class="nav-link more">
                             <a href="javascript:void(0)">Teaching</a>
                             <ul class="submenu">
                                 <li class="nav-link"><a href="{$serverroot}/#workshop">Workshops</a></li>
-                                <li class="nav-link"><a href="{$serverroot}about.html">Resources</a></li>
                                 <li class="nav-link"><a href="{$serverroot}index.html#testimonials" class="scroll-on-page-link" >Testimonials</a></li>
                             </ul>
                         </li>
                         --><li class="nav-link more"><a href="javascript:void(0)">Contributing</a><ul class="submenu"><li class="nav-link"><a href="http://start.shrimping.it/contribute.html#feedback">Feedback</a></li><li class="nav-link"><a href="http://start.shrimping.it/contribute.html#donate">Donating</a></li><li class="nav-link"><a href="http://start.shrimping.it/index.html#kit" class="scroll-on-page-link">Buying</a></li></ul></li><li class="nav-link more"><a href="javascript:void(0)">More</a><ul class="submenu"><li class="nav-link"><a href="http://start.shrimping.it/index.html#about" class="scroll-on-page-link">About Us</a></li><!--
                                 <li class="nav-link"><a href="{$serverroot}license.html">Licensing</a></li>
                                 --><li class="nav-link"><a href="http://start.shrimping.it/offer.html">Special Offers</a></li><li class="nav-link"><a href="http://start.shrimping.it/contact.html">Contact</a></li></ul></li></ul></nav><div class="navigation-tools"><div class="search-bar"><form role="search" action="http://duckduckgo.com/" method="get"><input type="hidden" value="start.shrimping.it" name="sites"/><input type="hidden" value="1" name="kh"/><input type="hidden" value="1" name="kn"/><input type="hidden" value="1" name="kac"/><input type="search" placeholder="Enter Search" name="q"/><button type="submit"><img src="http://start.shrimping.it/style/brand/search-icon.png" alt="Search Icon"/></button></form></div></div></div></header><section class="content">
-
-</section><footer class="footer" role="contentinfo"><div class="footer-logo"><img src="http://start.shrimping.it/style/brand/logomenu.png" alt="Logo image"/></div><div class="footer-links"><ul><li><h3>Community</h3></li><li><a href="http://start.shrimping.it/project/">Projects</a></li><li><a href="http://start.shrimping.it/support.html">Support</a></li><li><a href="http://start.shrimping.it/license.html">Licensing</a></li></ul><ul><li><h3>Commercial</h3></li><li><a href="http://start.shrimping.it/kit/">Kits</a></li><li><a href="http://start.shrimping.it/workshop/">Workshops</a></li><li><a href="http://start.shrimping.it/workshop/cpd.html">Training</a></li></ul><ul><li><h3>More</h3></li><li><a href="http://start.shrimping.it/contact.html">Contact Us</a></li><li><a href="http://start.shrimping.it/social.html">Follow Us</a></li><li><a href="http://start.shrimping.it/">About Us</a></li></ul></div><hr/><p>
+<h1 id="debugging-blink">Debugging Blink</h1>
+<p>First, check that the circuit is exactly as shown in the <a href="build.html#step11" target="blank">last frame of the Blink build</a>. Click on the image shown if you need it to be bigger to read the numbers and follow the wires.</p>
+<h2 id="problems-programming">Problems programming</h2>
+<h4 id="the-programming-sequence">The programming sequence</h4>
+<p>A Shrimp (or any Arduino-Uno-compatible circuit) is re-programmed as follows...</p>
+<ul>
+<li><strong>The Shrimp's reset pin is set to 0V, then back to 5V, rebooting the chip</strong>
+<ul>
+<li>the USB module's Brown Wire (DTR) sends a 0V pulse through a capacitor to <em>chip pin 1</em></li>
+<li>when the 0V signal ends, the 10k pull-up resistor restores <em>chip pin 1</em> to 5V</li>
+</ul></li>
+<li><strong>The chip monitors the 'Serial' connection to receive and acknowledge a new program</strong>
+<ul>
+<li>the USB module appears as a 'Serial Port' on your laptop. On the Shrimp chip, <em>pin 2</em> receives data, and <em>pin 3</em> sends data back</li>
+</ul></li>
+<li><strong>If the Shrimp receives...</strong>
+<ul>
+<li><strong>...a new program</strong>, it
+<ul>
+<li>acknowledges using the Serial link</li>
+<li>stores the program</li>
+<li>it runs the program</li>
+</ul></li>
+<li><strong>...no new program</strong>, it
+<ul>
+<li>runs the previously stored program</li>
+</ul></li>
+</ul></li>
+</ul>
+<h5 id="types-of-failure">Types of failure</h5>
+<p>This programming sequence can fail in a number of ways.</p>
+<ul>
+<li>a) Example error: <strong><em>Serial port [SOMETHING] not found. Did you select the right one from the Tools =&gt; Serial Port menu</em></strong>. In this case, the Serial Port location ticked under <em>Tools =&gt; Serial Ports</em> does not select the correct USB module
+<ul>
+<li>Check which Serial Port disappears and reappears in the <em>Tools =&gt; Serial Ports</em> menu when you unplug and replug the USB module in your laptop, (close and reopen the <em>Tools=&gt;Serial Ports</em> menu to refresh it after each step).</li>
+<li>The USB module is not plugged in to the laptop (this happens more often than you'd think)</li>
+</ul></li>
+<li>b) The laptop seems to be talking to a USB module, but it isn't the right one
+<ul>
+<li>see the troubleshooting steps for a) above. If more than one new ports appear, try each one in turn</li>
+</ul></li>
+<li>but there is something wrong in the serial circuit, for example...
+<ul>
+<li>send and receive wires are swapped or not attached</li>
+<li>100nF Reset Capacitor or 10kOhm pull-up resistor are missing or miswired</li>
+<li/>
+</ul></li>
+<li><ul>
+<li>You</li>
+</ul></li>
+</ul>
+</section><footer class="footer" role="contentinfo"><div class="footer-logo"><img src="http://start.shrimping.it/style/brand/logomenu.png" alt="Logo image"/></div><div class="footer-links"><ul><li><h3>Community</h3></li><li><a href="http://start.shrimping.it/project/">Projects</a></li><!--
+                    <li><a href="{$serverroot}support.html">Support</a></li>
+                    <li><a href="{$serverroot}license.html">Licensing</a></li>
+                    --></ul><ul><li><h3>Commercial</h3></li><li><a href="http://start.shrimping.it//#kit">Kits</a></li><li><a href="http://start.shrimping.it//#workshop">Workshops</a></li><!--
+                    <li><a href="{$serverroot}workshop/cpd.html">Training</a></li>
+                    --></ul><ul><li><h3>More</h3></li><li><a href="http://start.shrimping.it/contact.html">Contact Us</a></li><li><a href="http://start.shrimping.it/contact.html#social">Follow Us</a></li><li><a href="http://start.shrimping.it/#what">About Us</a></li></ul></div><hr/><p>
                 Thanks to the <a href="http://arduino.cc">Arduino</a> community for the amazing foundations on which the Shrimp and @ShrimpingIt projects are based.
                 Thanks to <a href="http://fritzing.org">Fritzing</a> for vector graphics elements. Flickr user <a href="https://www.flickr.com/photos/randomskk/">Adam Greig</a> for cover image.
             </p></footer><script>
@@ -28,4 +82,6 @@
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
             ga('create', 'UA-36299759-2', 'auto');
             ga('send', 'pageview');
-            //--></script></body></html>
+            //--></script><script src="//cdnjs.cloudflare.com/ajax/libs/minicart/3.0.6/minicart.min.js"/><script>
+            paypal.minicart.render();
+        </script></body></html>

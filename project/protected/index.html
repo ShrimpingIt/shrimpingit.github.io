@@ -20,8 +20,8 @@
 <p>After completing the <a href="../blink/build.html">Minimal Shrimp</a> and getting it to Blink, a few extra components might be needed if you want it to substitute for an Arduino Uno in a deployed project. The <a href="build.html">Protected Shrimp Build</a> offers step-by-step instructions to add these extra elements. <a href="../../kit/shrimp.html">Official Shrimp kits</a> always include these components as standard.</p>
 <p>In practice, we use the Minimal Shrimp build all the time. It has fewer components and is less fiddly when leading large classes of learners. However it doesn't include...</p>
 <ul>
-<li>a Reset button</li>
-<li>a stable Crystal circuit</li>
+<li>a Reset button<br/></li>
+<li>a stable Crystal circuit<br/></li>
 <li>a stable Power circuit</li>
 </ul>
 <p>...which would be ideal for a deployed project.</p>
@@ -32,15 +32,15 @@
 <h2 id="protected-shrimp-vs-arduino-uno">Protected Shrimp vs Arduino Uno</h2>
 <p>The Protected build can be substituted for an Arduino Uno in most projects (in fact it is almost an identical circuit, and has the same 'bootloader' software on the chip). However, the Protected Shrimp still doesn't have</p>
 <ul>
-<li>an inbuilt UART</li>
+<li>an inbuilt UART<br/></li>
 <li>a Power Regulator</li>
 </ul>
 <p>Without an <strong>inbuilt UART</strong> we rely on a cheap external <a href="../../kit/cp2102.html">USB Uart Module</a> when programming and sending Serial messages to our Shrimp Projects. This also means you can remove the UART when you are not using it, saving money (they can be shared between projects or between learners), and avoiding the extra power and complexity of the USB circuit.</p>
 <p>Without a <strong>power regulator</strong> we need to take responsibility for providing a power supply of between 3V and 6V. This can be delivered by...</p>
 <ul>
-<li>A Lithium battery at ~3.7V</li>
-<li>Four NiCd or NiMh batteries at ~4.8V</li>
-<li>Three Alkaline batteries at ~4.5V</li>
+<li>A Lithium battery at ~3.7V<br/></li>
+<li>Four NiCd or NiMh batteries at ~4.8V<br/></li>
+<li>Three Alkaline batteries at ~4.5V<br/></li>
 <li>a USB power supply at ~5V</li>
 </ul>
 <p>...meaning you can choose the power supply suited to your project.</p>

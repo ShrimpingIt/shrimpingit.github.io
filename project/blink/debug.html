@@ -21,24 +21,24 @@
 <h4 id="the-programming-sequence">The programming sequence</h4>
 <p>A Shrimp (or any Arduino-Uno-compatible circuit) is re-programmed as follows...</p>
 <ul>
-<li><p><strong>The Shrimp's reset pin is set to 0V, then back to 5V, rebooting the chip</strong></p>
+<li><strong>The Shrimp's reset pin is set to 0V, then back to 5V, rebooting the chip</strong>
 <ul>
-<li>the USB module's Brown Wire (DTR) sends a 0V pulse through a capacitor to <em>chip pin 1</em><br/></li>
-<li>when the 0V signal ends, the 10k pull-up resistor restores <em>chip pin 1</em> to 5V<br/></li>
+<li>the USB module's Brown Wire (DTR) sends a 0V pulse through a capacitor to <em>chip pin 1</em></li>
+<li>when the 0V signal ends, the 10k pull-up resistor restores <em>chip pin 1</em> to 5V</li>
 </ul></li>
-<li><p><strong>The chip monitors the 'Serial' connection to receive and acknowledge a new program</strong></p>
+<li><strong>The chip monitors the 'Serial' connection to receive and acknowledge a new program</strong>
 <ul>
-<li>the USB module appears as a 'Serial Port' on your laptop. On the Shrimp chip, <em>pin 2</em> receives data, and <em>pin 3</em> sends data back<br/></li>
+<li>the USB module appears as a 'Serial Port' on your laptop. On the Shrimp chip, <em>pin 2</em> receives data, and <em>pin 3</em> sends data back</li>
 </ul></li>
-<li><p><strong>If the Shrimp receives...</strong></p>
+<li><strong>If the Shrimp receives...</strong>
 <ul>
-<li><p><strong>...a new program</strong>, it</p>
+<li><strong>...a new program</strong>, it
 <ul>
-<li>acknowledges using the Serial link<br/></li>
-<li>stores the program<br/></li>
-<li>it runs the program<br/></li>
+<li>acknowledges using the Serial link</li>
+<li>stores the program</li>
+<li>it runs the program</li>
 </ul></li>
-<li><p><strong>...no new program</strong>, it</p>
+<li><strong>...no new program</strong>, it
 <ul>
 <li>runs the previously stored program</li>
 </ul></li>
@@ -47,19 +47,19 @@
 <h5 id="types-of-failure">Types of failure</h5>
 <p>This programming sequence can fail in a number of ways.</p>
 <ul>
-<li><p>a) Example error: <strong><em>Serial port [SOMETHING] not found. Did you select the right one from the Tools =&gt; Serial Port menu</em></strong>. In this case, the Serial Port location ticked under <em>Tools =&gt; Serial Ports</em> does not select the correct USB module</p>
+<li>a) Example error: <strong><em>Serial port [SOMETHING] not found. Did you select the right one from the Tools =&gt; Serial Port menu</em></strong>. In this case, the Serial Port location ticked under <em>Tools =&gt; Serial Ports</em> does not select the correct USB module
 <ul>
-<li>Check which Serial Port disappears and reappears in the <em>Tools =&gt; Serial Ports</em> menu when you unplug and replug the USB module in your laptop, (close and reopen the <em>Tools=&gt;Serial Ports</em> menu to refresh it after each step).<br/></li>
+<li>Check which Serial Port disappears and reappears in the <em>Tools =&gt; Serial Ports</em> menu when you unplug and replug the USB module in your laptop, (close and reopen the <em>Tools=&gt;Serial Ports</em> menu to refresh it after each step).</li>
 <li>The USB module is not plugged in to the laptop (this happens more often than you'd think)</li>
 </ul></li>
-<li><p>b) The laptop seems to be talking to a USB module, but it isn't the right one</p>
+<li>b) The laptop seems to be talking to a USB module, but it isn't the right one
 <ul>
 <li>see the troubleshooting steps for a) above. If more than one new ports appear, try each one in turn</li>
 </ul></li>
-<li><p>but there is something wrong in the serial circuit, for example...</p>
+<li>but there is something wrong in the serial circuit, for example...
 <ul>
-<li>send and receive wires are swapped or not attached<br/></li>
-<li>100nF Reset Capacitor or 10kOhm pull-up resistor are missing or miswired<br/></li>
+<li>send and receive wires are swapped or not attached</li>
+<li>100nF Reset Capacitor or 10kOhm pull-up resistor are missing or miswired</li>
 <li/>
 </ul></li>
 <li><ul>

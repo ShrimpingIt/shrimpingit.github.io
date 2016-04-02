@@ -19,40 +19,40 @@
 <p>The default time display relies on a set of 24 LEDs organised in two lines of 12, a display which is quite power-hungry, and therefore intended to be continually illuminated by a permanent power supply (not a battery).</p>
 <p>These LEDs are employed in two distinct regimes to present the time of day as...</p>
 <ul>
-<li>a word clock display<br/></li>
-<li>leds are placed behind printed words<br/></li>
-<li>words are selectively illuminated to present the time in English<br/></li>
+<li>a word clock display</li>
+<li>leds are placed behind printed words</li>
+<li>words are selectively illuminated to present the time in English</li>
 <li><p>examples; "It's five minutes to ten", "It's a quarter past three"</p></li>
-<li>a proportional display<br/></li>
-<li>a row with one lit LED for every hour<br/></li>
-<li>examples <code>* * * * * *</code> is 6 hours, <code>**   *   **</code> is 5 hours<br/></li>
-<li>another row with one lit LED for every 5 minutes.<br/></li>
+<li>a proportional display</li>
+<li>a row with one lit LED for every hour</li>
+<li>examples <code>* * * * * *</code> is 6 hours, <code>**   *   **</code> is 5 hours</li>
+<li>another row with one lit LED for every 5 minutes.</li>
 <li><p>examples <code>* * * * * *</code> is 30 minutes, <code>**   *   **</code> is 25 minutes</p></li>
 </ul>
 <p>The build provides a jumping off point for programming activities focused on different LED lighting behaviours for time display such as altering which lights are visible for easy identification of the hour, creating a word clock with different logic (e.g. translated from english to french), different tunes played on the hour, menu interactions to set the time or alarms. It also provides a natural foundation for D&amp;T activities around developing time display mechanisms or product housings.</p>
 <p>All @ShrimpingIt projects use the Arduino-compatible ATMEGA328 chip as the controller of the digital device. The two extra ICs wired into this project demonstrated how other specialist external chips can communicate back and forth to perform their part.</p>
 <p>The following chips are used.</p>
 <ul>
-<li><p><em>ATMEGA328P-PU</em></p>
+<li><em>ATMEGA328P-PU</em>
 <ul>
-<li>Performs the role of the 'brain' controlling the device<br/></li>
-<li>an Arduino-compatible microcontroller<br/></li>
-<li>Used in all the @ShrimpingIt projects<br/></li>
-<li><strong>receives initial time setting from a laptop (via Serial UART communication)</strong><br/></li>
+<li>Performs the role of the 'brain' controlling the device</li>
+<li>an Arduino-compatible microcontroller</li>
+<li>Used in all the @ShrimpingIt projects</li>
+<li><strong>receives initial time setting from a laptop (via Serial UART communication)</strong></li>
 </ul></li>
-<li><p><em>Real Time Clock Chip</em></p>
+<li><em>Real Time Clock Chip</em>
 <ul>
-<li>performs the role of pendulum - the tick in the clock<br/></li>
-<li>precisely regulated Quartz clock maintains accurate time signal<br/></li>
-<li>battery backup subcircuit allows time to be retained even when unplugged<br/></li>
-<li><strong>sends timestamps and receives them from the ATMEGA328 (via I2C communication)</strong><br/></li>
+<li>performs the role of pendulum - the tick in the clock</li>
+<li>precisely regulated Quartz clock maintains accurate time signal</li>
+<li>battery backup subcircuit allows time to be retained even when unplugged</li>
+<li><strong>sends timestamps and receives them from the ATMEGA328 (via I2C communication)</strong></li>
 </ul></li>
-<li><p><em>LED driver chip</em></p>
+<li><em>LED driver chip</em>
 <ul>
-<li>can light a large number of LEDs (more than the ATMEGA)<br/></li>
-<li>can handle high-powered LEDs (more than the ATMEGA)<br/></li>
-<li>regulates the current to each LED (eliminating the need for resistors)<br/></li>
-<li>described as a 'Shift Register'<br/></li>
+<li>can light a large number of LEDs (more than the ATMEGA)</li>
+<li>can handle high-powered LEDs (more than the ATMEGA)</li>
+<li>regulates the current to each LED (eliminating the need for resistors)</li>
+<li>described as a 'Shift Register'</li>
 <li><strong>receives LED on and off commands from the ATMEGA (a clocked signal)</strong></li>
 </ul></li>
 </ul>

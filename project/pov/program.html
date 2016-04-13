@@ -19,19 +19,19 @@
 <p>You will be able to upload the programs described below to your <a href="build.html">Persistence of Vision circuit</a> once you have completed <a href="../shrimp/program.html">these instructions</a> to install the relevant software on your laptop.</p>
 <p>After installation, our sketches should be accessible under File=&gt;Sketchbook=&gt;shrimpingit. However, you can also browse all the code examples for the POV circuit on the web at...</p>
 <p><a href="https://github.com/ShrimpingIt/projects/tree/master/sketchbook/shrimpingit/pov" class="uri">https://github.com/ShrimpingIt/projects/tree/master/sketchbook/shrimpingit/pov</a></p>
-<h1 id="a-hard-coded-pattern">A hard-coded pattern</h1>
+<h2 id="a-hard-coded-pattern">A hard-coded pattern</h2>
 <p>To start with, we will control the 8 LEDs to produce a static pattern by running the <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov01PatternFixed/Pov01PatternFixed.ino">Pov01PatternFixed</a> sketch.</p>
-<h1 id="the-same-pattern-stored-in-a-variable">The same pattern stored in a variable</h1>
+<h2 id="the-same-pattern-stored-in-a-variable">The same pattern stored in a variable</h2>
 <p>Next we will show how the 8 LEDs can produce the same pattern by reading bits from a byte in the <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov02PatternStored/Pov02PatternStored.ino">Pov02PatternStored</a> sketch.</p>
-<h1 id="drawing-the-same-pattern-using-a-while-loop">Drawing the same pattern using a 'while' loop</h1>
+<h2 id="drawing-the-same-pattern-using-a-while-loop">Drawing the same pattern using a 'while' loop</h2>
 <p>Instead of having separate lines of code for every LED, we then use a while loop <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov03PatternWhile/Pov03PatternWhile.ino">Pov03PatternWhile</a> sketch.</p>
-<h1 id="drawing-the-same-pattern-using-a-function-call">Drawing the same pattern using a function call</h1>
+<h2 id="drawing-the-same-pattern-using-a-function-call">Drawing the same pattern using a function call</h2>
 <p>Instead of having the sequence of steps to light the LEDs embedded in routine called 'loop', we put those steps in their own routine, called setLights(...) in <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov04PatternFunction/Pov04PatternFunction.ino">Pov04PatternFunction</a></p>
-<h1 id="pov---painting-a-sequence-of-patterns">POV - Painting a sequence of patterns</h1>
+<h2 id="pov---painting-a-sequence-of-patterns">POV - Painting a sequence of patterns</h2>
 <p>Previously we were visiting a sequence of bits, and setting the lights to a given pattern. Now we go 'up a level' by doing the same thing for a <strong><em>sequence of patterns</em></strong>. If we upload <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov05SequenceSmiley/Pov05SequenceSmiley.ino">Pov05SequenceSmiley</a> and attach a battery pack, then waving it in the air should paint a smiley face.</p>
-<h1 id="pov---painting-the-arduino-logo">POV - Painting the Arduino logo</h1>
+<h2 id="pov---painting-the-arduino-logo">POV - Painting the Arduino logo</h2>
 <p>Just for fun, we do the same thing with a different pattern - <a href="https://upload.wikimedia.org/wikipedia/commons/8/87/Arduino_Logo.svg">the Arduino Logo</a> with our sketch <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov06SequenceArduino/Pov06SequenceArduino.ino">Pov06SequenceArduino</a>. Of course this is best done with Blue LEDs!</p>
-<h1 id="pov-painting-text-in-the-air...">POV Painting text in the air...</h1>
+<h2 id="pov-painting-text-in-the-air...">POV Painting text in the air...</h2>
 <p>Our last demonstration sketch is the best. We have exported the 8-bit font information from a Commodore 64 into an Arduino sketch, so that learners can paint their name or choice of message in the air. Simply change the 'message' value in <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov07PaintText/Pov07PaintText.ino">Pov07PaintText</a> to choose your own text!</p>
 </section><footer class="footer" role="contentinfo"><div class="footer-logo"><img src="http://start.shrimping.it/style/brand/logomenu.png" alt="Logo image"/></div><div class="footer-links"><ul><li><h3>Community</h3></li><li><a href="http://start.shrimping.it/project/">Projects</a></li><!--
                     <li><a href="{$serverroot}support.html">Support</a></li>

@@ -12,3 +12,4 @@ require(['refills/sliding-panel']);
 require(['refills/parallax']);
 
 require(['shrimpingit/hashhandler']);
+require(['shrimpingit/codeblocks']);

@@ -1,4 +1,4 @@
 require(['highlight'], function(hljs) {
-    hljs.initHighlightingOnLoad();
+//    hljs.initHighlightingOnLoad();
 });
 

@@ -19,112 +19,94 @@
 <p>You will be able to upload the programs described below to your <a href="build.html">Persistence of Vision circuit</a> once you have completed <a href="../shrimp/program.html">these instructions</a> to install the relevant software on your laptop. If they have been properly installed, our sketches should be accessible under File=&gt;Sketchbook=&gt;shrimpingit.</p>
 <h2 id="led-pattern---hard-coded">LED pattern - hard-coded</h2>
 <p>To start with, let's control the 8 LEDs to produce a static pattern by running the <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov01PatternFixed/Pov01PatternFixed.ino">Pov01PatternFixed</a> sketch.</p>
-<p>The key part of the code is shown below, which controls eight digital output pins (which can be on or off) by 'writing' a value of <code class="cpp">true</code> or <code class="cpp">false</code>.<br/>
-<pre><code class="cpp"><br/>
-//turn on selected LEDs<br/>
-digitalWrite(9, true );<br/>
-digitalWrite(10, false);<br/>
-digitalWrite(11, true );<br/>
-digitalWrite(12, false);<br/>
-digitalWrite(A1, true );<br/>
-digitalWrite(A2, false);<br/>
-digitalWrite(A3, true );<br/>
-digitalWrite(A4, false);<br/>
-</code></pre></p>
+<p>The key part of the code is shown below, which controls eight digital output pins (which can be on or off) by 'writing' a value of <code class="cpp">true</code> or <code class="cpp">false</code>.</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">  <span class="co">//turn on selected LEDs</span>
+  digitalWrite(<span class="dv">9</span>,  <span class="kw">true</span> );
+  digitalWrite(<span class="dv">10</span>, <span class="kw">false</span>); 
+  digitalWrite(<span class="dv">11</span>, <span class="kw">true</span> ); 
+  digitalWrite(<span class="dv">12</span>, <span class="kw">false</span>); 
+  digitalWrite(A1, <span class="kw">true</span> ); 
+  digitalWrite(A2, <span class="kw">false</span>); 
+  digitalWrite(A3, <span class="kw">true</span> ); 
+  digitalWrite(A4, <span class="kw">false</span>); </code></pre></div>
 <h2 id="led-pattern---stored-in-a-variable">LED pattern - stored in a variable</h2>
 <p>Next we will show how the 8 LEDs can produce the same pattern by reading bits from a byte in the <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov02PatternStored/Pov02PatternStored.ino">Pov02PatternStored</a> sketch.</p>
 <p>The key parts of this code are show below. A byte stores a binary pattern, and each bit of the byte is examined in turn (using <a href="https://www.arduino.cc/en/Reference/BitwiseAnd">bitwise &amp;</a>) to see if each of the eight lights should be lit.</p>
-<pre><code class="cpp">
-byte pattern = 0b10101010;
-</code></pre>
-<pre><code class="cpp">
-  //check which 'bits' are set in the byte called 'pattern'
-  digitalWrite(9,    (pattern &amp; 0b00000001) != 0);
-  digitalWrite(10,   (pattern &amp; 0b00000010) != 0); 
-  digitalWrite(11,   (pattern &amp; 0b00000100) != 0); 
-  digitalWrite(12,   (pattern &amp; 0b00001000) != 0); 
-  digitalWrite(A1,   (pattern &amp; 0b00010000) != 0); 
-  digitalWrite(A2,   (pattern &amp; 0b00100000) != 0); 
-  digitalWrite(A3,   (pattern &amp; 0b01000000) != 0); 
-  digitalWrite(A4,   (pattern &amp; 0b10000000) != 0); 
-</code></pre>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">byte pattern = <span class="bn">0b10101010</span>;</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">  <span class="co">//check which 'bits' are set in the byte called 'pattern'</span>
+  digitalWrite(<span class="dv">9</span>,    (pattern &amp;amp; <span class="bn">0b00000001</span>) != <span class="dv">0</span>);
+  digitalWrite(<span class="dv">10</span>,   (pattern &amp;amp; <span class="bn">0b00000010</span>) != <span class="dv">0</span>); 
+  digitalWrite(<span class="dv">11</span>,   (pattern &amp;amp; <span class="bn">0b00000100</span>) != <span class="dv">0</span>); 
+  digitalWrite(<span class="dv">12</span>,   (pattern &amp;amp; <span class="bn">0b00001000</span>) != <span class="dv">0</span>); 
+  digitalWrite(A1,   (pattern &amp;amp; <span class="bn">0b00010000</span>) != <span class="dv">0</span>); 
+  digitalWrite(A2,   (pattern &amp;amp; <span class="bn">0b00100000</span>) != <span class="dv">0</span>); 
+  digitalWrite(A3,   (pattern &amp;amp; <span class="bn">0b01000000</span>) != <span class="dv">0</span>); 
+  digitalWrite(A4,   (pattern &amp;amp; <span class="bn">0b10000000</span>) != <span class="dv">0</span>); </code></pre></div>
 <p>In each case, if the bit <strong><em>isn't</em></strong> set, then the result of the <code class="cpp">&amp;</code> operator is 0. The phrase <code class="cpp">!= 0</code> means 'not equal to zero'.</p>
 <h2 id="led-pattern---using-a-while-loop">LED pattern - using a 'while' loop</h2>
 <p>Instead of having separate lines of code for every LED, we use a while loop in <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov03PatternWhile/Pov03PatternWhile.ino">Pov03PatternWhile</a>.</p>
 <p>The key parts of this code are shown below. Instead of explicitly writing eight lots of instructions to query each bit and control each light, we have a single set of instructions, which is executed eight times.</p>
-<p>The code relies on an array containing the pin numbers. A bitCounter is used to count how many bits of the pattern have already been processed. The bitValue starts as 1, then becomes 2, then 4, then 8 and so on, corresponding with each digit of the binary number.<br/>
-<pre><code class="cpp"><br/>
-int pinNumbers[] = { 9,10,11,12,A1,A2,A3,A4 };<br/>
-</code></pre><br/>
-<pre><code class="cpp"><br/>
-bitCounter = 0;<br/>
-bitValue = 0b00000001;<br/>
-while(bitCounter &lt; totalBits){<br/>
-digitalWrite(pinNumbers[bitCounter], (pattern &amp; bitValue) != 0);<br/>
-bitCounter = bitCounter + 1;<br/>
-bitValue = bitValue * 2;<br/>
-}<br/>
-</code></pre></p>
+<p>The code relies on an array containing the pin numbers. A bitCounter is used to count how many bits of the pattern have already been processed. The bitValue starts as 1, then becomes 2, then 4, then 8 and so on, corresponding with each digit of the binary number.</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">    <span class="dt">int</span> pinNumbers[] = { <span class="dv">9</span>,<span class="dv">10</span>,<span class="dv">11</span>,<span class="dv">12</span>,A1,A2,A3,A4 };</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">    bitCounter = <span class="dv">0</span>;
+    bitValue = <span class="bn">0b00000001</span>;
+    <span class="kw">while</span>(bitCounter &amp;lt; totalBits){
+        digitalWrite(pinNumbers[bitCounter], (pattern &amp;amp; bitValue) != <span class="dv">0</span>);   
+        bitCounter = bitCounter + <span class="dv">1</span>;
+        bitValue = bitValue * <span class="dv">2</span>;
+    }</code></pre></div>
 <h2 id="led-pattern---using-a-function-call">LED pattern - using a function call</h2>
 <p>Instead of having the sequence of steps to light the LEDs embedded in routine called 'loop', we put those steps in their own routine, called setLights(...) in <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov04PatternFunction/Pov04PatternFunction.ino">Pov04PatternFunction</a></p>
 <p>The key parts of this code are shown below. We've moved the steps which turn on and off the lights into their own routine called, <code class="cpp">setLights</code> and the steps in <code class="cpp">loop</code> (which are repeated forever on a loop) tell <code class="cpp">setLights</code> to execute with a particular pattern.</p>
-<pre><code class="cpp">
-void loop() {
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> loop() {
   setLights(pattern);
-  delay(1);
+  delay(<span class="dv">1</span>);
   setLights(empty);
-  delay(2);
-}
-</code></pre>
-<pre><code class="cpp">
-void setLights(byte pattern){
-  bitCounter = 0;
-  bitValue = 1;
-  while(bitCounter &lt; totalBits){
-    digitalWrite(pinNumbers[bitCounter], (pattern &amp; bitValue) != 0); //turn on the LED if the 'pattern' value has that bit set  
-    bitCounter = bitCounter + 1;
-    bitValue = bitValue * 2;
+  delay(<span class="dv">2</span>);
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> setLights(byte pattern){
+  bitCounter = <span class="dv">0</span>;
+  bitValue = <span class="dv">1</span>;
+  <span class="kw">while</span>(bitCounter &amp;lt; totalBits){
+    digitalWrite(pinNumbers[bitCounter], (pattern &amp;amp; bitValue) != <span class="dv">0</span>); <span class="co">//turn on the LED if the 'pattern' value has that bit set  </span>
+    bitCounter = bitCounter + <span class="dv">1</span>;
+    bitValue = bitValue * <span class="dv">2</span>;
   }
-}
-</code></pre>
+}</code></pre></div>
 <h2 id="led-pov---painting-a-sequence-of-patterns">LED POV - Painting a sequence of patterns</h2>
 <p>Previously we were visiting a sequence of bits, and setting the lights to a given pattern. Now we go 'up a level' by doing the same thing for a <strong><em>sequence of patterns</em></strong>. If we upload <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov05SequenceSmiley/Pov05SequenceSmiley.ino">Pov05SequenceSmiley</a> and attach a battery pack, then <strong><em>waving it in the air should paint a smiley face</em></strong>.</p>
-<p>The key parts of this code are shown below. The byte array called <code class="cpp">patternSequence</code> contains a series of vertical columns, which make up a smiley face.<br/>
-<pre><code class="cpp"><br/>
-byte patternSequence[] = {<br/>
-0b00111100,<br/>
-0b01001110,<br/>
-0b11011011,<br/>
-0b11011111,<br/>
-0b11011111,<br/>
-0b11011011,<br/>
-0b01001110,<br/>
-0b00111100<br/>
-};<br/>
-</code></pre></p>
+<p>The key parts of this code are shown below. The byte array called <code class="cpp">patternSequence</code> contains a series of vertical columns, which make up a smiley face.</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">byte patternSequence[] = {
+  <span class="bn">0b00111100</span>,
+  <span class="bn">0b01001110</span>,
+  <span class="bn">0b11011011</span>,
+  <span class="bn">0b11011111</span>,
+  <span class="bn">0b11011111</span>,
+  <span class="bn">0b11011011</span>,
+  <span class="bn">0b01001110</span>,
+  <span class="bn">0b00111100</span>
+};</code></pre></div>
 <p>If you inspect the byte array carefully, you can see the image below, tipped to the right (each byte is a vertical column, starting from the left side)...</p>
 <p><img src="http://shrimping.it/blog/wp-content/uploads/2012/11/smilie_binary-250x300.png" alt="Smiley Face"/></p>
 <h2 id="led-pov---painting-the-arduino-logo">LED POV - Painting the Arduino logo</h2>
-<p>Just for fun, we do the same thing with a different pattern - <a href="https://upload.wikimedia.org/wikipedia/commons/8/87/Arduino_Logo.svg">the Arduino Logo</a> with our sketch <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov06SequenceArduino/Pov06SequenceArduino.ino">Pov06SequenceArduino</a>. Of course this is best done with Blue LEDs!<br/>
-<pre><code class="cpp"><br/>
-byte patternSequence[] = {<br/>
-0b00111000,<br/>
-0b01000100,<br/>
-0b10010010,<br/>
-0b10010010,<br/>
-0b10010010,<br/>
-0b01000100,<br/>
-0b00101000,<br/>
-0b00010000,<br/>
-0b00101000,<br/>
-0b01000100,<br/>
-0b10010010,<br/>
-0b10111010,<br/>
-0b10010010,<br/>
-0b01000100,<br/>
-0b00111000<br/>
-};<br/>
-</code></pre></p>
+<p>Just for fun, we do the same thing with a different pattern - <a href="https://upload.wikimedia.org/wikipedia/commons/8/87/Arduino_Logo.svg">the Arduino Logo</a> with our sketch <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov06SequenceArduino/Pov06SequenceArduino.ino">Pov06SequenceArduino</a>. Of course this is best done with Blue LEDs!</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">byte patternSequence[] = {
+  <span class="bn">0b00111000</span>,
+  <span class="bn">0b01000100</span>,
+  <span class="bn">0b10010010</span>,
+  <span class="bn">0b10010010</span>,
+  <span class="bn">0b10010010</span>,
+  <span class="bn">0b01000100</span>,
+  <span class="bn">0b00101000</span>,
+  <span class="bn">0b00010000</span>,
+  <span class="bn">0b00101000</span>,
+  <span class="bn">0b01000100</span>,
+  <span class="bn">0b10010010</span>,
+  <span class="bn">0b10111010</span>,
+  <span class="bn">0b10010010</span>,
+  <span class="bn">0b01000100</span>,
+  <span class="bn">0b00111000</span>
+};</code></pre></div>
 <p><img src="./photos/arduino_logo_480.png" alt="Arduino Logo"/></p>
 <h2 id="led-pov---painting-text-in-the-air">LED POV - Painting text in the air</h2>
 <p>Ourlast demonstration sketch is the best. We have exported the 8-bit font information from a Commodore 64 into an Arduino sketch, so that learners can paint their name or choice of message in the air. Simply change the 'message' value in <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov07PaintText/Pov07PaintText.ino">Pov07PaintText</a> to choose your own text!</p>

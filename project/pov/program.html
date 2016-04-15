@@ -20,28 +20,28 @@
 <h2 id="led-pattern---hard-coded">LED pattern - hard-coded</h2>
 <p>To start with, let's control the 8 LEDs to produce a static pattern by running the <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov01PatternFixed/Pov01PatternFixed.ino">Pov01PatternFixed</a> sketch.</p>
 <p>The key part of the code is shown below, which controls eight digital output pins (which can be on or off) by 'writing' a value of <code class="cpp">true</code> or <code class="cpp">false</code>.</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">  <span class="co">//turn on selected LEDs</span>
-  digitalWrite(<span class="dv">9</span>,  <span class="kw">true</span> );
-  digitalWrite(<span class="dv">10</span>, <span class="kw">false</span>); 
-  digitalWrite(<span class="dv">11</span>, <span class="kw">true</span> ); 
-  digitalWrite(<span class="dv">12</span>, <span class="kw">false</span>); 
-  digitalWrite(A1, <span class="kw">true</span> ); 
-  digitalWrite(A2, <span class="kw">false</span>); 
-  digitalWrite(A3, <span class="kw">true</span> ); 
-  digitalWrite(A4, <span class="kw">false</span>); </code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//turn on selected LEDs</span>
+digitalWrite(<span class="dv">9</span>,  <span class="kw">true</span> );
+digitalWrite(<span class="dv">10</span>, <span class="kw">false</span>); 
+digitalWrite(<span class="dv">11</span>, <span class="kw">true</span> ); 
+digitalWrite(<span class="dv">12</span>, <span class="kw">false</span>); 
+digitalWrite(A1, <span class="kw">true</span> ); 
+digitalWrite(A2, <span class="kw">false</span>); 
+digitalWrite(A3, <span class="kw">true</span> ); 
+digitalWrite(A4, <span class="kw">false</span>); </code></pre></div>
 <h2 id="led-pattern---stored-in-a-variable">LED pattern - stored in a variable</h2>
 <p>Next we will show how the 8 LEDs can produce the same pattern by reading bits from a byte in the <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov02PatternStored/Pov02PatternStored.ino">Pov02PatternStored</a> sketch.</p>
 <p>The key parts of this code are show below. A byte stores a binary pattern, and each bit of the byte is examined in turn (using <a href="https://www.arduino.cc/en/Reference/BitwiseAnd">bitwise &amp;</a>) to see if each of the eight lights should be lit.</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">byte pattern = <span class="bn">0b10101010</span>;</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//check which 'bits' are set in the byte called 'pattern'</span>
-digitalWrite(<span class="dv">9</span>,    (pattern &amp;amp; <span class="bn">0b00000001</span>) != <span class="dv">0</span>);
-digitalWrite(<span class="dv">10</span>,   (pattern &amp;amp; <span class="bn">0b00000010</span>) != <span class="dv">0</span>); 
-digitalWrite(<span class="dv">11</span>,   (pattern &amp;amp; <span class="bn">0b00000100</span>) != <span class="dv">0</span>); 
-digitalWrite(<span class="dv">12</span>,   (pattern &amp;amp; <span class="bn">0b00001000</span>) != <span class="dv">0</span>); 
-digitalWrite(A1,   (pattern &amp;amp; <span class="bn">0b00010000</span>) != <span class="dv">0</span>); 
-digitalWrite(A2,   (pattern &amp;amp; <span class="bn">0b00100000</span>) != <span class="dv">0</span>); 
-digitalWrite(A3,   (pattern &amp;amp; <span class="bn">0b01000000</span>) != <span class="dv">0</span>); 
-digitalWrite(A4,   (pattern &amp;amp; <span class="bn">0b10000000</span>) != <span class="dv">0</span>); </code></pre></div>
+digitalWrite(<span class="dv">9</span>,    (pattern &amp; <span class="bn">0b00000001</span>) != <span class="dv">0</span>);
+digitalWrite(<span class="dv">10</span>,   (pattern &amp; <span class="bn">0b00000010</span>) != <span class="dv">0</span>); 
+digitalWrite(<span class="dv">11</span>,   (pattern &amp; <span class="bn">0b00000100</span>) != <span class="dv">0</span>); 
+digitalWrite(<span class="dv">12</span>,   (pattern &amp; <span class="bn">0b00001000</span>) != <span class="dv">0</span>); 
+digitalWrite(A1,   (pattern &amp; <span class="bn">0b00010000</span>) != <span class="dv">0</span>); 
+digitalWrite(A2,   (pattern &amp; <span class="bn">0b00100000</span>) != <span class="dv">0</span>); 
+digitalWrite(A3,   (pattern &amp; <span class="bn">0b01000000</span>) != <span class="dv">0</span>); 
+digitalWrite(A4,   (pattern &amp; <span class="bn">0b10000000</span>) != <span class="dv">0</span>); </code></pre></div>
 <p>In each case, if the bit <strong><em>isn't</em></strong> set, then the result of the <code class="cpp">&amp;</code> operator is 0. The phrase <code class="cpp">!= 0</code> means 'not equal to zero'.</p>
 <h2 id="led-pattern---using-a-while-loop">LED pattern - using a 'while' loop</h2>
 <p>Instead of having separate lines of code for every LED, we use a while loop in <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov03PatternWhile/Pov03PatternWhile.ino">Pov03PatternWhile</a>.</p>
@@ -50,8 +50,8 @@ digitalWrite(A4,   (pattern &amp;amp; <span class="bn">0b10000000</span>) != <sp
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> pinNumbers[] = { <span class="dv">9</span>,<span class="dv">10</span>,<span class="dv">11</span>,<span class="dv">12</span>,A1,A2,A3,A4 };</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">bitCounter = <span class="dv">0</span>;
 bitValue = <span class="bn">0b00000001</span>;
-<span class="kw">while</span>(bitCounter &amp;lt; totalBits){
-    digitalWrite(pinNumbers[bitCounter], (pattern &amp;amp; bitValue) != <span class="dv">0</span>);   
+<span class="kw">while</span>(bitCounter &lt; totalBits){
+    digitalWrite(pinNumbers[bitCounter], (pattern &amp; bitValue) != <span class="dv">0</span>);   
     bitCounter = bitCounter + <span class="dv">1</span>;
     bitValue = bitValue * <span class="dv">2</span>;
 }</code></pre></div>
@@ -67,8 +67,8 @@ bitValue = <span class="bn">0b00000001</span>;
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> setLights(byte pattern){
   bitCounter = <span class="dv">0</span>;
   bitValue = <span class="dv">1</span>;
-  <span class="kw">while</span>(bitCounter &amp;lt; totalBits){
-    digitalWrite(pinNumbers[bitCounter], (pattern &amp;amp; bitValue) != <span class="dv">0</span>);  
+  <span class="kw">while</span>(bitCounter &lt; totalBits){
+    digitalWrite(pinNumbers[bitCounter], (pattern &amp; bitValue) != <span class="dv">0</span>);  
     bitCounter = bitCounter + <span class="dv">1</span>;
     bitValue = bitValue * <span class="dv">2</span>;
   }
@@ -109,7 +109,7 @@ bitValue = <span class="bn">0b00000001</span>;
 };</code></pre></div>
 <p><img src="./photos/arduino_logo_480.png" alt="Arduino Logo"/></p>
 <h2 id="led-pov---painting-text-in-the-air">LED POV - Painting text in the air</h2>
-<p>Ourlast demonstration sketch is the best. We have exported the 8-bit font information from a Commodore 64 into an Arduino sketch, so that learners can paint their name or choice of message in the air. Simply change the 'message' value in <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov07PaintText/Pov07PaintText.ino">Pov07PaintText</a> to choose your own text!</p>
+<p>Our last demonstration sketch is the best. We have exported the 8-bit font information from a Commodore 64 into an Arduino sketch, so that learners can paint their name or choice of message in the air. Simply change the 'message' value in <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov07PaintText/Pov07PaintText.ino">Pov07PaintText</a> to choose your own text!</p>
 <p><img src="./show.jpg" alt="Illusion effect"/></p>
 <h2 id="exploring-our-examples">Exploring our examples</h2>
 <p>All the code examples for the <a href="build.html">POV circuit</a> can be browsed on the web at <a href="https://github.com/ShrimpingIt/projects/tree/master/sketchbook/shrimpingit/pov" class="uri">https://github.com/ShrimpingIt/projects/tree/master/sketchbook/shrimpingit/pov</a></p>

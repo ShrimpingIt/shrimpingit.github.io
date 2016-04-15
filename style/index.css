@@ -986,6 +986,11 @@ article.type-system-rounded, body.project section.content {
     @media screen and (min-width: 40em) {
       article.type-system-rounded h2, body.project section.content h2 {
         font-size: 1.4em; } }
+  article.type-system-rounded code, body.project section.content code {
+    background: #F7F7F7;
+    border-radius: 4.5px;
+    border: 1px solid #E0E0E0;
+    padding: 0.1em 0.4em; }
   article.type-system-rounded h3, body.project section.content h3 {
     font-family: "Varela Round", sans-serif;
     font-size: 1.2em;

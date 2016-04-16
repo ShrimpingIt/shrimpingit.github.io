@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <?DOCTYPE html?>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>Example Sketches </title><meta charset="utf-8"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="google-site-verification" content="plo81K3pJKsnzIVI5_O4Ug7ewR52af_-pxoKMTDTJYY"/><script type="text/javascript" src="http://start.shrimping.it/style/require/require.js"> </script><script>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>Examples for the Persistence of Vision Circuit </title><meta charset="utf-8"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="google-site-verification" content="plo81K3pJKsnzIVI5_O4Ug7ewR52af_-pxoKMTDTJYY"/><script type="text/javascript" src="http://start.shrimping.it/style/require/require.js"> </script><script>
                 require.config({
                     baseUrl: 'http://start.shrimping.it/style/require',
                 });
@@ -15,18 +15,23 @@
                         --><li class="nav-link more"><a href="javascript:void(0)">Contributing</a><ul class="submenu"><li class="nav-link"><a href="http://start.shrimping.it/contribute.html#feedback">Feedback</a></li><li class="nav-link"><a href="http://start.shrimping.it/contribute.html#donate">Donating</a></li><li class="nav-link"><a href="http://start.shrimping.it/index.html#kit" class="scroll-on-page-link">Buying</a></li></ul></li><li class="nav-link more"><a href="javascript:void(0)">More</a><ul class="submenu"><li class="nav-link"><a href="http://start.shrimping.it/index.html#about" class="scroll-on-page-link">About Us</a></li><!--
                                 <li class="nav-link"><a href="{$serverroot}license.html">Licensing</a></li>
                                 --><li class="nav-link"><a href="http://start.shrimping.it/offer.html">Special Offers</a></li><li class="nav-link"><a href="http://start.shrimping.it/contact.html">Contact</a></li></ul></li></ul></nav><div class="navigation-tools"><div class="search-bar"><form role="search" action="http://duckduckgo.com/" method="get"><input type="hidden" value="start.shrimping.it" name="sites"/><input type="hidden" value="1" name="kh"/><input type="hidden" value="1" name="kn"/><input type="hidden" value="1" name="kac"/><input type="search" placeholder="Enter Search" name="q"/><button type="submit"><img src="http://start.shrimping.it/style/brand/search-icon.png" alt="Search Icon"/></button></form></div></div></div></header><section class="content">
-<h2 id="example-sketches">Example Sketches</h2>
-<p>Each of the examples is a small step towards the next, with the final examples painting images and text in the air when you wave the circuit.</p>
+<h2 id="examples-for-the-persistence-of-vision-circuit">Examples for the Persistence of Vision Circuit</h2>
 <ul>
-<li><a href="#hardcoded">Fixed pattern - hard-coded</a></li>
-<li><a href="#stored">Fixed pattern - stored in a variable</a></li>
-<li><a href="#while">Fixed pattern - using a while loop</a></li>
-<li><a href="#function">Fixed pattern - using a function call</a></li>
-<li><a href="#smiley">Sequenced patterns - paint a smiley face in the air</a></li>
-<li><a href="#logo">Sequenced patterns - paint the Arduino™ logo in the air</a></li>
-<li><a href="#text">Sequenced Patterns - Paint your text in the air</a></li>
+<li>Programming examples
+<ul>
+<li><a href="#hardcoded">Using <strong><em>true and false</em></strong> to control 8 lights</a></li>
+<li><a href="#stored">Storing a pattern in the <strong><em>8 bits of a byte</em></strong></a></li>
+<li><a href="#while">Traversing the byte pattern with a <strong><em>while loop</em></strong></a></li>
+<li><a href="#function">Writing a <strong><em>function</em></strong> to traverse the pattern</a></li>
+</ul></li>
+<li>High-impact demonstrations
+<ul>
+<li><a href="#smiley">Painting a <strong><em>smiley face</em></strong> in the air</a></li>
+<li><a href="#logo">Painting the <strong><em>Arduino™ logo</em></strong> in the air</a></li>
+<li><a href="#text">Painting <strong><em>your text</em></strong> in the air</a></li>
+</ul></li>
 </ul>
-<h1 id="about-the-examples">About the examples</h1>
+<h1 id="installing-the-examples">Installing the examples</h1>
 <p>You can upload the programs described below to your <a href="build.html">Persistence of Vision circuit</a> once you have completed the <a href="../shrimp/program.html">Programming Shrimps instructions</a> to install the relevant software on your laptop.</p>
 <p>Once properly installed, the sketches described appear in the File=&gt;Sketchbook=&gt;shrimpingit=&gt;pov menu. All the examples below run on the same circuit, constructed following the <a href="./build.html">build instructions</a></p>
 <p><a id="hardcoded"/></p>
@@ -66,11 +71,9 @@ digitalWrite(A4,   (pattern &amp; <span class="bn">0b10000000</span>) != <span c
 <p><a id="while"/></p>
 <h2 id="fixed-pattern---using-a-while-loop">Fixed pattern - using a 'while' loop</h2>
 <p>In <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov03PatternWhile/Pov03PatternWhile.ino">Pov03PatternWhile</a>, instead of having separate lines of code for every LED, we use a <strong><em>while loop</em></strong>.</p>
-<p>The key parts of this code are shown below. To avoid explicitly writing eight lots of instructions to query each bit and control each light, we have a single set of instructions, which are executed eight times using parameters that change each time.</p>
-<p>A <code>pinNumbers</code> array is created to contain the numbers of the pins we plan to control. These numbers can be retrieved using a <em>subscript</em> in square brackets, for example we could use <code>pinNumbers[0]</code> to get us the first entry, (the stored value <em>9</em>), and pinNumbers[7] would get us the last entry, (the stored value <em>A4</em>).</p>
+<p>The key parts of this code are shown below. To avoid writing the instructions eight times, a single set of instructions is executed eight times with parameters that change each time.</p>
+<p>The steps shown run one after the other. However, note the indented steps inside the while loop are repeated <strong><em>while</em></strong> the bitCounter is <strong><em>less than 8</em></strong>.</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> pinNumbers[] = { <span class="dv">9</span>,<span class="dv">10</span>,<span class="dv">11</span>,<span class="dv">12</span>,A1,A2,A3,A4 };</code></pre></div>
-<p>In programming, counting up to eight begins with 0 and finishes with 7!</p>
-<p>The following steps run one after the other. However the steps in the while loop are repeated <strong><em>while</em></strong> the bitCounter is <strong><em>less than 8</em></strong>, before we begin again.</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">bitCounter = <span class="dv">0</span>;
 bitValue = <span class="bn">0b00000001</span>;
 <span class="kw">while</span>(bitCounter &lt; <span class="dv">8</span>){
@@ -78,9 +81,10 @@ bitValue = <span class="bn">0b00000001</span>;
     bitValue = bitValue * <span class="dv">2</span>;
     bitCounter = bitCounter + <span class="dv">1</span>;
 }</code></pre></div>
-<p>The <code>bitCounter</code> is assigned the value zero. We use bitCounter as a <em>subscript</em> to retrieve the next pin from the <code>pinNumbers</code> array. This pin is updated to turn its LED on or off with the digitalWrite instruction. After we have updated the LED <code>bitCounter = bitCounter + 1</code> increases the bitCounter, so a different bit (and a different LED) is processed the next time round.</p>
-<p>By contrast the <code>bitValue</code> starts as 1. The instruction <code>bitValue = bitValue * 2</code> multiplies bitValue by two after we have updated the light, generating the sequence 1,2,4,8,16 and so on. This is equivalent to the binary series <em>0b00000001, 0b00000010, 0b00000100, 0b00001000, 0b00010000</em> and so on, previously written out in full in the <a href="#stored">stored pattern example</a>.</p>
-<p>The steps in the while loop will only be repeated <strong><em>while</em></strong> the bitCounter is less than 8. This means the bitCounter will be <em>0</em> then <em>1</em> then, <em>2,3,4,5,6,7</em> before escaping the while loop.</p>
+<p>A <code>pinNumbers</code> array contains the pin numbers to control. Array values are retrieved using a <em>subscript</em> in square brackets, for example <code>pinNumbers[0]</code> gets the first entry, (the stored value <em>9</em>), or pinNumbers[7] the eighth and last entry, (the stored value <em>A4</em>).</p>
+<p>Note, in programming, counting up to eight begins with 0 and finishes with 7!</p>
+<p>To begin, the <code>bitCounter</code> is assigned the value zero. We use bitCounter as a <em>subscript</em> to retrieve the next pin from the <code>pinNumbers</code> array like <code>pinNumbers[bitCounter]</code>. The LED is turned on or off with the <code>digitalWrite</code> instruction using the same calculation as before, but with a <code>bitValue</code> that changes. After updating the LED <code>bitCounter = bitCounter + 1</code> increases the bitCounter. This ensures a different bit (and a different LED) is processed the next time round. This means the bitCounter will be <em>0</em> then <em>1</em> then, <em>2,3,4,5,6,7</em> before escaping the while loop.</p>
+<p>The variable <code>bitValue</code> is initially assigned the value 1. After we have turned on or off the LED, the instruction <code>bitValue = bitValue * 2</code> multiplies <code>bitValue</code> by two. This means the bitValue will adopt the value 1 then 2 then 4,8,16 and so on. This is equivalent to the binary series <em>0b00000001, 0b00000010, 0b00000100, 0b00001000, 0b00010000</em> etc. visible in the <a href="#stored">stored pattern example</a>.</p>
 <p><a id="function"/></p>
 <h2 id="fixed-pattern---using-a-function-call">Fixed pattern - using a function call</h2>
 <p>In <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov04PatternFunction/Pov04PatternFunction.ino">Pov04PatternFunction</a>, we remove the duplication in the routine called <code>loop</code>. We put the lighting steps in their own routine, called <code>setLights</code>.</p>
@@ -103,7 +107,7 @@ bitValue = <span class="bn">0b00000001</span>;
 <p><a id="smiley"/></p>
 <h2 id="sequenced-patterns---paint-a-smiley-face-in-the-air">Sequenced patterns - Paint a smiley face in the air</h2>
 <p>Previously we were visiting a sequence of bits, and setting the lights to a given pattern. Now we go 'up a level' by doing the same thing for a <strong><em>sequence of patterns</em></strong>. If we upload <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov05SequenceSmiley/Pov05SequenceSmiley.ino">Pov05SequenceSmiley</a> and attach a battery pack, then <strong><em>waving it in the air should paint a smiley face</em></strong>.</p>
-<p>The key parts of this code are shown below. The byte array called <code class="cpp">patternSequence</code> contains a series of vertical columns, which make up a smiley face.</p>
+<p>The key parts of this code are shown below. The byte array called <code class="cpp">patternSequence</code> contains a series of bytes which map to vertical columns making up a smiley face.</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">byte patternSequence[] = {
   <span class="bn">0b00111100</span>,
   <span class="bn">0b01001110</span>,
@@ -114,7 +118,7 @@ bitValue = <span class="bn">0b00000001</span>;
   <span class="bn">0b01001110</span>,
   <span class="bn">0b00111100</span>
 };</code></pre></div>
-<p>If you inspect the byte array carefully, you can see the image below, tipped to the right (each byte is a vertical column, starting from the left side)...</p>
+<p>If you inspect the 1s and 0s in the byte array, you can see the image below, tipped to the right (each byte is a vertical column, starting from the left side)...</p>
 <p><img src="http://shrimping.it/blog/wp-content/uploads/2012/11/smilie_binary-250x300.png" alt="Smiley Face"/></p>
 <p><a id="logo"/></p>
 <h2 id="sequenced-patterns---paint-the-arduino-logo">Sequenced patterns - Paint the Arduino ™ logo</h2>

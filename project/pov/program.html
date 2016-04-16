@@ -15,10 +15,21 @@
                         --><li class="nav-link more"><a href="javascript:void(0)">Contributing</a><ul class="submenu"><li class="nav-link"><a href="http://start.shrimping.it/contribute.html#feedback">Feedback</a></li><li class="nav-link"><a href="http://start.shrimping.it/contribute.html#donate">Donating</a></li><li class="nav-link"><a href="http://start.shrimping.it/index.html#kit" class="scroll-on-page-link">Buying</a></li></ul></li><li class="nav-link more"><a href="javascript:void(0)">More</a><ul class="submenu"><li class="nav-link"><a href="http://start.shrimping.it/index.html#about" class="scroll-on-page-link">About Us</a></li><!--
                                 <li class="nav-link"><a href="{$serverroot}license.html">Licensing</a></li>
                                 --><li class="nav-link"><a href="http://start.shrimping.it/offer.html">Special Offers</a></li><li class="nav-link"><a href="http://start.shrimping.it/contact.html">Contact</a></li></ul></li></ul></nav><div class="navigation-tools"><div class="search-bar"><form role="search" action="http://duckduckgo.com/" method="get"><input type="hidden" value="start.shrimping.it" name="sites"/><input type="hidden" value="1" name="kh"/><input type="hidden" value="1" name="kn"/><input type="hidden" value="1" name="kac"/><input type="search" placeholder="Enter Search" name="q"/><button type="submit"><img src="http://start.shrimping.it/style/brand/search-icon.png" alt="Search Icon"/></button></form></div></div></div></header><section class="content">
-<h1 id="example-sketches">Example Sketches</h1>
-<p>You will be able to upload the programs described below to your <a href="build.html">Persistence of Vision circuit</a> once you have completed the <a href="../shrimp/program.html">Programming Shrimps instructions</a> to install the relevant software on your laptop.</p>
-<p>If they have been properly installed, the sketches described below should be under File=&gt;Sketchbook=&gt;shrimpingit=&gt;pov. All of the below examples will run on the same circuit, which can be constructed following the <a href="./build.html">build instructions</a></p>
-<h2 id="fixed-pattern---hard-coded">Fixed pattern - hard-coded</h2>
+<h2 id="example-sketches">Example Sketches</h2>
+<p>Each of the examples is a small step towards the next, with the final examples painting images and text in the air when you wave the circuit.</p>
+<ul>
+<li><a href="#hardcoded">Fixed pattern - hard-coded</a></li>
+<li><a href="#stored">Fixed pattern - stored in a variable</a></li>
+<li><a href="#while">Fixed pattern - using a while loop</a></li>
+<li><a href="#function">Fixed pattern - using a function call</a></li>
+<li><a href="#smiley">Sequenced patterns - paint a smiley face in the air</a></li>
+<li><a href="#logo">Sequenced patterns - paint the Arduino™ logo in the air</a></li>
+<li><a href="#text">Sequenced Patterns - Paint your text in the air</a></li>
+</ul>
+<h1 id="about-the-examples">About the examples</h1>
+<p>You can upload the programs described below to your <a href="build.html">Persistence of Vision circuit</a> once you have completed the <a href="../shrimp/program.html">Programming Shrimps instructions</a> to install the relevant software on your laptop.</p>
+<p>Once properly installed, the sketches described appear in the File=&gt;Sketchbook=&gt;shrimpingit=&gt;pov menu. All the examples below run on the same circuit, constructed following the <a href="./build.html">build instructions</a></p>
+<h2 id="fixed-pattern---hard-coded">Fixed pattern - hard-coded <a id="hardcoded"/></h2>
 <p>To start with, let's control the 8 LEDs to produce a static pattern by running the <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov01PatternFixed/Pov01PatternFixed.ino">Pov01PatternFixed</a> sketch.</p>
 <p>The key part of the code is shown below, which controls eight digital output pins (pins which can be <em>on</em> or <em>off</em>) by 'writing' a value of <code class="cpp">true</code> or <code class="cpp">false</code>.</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//turn on selected LEDs</span>
@@ -31,7 +42,7 @@ digitalWrite(A2, <span class="kw">false</span>);
 digitalWrite(A3, <span class="kw">true</span> ); 
 digitalWrite(A4, <span class="kw">false</span>); </code></pre></div>
 <p>In the default pattern, every <em>odd</em> light is illuminated, and every <em>even</em> light is extinguished.</p>
-<h2 id="fixed-pattern---but-stored-in-a-variable">Fixed pattern - but stored in a variable</h2>
+<h2 id="fixed-pattern---stored-in-a-variable">Fixed pattern - stored in a variable <a id="stored"/></h2>
 <p>The next sketch called <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov02PatternStored/Pov02PatternStored.ino">Pov02PatternStored</a> shows how to produce the same pattern, but by reading bits from a byte instead.</p>
 <p>A byte called <code>pattern</code> contains either a <em>one</em> or a <em>zero</em> in each of its eight positions to determine whether each light is <em>on</em> or <em>off</em>, (the prefix <code>0b</code> warns that the byte is written in binary, as a series of <em>bits</em>).</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">byte pattern = <span class="bn">0b10101010</span>;</code></pre></div>
@@ -48,7 +59,7 @@ digitalWrite(A4,   (pattern &amp; <span class="bn">0b10000000</span>) != <span c
 <p>The calculation <code>(pattern &amp; 0b00000001)</code> is a <a href="https://www.arduino.cc/en/Reference/BitwiseAnd">bitwise &amp;</a>. It creates a new byte value by looking at each bit of the two bytes, putting a <code>1</code> bit only where <strong><em>BOTH</em></strong> <code>pattern</code> <strong><em>AND</em></strong> <code>0b00000001</code> are set to <code>1</code>. If either of them has a zero in any position, that bit becomes zero.</p>
 <p>Since <code>0b00000001</code> is all zeroes except in the first position, if <code>pattern</code> <strong><em>doesn't</em></strong> have a 1 there, then the result will be the byte <code>0x00000000</code>, representing the number zero. The expression <code>!= 0</code> means <a href="https://www.arduino.cc/en/Reference/If">"not equal to"</a> zero. The calculation <code>(pattern &amp; 0b00000001) != 0</code> is therefore <code>true</code> <strong><em>if and only if</em></strong> the first bit is set.</p>
 <p>Each bit is examined in turn, the first bit <code>0b00000001</code>, then the second bit <code>0b00000010</code>, then the third bit <code>0b00000100</code> and so on until all eight LEDs have been set to either <em>on</em> or *off".</p>
-<h2 id="fixed-pattern---using-a-while-loop">Fixed pattern - using a 'while' loop</h2>
+<h2 id="fixed-pattern---using-a-while-loop">Fixed pattern - using a 'while' loop <a id="while"/></h2>
 <p>Instead of having separate lines of code for every LED, we use a while loop in <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov03PatternWhile/Pov03PatternWhile.ino">Pov03PatternWhile</a>.</p>
 <p>The key parts of this code are shown below. Instead of explicitly writing eight lots of instructions to query each bit and control each light, we have a single set of instructions, which is executed eight times.</p>
 <p>The code relies on an array containing the pin numbers. A bitCounter is used to count how many bits of the pattern have already been processed. The bitValue starts as 1, then becomes 2, then 4, then 8 and so on, corresponding with each digit of the binary number.</p>
@@ -60,7 +71,7 @@ bitValue = <span class="bn">0b00000001</span>;
     bitCounter = bitCounter + <span class="dv">1</span>;
     bitValue = bitValue * <span class="dv">2</span>;
 }</code></pre></div>
-<h2 id="fixed-pattern---using-a-function-call">Fixed pattern - using a function call</h2>
+<h2 id="fixed-pattern---using-a-function-call">Fixed pattern - using a function call <a id="function"/></h2>
 <p>In <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov04PatternFunction/Pov04PatternFunction.ino">Pov04PatternFunction</a>, we remove the duplication in the routine called <code>loop</code>. We put the lighting steps in their own routine, called <code>setLights</code>.</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> setLights(byte pattern){
   bitCounter = <span class="dv">0</span>;
@@ -78,7 +89,7 @@ bitValue = <span class="bn">0b00000001</span>;
   setLights(empty);
   delay(<span class="dv">2</span>);
 }</code></pre></div>
-<h2 id="sequenced-patterns---paint-a-smiley-face-in-the-air">Sequenced patterns - Paint a smiley face in the air</h2>
+<h2 id="sequenced-patterns---paint-a-smiley-face-in-the-air">Sequenced patterns - Paint a smiley face in the air <a id="smiley"/></h2>
 <p>Previously we were visiting a sequence of bits, and setting the lights to a given pattern. Now we go 'up a level' by doing the same thing for a <strong><em>sequence of patterns</em></strong>. If we upload <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov05SequenceSmiley/Pov05SequenceSmiley.ino">Pov05SequenceSmiley</a> and attach a battery pack, then <strong><em>waving it in the air should paint a smiley face</em></strong>.</p>
 <p>The key parts of this code are shown below. The byte array called <code class="cpp">patternSequence</code> contains a series of vertical columns, which make up a smiley face.</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">byte patternSequence[] = {
@@ -93,7 +104,7 @@ bitValue = <span class="bn">0b00000001</span>;
 };</code></pre></div>
 <p>If you inspect the byte array carefully, you can see the image below, tipped to the right (each byte is a vertical column, starting from the left side)...</p>
 <p><img src="http://shrimping.it/blog/wp-content/uploads/2012/11/smilie_binary-250x300.png" alt="Smiley Face"/></p>
-<h2 id="sequenced-patterns---paint-the-arduino-logo">Sequenced patterns - Paint the Arduino logo</h2>
+<h2 id="sequenced-patterns---paint-the-arduino-logo">Sequenced patterns - Paint the Arduino ™ logo <a id="logo"/></h2>
 <p>Just for fun, we do the same thing with a different pattern - <a href="https://upload.wikimedia.org/wikipedia/commons/8/87/Arduino_Logo.svg">the Arduino Logo</a> with our sketch <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov06SequenceArduino/Pov06SequenceArduino.ino">Pov06SequenceArduino</a>. Of course this is best done with Blue LEDs!</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">byte patternSequence[] = {
   <span class="bn">0b00111000</span>,
@@ -114,11 +125,13 @@ bitValue = <span class="bn">0b00000001</span>;
 };</code></pre></div>
 <p>This sketch should cause the image below to be painted in the air...</p>
 <p><img src="./photos/arduino_logo_480.png" alt="Arduino Logo"/></p>
-<h2 id="sequenced-patterns---painting-text-in-the-air">Sequenced Patterns - Painting text in the air</h2>
+<h2 id="sequenced-patterns---paint-your-text-in-the-air">Sequenced Patterns - Paint your text in the air <a id="text"/></h2>
 <p>Our last demonstration sketch is the best. <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov07PaintText/Pov07PaintText.ino">Pov07PaintText</a> incorporates the 8-bit font from a Commodore 64 into an Arduino sketch, so learners can paint their choice of text in the air.</p>
-<p>You can change the text by looking for the message text in the code...</p>
+<p>In our example code, we have replaced the original font's $ symbol with the smiley face sequence, showing how to combine your own icons with text messages.</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">String message =<span class="st">"HACK $"</span>;</code></pre></div>
-<p>We have replaced the original font's $ symbol with the smiley face sequence, showing how to combine your own icons with text messages.</p>
+<p>Try looking for the above fragment of code (try CTRL+F to find the word 'message').</p>
+<p>Then change HACK to show the text you prefer. Be careful to keep the keyword <code>String</code>, the <code>=</code> symbol, quote marks and semi-colon in place otherwise a compiler error will be reported.</p>
+<p>If you get really stuck after making code changes, try mashing CTRL+Z (undo) or just delete everything and copy paste the <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov07PaintText/Pov07PaintText.ino">original code</a> back in place.</p>
 <p><img src="./show.jpg" alt="Illusion effect"/></p>
 <h2 id="exploring-our-examples">Exploring our examples</h2>
 <p>All the code examples for the <a href="build.html">POV circuit</a> can be browsed on the web at <a href="https://github.com/ShrimpingIt/projects/tree/master/sketchbook/shrimpingit/pov" class="uri">https://github.com/ShrimpingIt/projects/tree/master/sketchbook/shrimpingit/pov</a></p>

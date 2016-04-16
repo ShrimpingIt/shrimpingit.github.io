@@ -42,13 +42,13 @@ digitalWrite(A1, <span class="kw">true</span> );
 digitalWrite(A2, <span class="kw">false</span>); 
 digitalWrite(A3, <span class="kw">true</span> ); 
 digitalWrite(A4, <span class="kw">false</span>); </code></pre></div>
-<p>In the default pattern, every <em>odd</em> light is illuminated, and every <em>even</em> light is extinguished.</p>
+<p>In the default pattern, every <em>odd</em> light is illuminated, and every <em>even</em> light is extinguished. Try changing some of the true or false values to prove you can turn different lights on and off.</p>
 <p><a id="stored"/></p>
 <h2 id="fixed-pattern---stored-in-a-variable">Fixed pattern - stored in a variable</h2>
 <p>The next sketch called <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov02PatternStored/Pov02PatternStored.ino">Pov02PatternStored</a> shows how to produce the same pattern, but by reading bits from a byte instead.</p>
-<p>A byte called <code>pattern</code> contains either a <em>one</em> or a <em>zero</em> in each of its eight positions to determine whether each light is <em>on</em> or <em>off</em>, (the prefix <code>0b</code> warns that the byte is written in binary, as a series of <em>bits</em>).</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">byte pattern = <span class="bn">0b10101010</span>;</code></pre></div>
-<p>A calculation takes the place of the hard-coded <code>true</code> or <code>false</code> value in the last sketch...</p>
+<p>The byte called <code>pattern</code> contains either a <em>one</em> or a <em>zero</em> in each of its eight positions to determine whether each light is <em>on</em> or <em>off</em>, (the prefix <code>0b</code> tells us that the byte is written in binary, as a series of <em>bits</em>). Try changing the 1s and 0s (a byte has to have exactly eight of them) and uploading to prove you can turn different lights on or off.</p>
+<p>Instead of the hard-coded <code>true</code> or <code>false</code> value for each LED in the last sketch, a calculation like <code>pattern &amp; 0b00000001</code> is used to inspect a single bit at a time.</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//check which 'bits' are set in the byte called 'pattern'</span>
 digitalWrite(<span class="dv">9</span>,    (pattern &amp; <span class="bn">0b00000001</span>) != <span class="dv">0</span>);
 digitalWrite(<span class="dv">10</span>,   (pattern &amp; <span class="bn">0b00000010</span>) != <span class="dv">0</span>); 
@@ -58,22 +58,29 @@ digitalWrite(A1,   (pattern &amp; <span class="bn">0b00010000</span>) != <span c
 digitalWrite(A2,   (pattern &amp; <span class="bn">0b00100000</span>) != <span class="dv">0</span>); 
 digitalWrite(A3,   (pattern &amp; <span class="bn">0b01000000</span>) != <span class="dv">0</span>); 
 digitalWrite(A4,   (pattern &amp; <span class="bn">0b10000000</span>) != <span class="dv">0</span>); </code></pre></div>
-<p>The calculation <code>(pattern &amp; 0b00000001)</code> is a <a href="https://www.arduino.cc/en/Reference/BitwiseAnd">bitwise &amp;</a>. It creates a new byte value by looking at each bit of the two bytes, putting a <code>1</code> bit only where <strong><em>BOTH</em></strong> <code>pattern</code> <strong><em>AND</em></strong> <code>0b00000001</code> are set to <code>1</code>. If either of them has a zero in any position, that bit becomes zero.</p>
-<p>Since <code>0b00000001</code> is all zeroes except in the first position, if <code>pattern</code> <strong><em>doesn't</em></strong> have a 1 there, then the result will be the byte <code>0x00000000</code>, representing the number zero. The expression <code>!= 0</code> means <a href="https://www.arduino.cc/en/Reference/If">"not equal to"</a> zero. The calculation <code>(pattern &amp; 0b00000001) != 0</code> is therefore <code>true</code> <strong><em>if and only if</em></strong> the first bit is set.</p>
+<p>In the calculation, we are using the <a href="https://www.arduino.cc/en/Reference/BitwiseAnd">bitwise &amp;</a> operator. It creates a new byte (sequence of eight bits) from two other bytes.</p>
+<p>In this case, it takes the two bytes <code>pattern</code> <strong><em>AND</em></strong> <code>0b00000001</code>, passing on a <code>1</code> bit only where <strong><em>BOTH</em></strong> <code>pattern</code> <strong><em>AND</em></strong> <code>0b00000001</code> have a <code>1</code>. So if <strong><em>either</em></strong> of them has a <code>0</code>bit in some location, the resulting byte will have a <code>0</code> bit there.</p>
+<p>The byte <code>0b00000001</code> has zeroes in <em>all but one</em> location, so if <code>pattern</code> has a 0 bit at that spot, the result of the <a href="https://www.arduino.cc/en/Reference/BitwiseAnd">bitwise &amp;</a> will be <code>0x00000000</code>, (the byte representing the number zero).</p>
+<p>The expression <code>!= 0</code> means <a href="https://www.arduino.cc/en/Reference/If">"not equal to"</a> zero. The calculation <code>(pattern &amp; 0b00000001) != 0</code> is therefore <code>true</code> <strong><em>if and only if</em></strong> the first bit of <code>pattern</code> is a 1.</p>
 <p>Each bit is examined in turn, the first bit <code>0b00000001</code>, then the second bit <code>0b00000010</code>, then the third bit <code>0b00000100</code> and so on until all eight LEDs have been set to either <em>on</em> or *off".</p>
 <p><a id="while"/></p>
 <h2 id="fixed-pattern---using-a-while-loop">Fixed pattern - using a 'while' loop</h2>
-<p>Instead of having separate lines of code for every LED, we use a while loop in <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov03PatternWhile/Pov03PatternWhile.ino">Pov03PatternWhile</a>.</p>
-<p>The key parts of this code are shown below. Instead of explicitly writing eight lots of instructions to query each bit and control each light, we have a single set of instructions, which is executed eight times.</p>
-<p>The code relies on an array containing the pin numbers. A bitCounter is used to count how many bits of the pattern have already been processed. The bitValue starts as 1, then becomes 2, then 4, then 8 and so on, corresponding with each digit of the binary number.</p>
+<p>In <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov03PatternWhile/Pov03PatternWhile.ino">Pov03PatternWhile</a>, instead of having separate lines of code for every LED, we use a <strong><em>while loop</em></strong>.</p>
+<p>The key parts of this code are shown below. To avoid explicitly writing eight lots of instructions to query each bit and control each light, we have a single set of instructions, which are executed eight times using parameters that change each time.</p>
+<p>A <code>pinNumbers</code> array is created to contain the numbers of the pins we plan to control. These numbers can be retrieved using a <em>subscript</em> in square brackets, for example we could use <code>pinNumbers[0]</code> to get us the first entry, (the stored value <em>9</em>), and pinNumbers[7] would get us the last entry, (the stored value <em>A4</em>).</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> pinNumbers[] = { <span class="dv">9</span>,<span class="dv">10</span>,<span class="dv">11</span>,<span class="dv">12</span>,A1,A2,A3,A4 };</code></pre></div>
+<p>In programming, counting up to eight begins with 0 and finishes with 7!</p>
+<p>The following steps run one after the other. However the steps in the while loop are repeated <strong><em>while</em></strong> the bitCounter is <strong><em>less than 8</em></strong>, before we begin again.</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">bitCounter = <span class="dv">0</span>;
 bitValue = <span class="bn">0b00000001</span>;
-<span class="kw">while</span>(bitCounter &lt; totalBits){
-    digitalWrite(pinNumbers[bitCounter], (pattern &amp; bitValue) != <span class="dv">0</span>);   
-    bitCounter = bitCounter + <span class="dv">1</span>;
+<span class="kw">while</span>(bitCounter &lt; <span class="dv">8</span>){
+    digitalWrite(pinNumbers[bitCounter], (pattern &amp; bitValue) != <span class="dv">0</span>);
     bitValue = bitValue * <span class="dv">2</span>;
+    bitCounter = bitCounter + <span class="dv">1</span>;
 }</code></pre></div>
+<p>The <code>bitCounter</code> is assigned the value zero. We use bitCounter as a <em>subscript</em> to retrieve the next pin from the <code>pinNumbers</code> array. This pin is updated to turn its LED on or off with the digitalWrite instruction. After we have updated the LED <code>bitCounter = bitCounter + 1</code> increases the bitCounter, so a different bit (and a different LED) is processed the next time round.</p>
+<p>By contrast the <code>bitValue</code> starts as 1. The instruction <code>bitValue = bitValue * 2</code> multiplies bitValue by two after we have updated the light, generating the sequence 1,2,4,8,16 and so on. This is equivalent to the binary series <em>0b00000001, 0b00000010, 0b00000100, 0b00001000, 0b00010000</em> and so on, previously written out in full in the <a href="#stored">stored pattern example</a>.</p>
+<p>The steps in the while loop will only be repeated <strong><em>while</em></strong> the bitCounter is less than 8. This means the bitCounter will be <em>0</em> then <em>1</em> then, <em>2,3,4,5,6,7</em> before escaping the while loop.</p>
 <p><a id="function"/></p>
 <h2 id="fixed-pattern---using-a-function-call">Fixed pattern - using a function call</h2>
 <p>In <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov04PatternFunction/Pov04PatternFunction.ino">Pov04PatternFunction</a>, we remove the duplication in the routine called <code>loop</code>. We put the lighting steps in their own routine, called <code>setLights</code>.</p>

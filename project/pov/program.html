@@ -36,8 +36,7 @@
 <h1 id="installing-the-examples">Installing the examples</h1>
 <p>You can upload the programs described below to your circuit once you have completed the <a href="../shrimp/program.html">Programming Shrimps instructions</a> to install the relevant software on your laptop.</p>
 <p>Once properly installed, the sketches described appear in the File=&gt;Sketchbook=&gt;shrimpingit=&gt;pov menu. All the examples below run on the same circuit, which you can construct following the <a href="./build.html">build instructions</a></p>
-<p><a id="hardcoded"/></p>
-<h2 id="using-true-and-false-to-control-8-lights">Using <strong><em>true and false</em></strong> to control 8 lights</h2>
+<h2 id="using-true-and-false-to-control-8-lights"><a id="hardcoded"/> Using <strong><em>true and false</em></strong> to control 8 lights</h2>
 <p>To begin, let's control the 8 LEDs to produce a static pattern by running the <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov01PatternFixed/Pov01PatternFixed.ino">Pov01PatternFixed</a> sketch.</p>
 <p>The key part of the code is shown below, which controls eight digital output pins (pins which can be <em>on</em> or <em>off</em>) by 'writing' a value of <code class="cpp">true</code> or <code class="cpp">false</code>.</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//turn on selected LEDs</span>
@@ -50,8 +49,7 @@ digitalWrite(A2, <span class="kw">false</span>);
 digitalWrite(A3, <span class="kw">true</span> ); 
 digitalWrite(A4, <span class="kw">false</span>); </code></pre></div>
 <p>In the default pattern, every <em>odd</em> light is illuminated, and every <em>even</em> light is extinguished. Try changing some of the true or false values to prove you can turn different lights on and off.</p>
-<p><a id="stored"/></p>
-<h2 id="storing-a-pattern-in-the-8-bits-of-a-byte">Storing a pattern in the <strong><em>8 bits of a byte</em></strong></h2>
+<h2 id="storing-a-pattern-in-the-8-bits-of-a-byte"><a id="stored"/> Storing a pattern in the <strong><em>8 bits of a byte</em></strong></h2>
 <p>The next sketch called <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov02PatternStored/Pov02PatternStored.ino">Pov02PatternStored</a> shows how to produce the same pattern, but by reading bits from a byte instead.</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">byte pattern = <span class="bn">0b10101010</span>;</code></pre></div>
 <p>The byte called <code>pattern</code> contains either a <em>one</em> or a <em>zero</em> in each of its eight positions to determine whether each light is <em>on</em> or <em>off</em>, (the prefix <code>0b</code> tells us that the byte is written in binary, as a series of <em>bits</em>). Try changing the 1s and 0s (a byte has to have exactly eight of them) and uploading to prove you can turn different lights on or off.</p>
@@ -70,8 +68,7 @@ digitalWrite(A4,   (pattern &amp; <span class="bn">0b10000000</span>) != <span c
 <p>The byte <code>0b00000001</code> has zeroes in <em>all but one</em> location, so if <code>pattern</code> has a 0 bit at that spot, the result of the <a href="https://www.arduino.cc/en/Reference/BitwiseAnd">bitwise &amp;</a> will be <code>0x00000000</code>, (the byte representing the number zero).</p>
 <p>The expression <code>!= 0</code> means <a href="https://www.arduino.cc/en/Reference/If">"not equal to"</a> zero. The calculation <code>(pattern &amp; 0b00000001) != 0</code> is therefore <code>true</code> <strong><em>if and only if</em></strong> the first bit of <code>pattern</code> is a 1.</p>
 <p>Each bit is examined in turn, the first bit <code>0b00000001</code>, then the second bit <code>0b00000010</code>, then the third bit <code>0b00000100</code> and so on until all eight LEDs have been set to either <em>on</em> or *off".</p>
-<p><a id="while"/></p>
-<h2 id="traversing-the-byte-pattern-with-a-while-loop">Traversing the byte pattern with a <strong><em>while loop</em></strong></h2>
+<h2 id="traversing-the-byte-pattern-with-a-while-loop"><a id="while"/> Traversing the byte pattern with a <strong><em>while loop</em></strong></h2>
 <p>In <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov03PatternWhile/Pov03PatternWhile.ino">Pov03PatternWhile</a>, instead of having separate lines of code for every LED, we use a <strong><em>while loop</em></strong>.</p>
 <p>The key parts of this code are shown below. To avoid writing the instructions eight times, a single set of instructions is executed eight times with parameters that change each time.</p>
 <p>The steps shown run one after the other. However, note the indented steps inside the while loop are repeated <strong><em>while</em></strong> the bitCounter is <strong><em>less than 8</em></strong>.</p>
@@ -87,8 +84,7 @@ bitValue = <span class="bn">0b00000001</span>;
 <p>Note, in programming, counting up to eight begins with 0 and finishes with 7!</p>
 <p>To begin, the <code>bitCounter</code> is assigned the value zero. We use bitCounter as a <em>subscript</em> to retrieve the next pin from the <code>pinNumbers</code> array like <code>pinNumbers[bitCounter]</code>. The LED is turned on or off with the <code>digitalWrite</code> instruction using the same calculation as before, but with a <code>bitValue</code> that changes. After updating the LED <code>bitCounter = bitCounter + 1</code> increases the bitCounter. This ensures a different bit (and a different LED) is processed the next time round. This means the bitCounter will be <em>0</em> then <em>1</em> then, <em>2,3,4,5,6,7</em> before escaping the while loop.</p>
 <p>The variable <code>bitValue</code> is initially assigned the value 1. After we have turned on or off the LED, the instruction <code>bitValue = bitValue * 2</code> multiplies <code>bitValue</code> by two. This means the bitValue will adopt the value 1 then 2 then 4,8,16 and so on. This is equivalent to the binary series <em>0b00000001, 0b00000010, 0b00000100, 0b00001000, 0b00010000</em> etc. visible in the <a href="#stored">stored pattern example</a>.</p>
-<p><a id="function"/></p>
-<h2 id="writing-a-function-to-traverse-the-pattern">Writing a <strong><em>function</em></strong> to traverse the pattern</h2>
+<h2 id="writing-a-function-to-traverse-the-pattern"><a id="function"/> Writing a <strong><em>function</em></strong> to traverse the pattern</h2>
 <p>In <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov04PatternFunction/Pov04PatternFunction.ino">Pov04PatternFunction</a>, we remove the duplication in the routine called <code>loop</code>. We put the lighting steps in their own routine, called <code>setLights</code>.</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> setLights(byte pattern){
   bitCounter = <span class="dv">0</span>;
@@ -106,8 +102,7 @@ bitValue = <span class="bn">0b00000001</span>;
   setLights(empty);
   delay(<span class="dv">2</span>);
 }</code></pre></div>
-<p><a id="smiley"/></p>
-<h2 id="painting-a-smiley-face-in-the-air">Painting a <strong><em>smiley face</em></strong> in the air</h2>
+<h2 id="painting-a-smiley-face-in-the-air"><a id="smiley"/> Painting a <strong><em>smiley face</em></strong> in the air</h2>
 <p>Previously we were visiting a sequence of bits, and setting the lights to a given pattern. Now we go 'up a level' by doing the same thing for a <strong><em>sequence of patterns</em></strong>. If we upload <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov05SequenceSmiley/Pov05SequenceSmiley.ino">Pov05SequenceSmiley</a> and attach a battery pack, then <strong><em>waving it in the air should paint a smiley face</em></strong>.</p>
 <p>The key parts of this code are shown below. The byte array called <code class="cpp">patternSequence</code> contains a series of bytes which map to vertical columns making up a smiley face.</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">byte patternSequence[] = {
@@ -122,8 +117,7 @@ bitValue = <span class="bn">0b00000001</span>;
 };</code></pre></div>
 <p>If you inspect the 1s and 0s in the byte array, you can see the image below, tipped to the right (each byte is a vertical column, starting from the left side)...</p>
 <p><img src="http://shrimping.it/blog/wp-content/uploads/2012/11/smilie_binary-250x300.png" alt="Smiley Face"/></p>
-<p><a id="logo"/></p>
-<h2 id="painting-the-arduino-logo-in-the-air">Painting the <strong><em>Arduino™ logo</em></strong> in the air</h2>
+<h2 id="painting-the-arduino-logo-in-the-air"><a id="logo"/> Painting the <strong><em>Arduino™ logo</em></strong> in the air</h2>
 <p>Just for fun, we do the same thing with a different pattern - <a href="https://upload.wikimedia.org/wikipedia/commons/8/87/Arduino_Logo.svg">the Arduino Logo</a> with our sketch <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov06SequenceArduino/Pov06SequenceArduino.ino">Pov06SequenceArduino</a>. Of course this is best done with Blue LEDs!</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">byte patternSequence[] = {
   <span class="bn">0b00111000</span>,
@@ -144,8 +138,7 @@ bitValue = <span class="bn">0b00000001</span>;
 };</code></pre></div>
 <p>This sketch should cause the image below to be painted in the air...</p>
 <p><img src="./photos/arduino_logo_480.png" alt="Arduino Logo"/></p>
-<p><a id="text"/></p>
-<h2 id="painting-your-text-in-the-air">Painting <strong><em>your text</em></strong> in the air</h2>
+<h2 id="painting-your-text-in-the-air"><a id="text"/> Painting <strong><em>your text</em></strong> in the air</h2>
 <p>Our last demonstration sketch is the best. <a href="https://github.com/ShrimpingIt/projects/blob/master/sketchbook/shrimpingit/pov/Pov07PaintText/Pov07PaintText.ino">Pov07PaintText</a> incorporates the 8-bit font from a Commodore 64 into an Arduino sketch, so learners can paint their choice of text in the air.</p>
 <p>In our example code, we have replaced the original font's $ symbol with the smiley face sequence, showing how to combine your own icons with text messages.</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">String message =<span class="st">"HACK $"</span>;</code></pre></div>
